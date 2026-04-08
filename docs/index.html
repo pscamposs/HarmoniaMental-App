@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Harmonia Mental — O app de musicoterapia que equilibra sua mente. Playlists terapêuticas, gêneros variados e suporte ao bem-estar emocional."
+      content="Harmonia Mental — App de musicoterapia para equilíbrio emocional. Playlists terapêuticas, suporte à crise e acesso gratuito."
     />
     <meta property="og:title" content="Harmonia Mental" />
     <meta property="og:description" content="A Música que Equilibra a Mente" />
@@ -14,7 +14,7 @@
     <title>Harmonia Mental — A Música que Equilibra a Mente</title>
 
     <style>
-      /* ── Reset & Base ──────────────────────────────────────────────── */
+      /* ── Reset & Base ─────────────────────────────────────────────── */
       *,
       *::before,
       *::after {
@@ -26,20 +26,16 @@
       :root {
         --bg: #0c0c24;
         --surface: #13132e;
-        --card: #1a1a42;
-        --card-alt: #201f4a;
+        --surface-alt: #1a1a42;
         --border: #2a2a5a;
-        --gold: #f0a500;
-        --gold-light: #ffd166;
-        --gold-dark: #b87d00;
+        --primary: #0c0c24;
+        --accent: #f0a500;
+        --accent-dark: #b87d00;
         --text: #ffffff;
         --text-sec: #8884a8;
         --text-muted: #5a587a;
-        --danger: #e84040;
-        --grad-mid: #16103a;
-        --grad-end: #1e1206;
-        --radius: 16px;
-        --radius-sm: 10px;
+        --radius: 12px;
+        --radius-sm: 8px;
       }
 
       html {
@@ -65,24 +61,10 @@
         max-width: 100%;
       }
 
-      /* ── Noise overlay ────────────────────────────────────────────── */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-        opacity: 0.03;
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      /* ── Container ────────────────────────────────────────────────── */
       .container {
-        max-width: 1120px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 0 24px;
-        position: relative;
-        z-index: 1;
       }
 
       /* ── NAV ──────────────────────────────────────────────────────── */
@@ -92,9 +74,7 @@
         left: 0;
         right: 0;
         z-index: 100;
-        background: rgba(12, 12, 36, 0.85);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        background: var(--surface);
         border-bottom: 1px solid var(--border);
       }
 
@@ -103,7 +83,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 14px 24px;
-        max-width: 1120px;
+        max-width: 1100px;
         margin: 0 auto;
       }
 
@@ -114,15 +94,15 @@
       }
 
       .nav-brand img {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         object-fit: contain;
       }
 
       .nav-brand span {
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         color: var(--text);
       }
 
@@ -136,28 +116,25 @@
       .nav-links a {
         font-size: 0.875rem;
         color: var(--text-sec);
-        transition: color 0.2s;
+        transition: color 0.15s;
       }
 
       .nav-links a:hover {
-        color: var(--gold-light);
+        color: var(--accent);
       }
 
       .nav-cta {
-        background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-        color: var(--bg) !important;
-        font-weight: 700;
+        background: var(--accent);
+        color: #fff !important;
+        font-weight: 600;
         padding: 8px 20px;
-        border-radius: 50px;
+        border-radius: var(--radius-sm);
         font-size: 0.875rem;
-        transition:
-          opacity 0.2s,
-          transform 0.15s;
+        transition: background 0.15s;
       }
 
       .nav-cta:hover {
-        opacity: 0.88;
-        transform: translateY(-1px);
+        background: var(--accent-dark) !important;
       }
 
       @media (max-width: 640px) {
@@ -168,157 +145,56 @@
 
       /* ── HERO ─────────────────────────────────────────────────────── */
       .hero {
-        position: relative;
+        background: var(--surface-alt);
         min-height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 120px 24px 80px;
-        overflow: hidden;
-      }
-
-      /* Radial glow behind logo */
-      .hero::after {
-        content: "";
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(
-          ellipse at center,
-          rgba(240, 165, 0, 0.12) 0%,
-          transparent 70%
-        );
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      /* Animated orbs */
-      .orb {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.18;
-        animation: drift 12s ease-in-out infinite alternate;
-        pointer-events: none;
-      }
-
-      .orb-1 {
-        width: 480px;
-        height: 480px;
-        background: #3b6be0;
-        top: -120px;
-        left: -160px;
-        animation-duration: 14s;
-      }
-
-      .orb-2 {
-        width: 360px;
-        height: 360px;
-        background: #2eb88a;
-        bottom: -80px;
-        right: -100px;
-        animation-duration: 10s;
-        animation-delay: -5s;
-      }
-
-      .orb-3 {
-        width: 280px;
-        height: 280px;
-        background: var(--gold);
-        top: 40%;
-        right: 10%;
-        opacity: 0.08;
-        animation-duration: 16s;
-        animation-delay: -3s;
-      }
-
-      @keyframes drift {
-        from {
-          transform: translate(0, 0) scale(1);
-        }
-        to {
-          transform: translate(30px, 20px) scale(1.05);
-        }
       }
 
       .hero-content {
-        position: relative;
-        z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
+        max-width: 560px;
+        margin: 0 auto;
       }
 
-      .hero-logo-wrap {
-        position: relative;
-        width: 138px;
-        height: 138px;
-      }
-
-      .hero-logo-wrap img {
-        width: 138px;
-        height: 138px;
+      .hero-logo {
+        width: 110px;
+        height: 110px;
         object-fit: contain;
-        position: relative;
-        z-index: 1;
-        animation: float 6s ease-in-out infinite;
-        filter: drop-shadow(0 8px 24px rgba(240, 165, 0, 0.3));
       }
 
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
+      .hero-eyebrow {
         font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
+        font-weight: 700;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--gold-light);
-        background: rgba(240, 165, 0, 0.12);
-        border: 1px solid rgba(240, 165, 0, 0.25);
-        padding: 4px 14px;
-        border-radius: 50px;
-      }
-
-      .hero-badge::before {
-        content: "♪";
-        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.5);
       }
 
       .hero h1 {
-        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-size: clamp(2rem, 5vw, 3rem);
         font-weight: 800;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.04em;
         line-height: 1.1;
-        color: var(--text);
-        max-width: 520px;
+        color: #ffffff;
       }
 
-      .hero-tagline em {
-        font-style: normal;
-        color: var(--gold-light);
-        font-weight: 600;
+      .hero-tagline {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.68);
+        max-width: 440px;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 12px;
         justify-content: center;
         margin-top: 8px;
       }
@@ -328,243 +204,171 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 14px 28px;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 700;
+        padding: 13px 26px;
+        border-radius: var(--radius-sm);
+        font-size: 0.95rem;
+        font-weight: 600;
         cursor: pointer;
         border: none;
-        transition:
-          transform 0.15s,
-          opacity 0.2s,
-          box-shadow 0.2s;
         text-decoration: none;
+        transition:
+          background 0.15s,
+          opacity 0.15s;
       }
 
-      .btn:hover {
-        transform: translateY(-2px);
+      .btn .icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-        color: #0c0c24;
-        box-shadow: 0 8px 32px rgba(240, 165, 0, 0.35);
+        background: var(--accent);
+        color: #ffffff;
       }
-
       .btn-primary:hover {
-        box-shadow: 0 12px 40px rgba(240, 165, 0, 0.5);
+        background: var(--accent-dark);
       }
 
       .btn-outline {
         background: transparent;
-        color: var(--text-sec);
-        border: 1.5px solid var(--border);
+        color: rgba(255, 255, 255, 0.65);
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
       }
 
       .btn-outline:hover {
-        border-color: var(--gold);
-        color: var(--gold-light);
-      }
-
-      .btn .icon {
-        width: 22px;
-        height: 22px;
-        flex-shrink: 0;
-      }
-
-      /* ── Scroll indicator ────────────────────────────────────────── */
-      .scroll-hint {
-        position: absolute;
-        bottom: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        color: var(--text-muted);
-        font-size: 0.75rem;
-        letter-spacing: 0.06em;
-        animation: bounce 2.4s ease-in-out infinite;
-      }
-
-      .scroll-hint svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateX(-50%) translateY(0);
-          opacity: 0.6;
-        }
-        50% {
-          transform: translateX(-50%) translateY(6px);
-          opacity: 1;
-        }
-      }
-
-      /* ── Section commons ─────────────────────────────────────────── */
-      section {
-        padding: 96px 0;
-        position: relative;
-        z-index: 1;
-      }
-
-      .section-label {
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 12px;
-        text-align: center;
-      }
-
-      .section-title {
-        font-size: clamp(1.6rem, 4vw, 2.4rem);
-        font-weight: 800;
-        text-align: center;
-        line-height: 1.2;
-        margin-bottom: 16px;
-      }
-
-      .section-sub {
-        font-size: 1rem;
-        color: var(--text-sec);
-        text-align: center;
-        max-width: 560px;
-        margin: 0 auto 56px;
+        border-color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.85);
       }
 
       /* ── Divider ─────────────────────────────────────────────────── */
       .section-divider {
         width: 100%;
         height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--border) 30%,
-          var(--border) 70%,
-          transparent
-        );
+        background: var(--border);
+      }
+
+      /* ── Section commons ─────────────────────────────────────────── */
+      section {
+        padding: 88px 0;
+      }
+
+      .section-label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+        font-weight: 800;
+        text-align: center;
+        line-height: 1.25;
+        margin-bottom: 14px;
+        color: var(--text);
+      }
+
+      .section-sub {
+        font-size: 1rem;
+        color: var(--text-sec);
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto 52px;
       }
 
       /* ── FEATURES ────────────────────────────────────────────────── */
       .features-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 18px;
       }
 
       .feature-card {
-        background: var(--card);
+        background: var(--surface);
         border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 28px 24px;
-        transition:
-          transform 0.2s,
-          border-color 0.2s,
-          box-shadow 0.2s;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(240, 165, 0, 0.4);
-        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+        padding: 26px 22px;
       }
 
       .feature-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 14px;
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-sm);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-        margin-bottom: 18px;
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+        background: var(--surface-alt);
       }
 
       .feature-card h3 {
-        font-size: 1.05rem;
+        font-size: 1rem;
         font-weight: 700;
         margin-bottom: 8px;
+        color: var(--text);
       }
 
       .feature-card p {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         color: var(--text-sec);
         line-height: 1.65;
       }
 
       /* ── HOW IT WORKS ────────────────────────────────────────────── */
+      .steps-section {
+        background: var(--surface);
+      }
+      .steps-section .section-label {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .steps-section .section-title {
+        color: #ffffff;
+      }
+      .steps-section .section-sub {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
       .steps {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 0;
-        position: relative;
-      }
-
-      .steps::before {
-        content: "";
-        position: absolute;
-        top: 28px;
-        left: calc(16.666% + 12px);
-        right: calc(16.666% + 12px);
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--gold) 30%,
-          var(--gold) 70%,
-          transparent
-        );
-        opacity: 0.3;
-      }
-
-      @media (max-width: 768px) {
-        .steps::before {
-          display: none;
-        }
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
       }
 
       .step {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 20px 32px;
-        gap: 16px;
+        align-items: flex-start;
+        gap: 12px;
       }
 
       .step-num {
-        width: 56px;
-        height: 56px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-        color: var(--bg);
-        font-size: 1.25rem;
+        background: var(--accent);
+        color: #fff;
+        font-size: 1.1rem;
         font-weight: 800;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        box-shadow: 0 4px 20px rgba(240, 165, 0, 0.35);
-        position: relative;
-        z-index: 1;
       }
 
       .step h3 {
         font-size: 1rem;
         font-weight: 700;
+        color: #ffffff;
       }
-
       .step p {
         font-size: 0.875rem;
-        color: var(--text-sec);
+        color: rgba(255, 255, 255, 0.58);
       }
 
       /* ── THERAPY CATEGORIES ──────────────────────────────────────── */
@@ -575,43 +379,39 @@
       }
 
       .therapy-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 24px;
+        padding: 22px 20px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        border: 1px solid transparent;
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
+        gap: 8px;
       }
 
-      .therapy-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-      }
-
-      .therapy-card .tc-icon {
-        font-size: 1.75rem;
+      .tc-icon {
+        font-size: 1.6rem;
+        margin-bottom: 4px;
       }
       .therapy-card h3 {
         font-size: 0.95rem;
         font-weight: 700;
+        color: var(--text);
       }
       .therapy-card p {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.82rem;
+        color: var(--text-sec);
+        line-height: 1.6;
       }
 
       /* ── EMERGENCY ───────────────────────────────────────────────── */
       .emergency-section {
-        background: var(--surface);
+        background: var(--surface-alt);
       }
 
       .emergency-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 18px;
         justify-content: center;
       }
 
@@ -619,26 +419,23 @@
         display: flex;
         align-items: center;
         gap: 18px;
-        padding: 22px 28px;
+        padding: 22px 26px;
         border-radius: var(--radius);
         flex: 1 1 280px;
-        max-width: 400px;
-        border: 1px solid transparent;
-        transition: transform 0.2s;
-      }
-
-      .emergency-card:hover {
-        transform: scale(1.02);
+        max-width: 380px;
+        background: var(--surface);
+        border: 1px solid var(--border);
       }
 
       .e-icon {
-        font-size: 2rem;
-        width: 56px;
-        height: 56px;
+        font-size: 1.75rem;
+        width: 52px;
+        height: 52px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 14px;
+        border-radius: var(--radius-sm);
+        background: var(--surface-alt);
         flex-shrink: 0;
       }
 
@@ -646,44 +443,30 @@
         font-size: 1rem;
         font-weight: 700;
         margin-bottom: 2px;
+        color: var(--text);
       }
       .emergency-card p {
-        font-size: 0.85rem;
-        opacity: 0.75;
+        font-size: 0.82rem;
+        color: var(--text-sec);
         margin-bottom: 6px;
       }
       .emergency-card a {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 800;
+        color: var(--accent);
         font-variant-numeric: tabular-nums;
       }
 
-      /* ── DOWNLOAD CTA ────────────────────────────────────────────── */
+      /* ── DOWNLOAD ────────────────────────────────────────────────── */
       .download-section {
         text-align: center;
+        background: var(--surface);
       }
-
-      .download-wrap {
-        background: linear-gradient(
-          135deg,
-          var(--card) 0%,
-          var(--card-alt) 100%
-        );
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 64px 48px;
-        position: relative;
-        overflow: hidden;
+      .download-section .section-title {
+        color: #ffffff;
       }
-
-      .download-wrap h2 {
-        font-size: clamp(1.6rem, 4vw, 2.4rem);
-        font-weight: 800;
-        margin-bottom: 14px;
-      }
-
-      .download-wrap p {
-        color: var(--text-sec);
+      .download-section > .container > p {
+        color: rgba(255, 255, 255, 0.62);
         font-size: 1rem;
         max-width: 480px;
         margin: 0 auto 36px;
@@ -692,12 +475,12 @@
       .download-buttons {
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 12px;
         justify-content: center;
       }
 
       .platform-badge {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         font-weight: 600;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -714,19 +497,20 @@
       }
 
       .download-btn-main {
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 700;
       }
 
       .version-tag {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.1);
         font-size: 0.72rem;
-        font-weight: 600;
-        padding: 3px 10px;
+        font-weight: 500;
+        padding: 4px 12px;
         border-radius: 50px;
-        margin-top: 18px;
-        color: var(--text-sec);
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.15);
       }
 
       /* ── FOOTER ──────────────────────────────────────────────────── */
@@ -734,8 +518,6 @@
         background: var(--surface);
         border-top: 1px solid var(--border);
         padding: 48px 0 32px;
-        position: relative;
-        z-index: 1;
       }
 
       .footer-inner {
@@ -743,7 +525,7 @@
         flex-wrap: wrap;
         gap: 32px;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
       }
 
       .footer-brand {
@@ -758,19 +540,17 @@
         align-items: center;
         gap: 10px;
       }
-
       .footer-brand-row img {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         object-fit: contain;
       }
-
       .footer-brand-row span {
         font-size: 0.875rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
+        color: var(--text);
       }
-
       .footer-brand p {
         font-size: 0.8rem;
         color: var(--text-muted);
@@ -778,7 +558,7 @@
       }
 
       .footer-col h4 {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -792,15 +572,13 @@
         flex-direction: column;
         gap: 10px;
       }
-
       .footer-col ul a {
         font-size: 0.875rem;
         color: var(--text-muted);
-        transition: color 0.2s;
+        transition: color 0.15s;
       }
-
       .footer-col ul a:hover {
-        color: var(--gold-light);
+        color: var(--accent);
       }
 
       .footer-bottom {
@@ -818,31 +596,14 @@
         color: var(--text-muted);
       }
 
-      .footer-bottom a {
-        color: var(--gold);
-      }
-
-      /* ── Scroll-reveal via IntersectionObserver ─────────────────── */
-      .reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-          opacity 0.55s ease,
-          transform 0.55s ease;
-      }
-
-      .reveal.visible {
-        opacity: 1;
-        transform: none;
-      }
-
       /* ── Responsive ──────────────────────────────────────────────── */
       @media (max-width: 640px) {
         section {
-          padding: 64px 0;
+          padding: 60px 0;
         }
-        .download-wrap {
-          padding: 40px 24px;
+        .step {
+          align-items: center;
+          text-align: center;
         }
       }
     </style>
@@ -866,27 +627,20 @@
 
     <!-- ── HERO ──────────────────────────────────────────────────────── -->
     <section id="hero" class="hero">
-      <div class="orb orb-1" aria-hidden="true"></div>
-      <div class="orb orb-2" aria-hidden="true"></div>
-      <div class="orb orb-3" aria-hidden="true"></div>
-
       <div class="hero-content">
-        <div class="hero-logo-wrap">
-          <img src="assets/brand-symbol.png" alt="Símbolo Harmonia Mental" />
-        </div>
-
-        <span class="hero-badge">Musicoterapia no seu bolso</span>
-
+        <img
+          class="hero-logo"
+          src="assets/brand-symbol.png"
+          alt="Símbolo Harmonia Mental"
+        />
+        <p class="hero-eyebrow">Musicoterapia no seu bolso</p>
         <h1>HARMONIA MENTAL</h1>
-
         <p class="hero-tagline">
-          A música que <em>equilibra a mente.</em><br />
-          Playlists terapêuticas criadas para cada estado emocional.
+          A música que equilibra a mente. Playlists terapêuticas criadas para
+          cada estado emocional, com acesso gratuito e sem anúncios.
         </p>
-
         <div class="hero-actions">
           <a href="#download" class="btn btn-primary">
-            <!-- Android icon -->
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -894,38 +648,13 @@
               aria-hidden="true"
             >
               <path
-                d="M17.523 15.341 14.93 11.5l2.594-3.841a.75.75 0 0 0-1.25-.832L13.888 10.5H10.11L7.726 6.827a.75.75 0 0 0-1.25.832L9.07 11.5l-2.594 3.841a.75.75 0 1 0 1.25.832L10.112 12.5h3.776l2.386 3.673a.75.75 0 0 0 1.249-.832ZM6.5 3.795 8.06 1h7.88l1.56 2.795M4 5h16a1 1 0 0 1 .99 1.142l-2 14A1 1 0 0 1 18 21H6a1 1 0 0 1-.99-.858l-2-14A1 1 0 0 1 4 5Z"
+                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-1 14.414-3.707-3.707 1.414-1.414L11 13.586V7h2v6.586l2.293-2.293 1.414 1.414L13 16.414a1 1 0 0 1-1.414 0L11 15.414Z"
               />
             </svg>
             Baixar para Android
           </a>
-          <a href="#download" class="btn btn-outline">
-            <!-- Apple icon -->
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"
-              />
-            </svg>
-            iOS — Em breve
-          </a>
+          <a href="#features" class="btn btn-outline">Saiba mais</a>
         </div>
-      </div>
-
-      <div class="scroll-hint" aria-hidden="true">
-        <span>Rolar</span>
-        <svg
-          viewBox="0 0 20 20"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path d="M10 4v12M5 11l5 5 5-5" />
-        </svg>
       </div>
     </section>
 
@@ -935,64 +664,40 @@
     <section id="features">
       <div class="container">
         <span class="section-label">Funcionalidades</span>
-        <h2 class="section-title reveal">
-          Tudo que você precisa para<br />cuidar da sua mente
+        <h2 class="section-title">
+          Tudo que você precisa para cuidar da sua mente
         </h2>
-        <p class="section-sub reveal">
+        <p class="section-sub">
           Um app completo que combina ciência da musicoterapia com uma
           experiência de uso simples e acolhedora.
         </p>
-
         <div class="features-grid">
-          <div class="feature-card reveal">
-            <div
-              class="feature-icon"
-              style="background: rgba(59, 107, 224, 0.18)"
-            >
-              🧠
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
             <h3>Musicoterapia Clínica</h3>
             <p>
               Playlists especializadas para Tristeza, Ansiedade, Euforia e
               Equilíbrio — baseadas nos princípios da musicoterapia.
             </p>
           </div>
-
-          <div class="feature-card reveal">
-            <div
-              class="feature-icon"
-              style="background: rgba(46, 184, 138, 0.18)"
-            >
-              🎵
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎵</div>
             <h3>Gêneros Variados</h3>
             <p>
               De Clássico a Lo-fi, de Jazz a Sertanejo — encontre o som certo
               para cada momento do seu dia.
             </p>
           </div>
-
-          <div class="feature-card reveal">
-            <div
-              class="feature-icon"
-              style="background: rgba(240, 165, 0, 0.18)"
-            >
-              🎭
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎭</div>
             <h3>Avatar Personalizado</h3>
             <p>
-              Escolha um avatar 2D único gerado por inteligência artificial que
+              Escolha um avatar único gerado por inteligência artificial que
               representa você no app.
             </p>
           </div>
-
-          <div class="feature-card reveal">
-            <div
-              class="feature-icon"
-              style="background: rgba(232, 64, 64, 0.18)"
-            >
-              🆘
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon">🆘</div>
             <h3>Ajuda de Emergência</h3>
             <p>
               Acesso rápido ao SAMU (192) e CVV (188) diretamente no app —
@@ -1006,35 +711,32 @@
     <div class="section-divider"></div>
 
     <!-- ── HOW IT WORKS ───────────────────────────────────────────────── -->
-    <section id="how-it-works" style="background: var(--surface)">
+    <section id="how-it-works" class="steps-section">
       <div class="container">
         <span class="section-label">Como funciona</span>
-        <h2 class="section-title reveal">
-          Em 3 passos você já está<br />cuidando da sua saúde mental
+        <h2 class="section-title">
+          Em 3 passos você já está cuidando da sua saúde mental
         </h2>
-        <p class="section-sub reveal">
+        <p class="section-sub">
           Sem complexidade. Sem cadastros demorados. Direto ao que importa.
         </p>
-
         <div class="steps">
-          <div class="step reveal">
+          <div class="step">
             <div class="step-num">1</div>
             <h3>Crie seu perfil</h3>
             <p>
               Insira seu nome e escolha um avatar personalizado em segundos.
             </p>
           </div>
-
-          <div class="step reveal">
+          <div class="step">
             <div class="step-num">2</div>
             <h3>Escolha como você está</h3>
             <p>
-              Selecione a playlist terapêutica que correspond ao seu estado
+              Selecione a playlist terapêutica que corresponde ao seu estado
               emocional atual.
             </p>
           </div>
-
-          <div class="step reveal">
+          <div class="step">
             <div class="step-num">3</div>
             <h3>Ouça e se equilibre</h3>
             <p>
@@ -1052,60 +754,37 @@
     <section id="therapy">
       <div class="container">
         <span class="section-label">Categorias Terapêuticas</span>
-        <h2 class="section-title reveal">Música certa para cada emoção</h2>
-        <p class="section-sub reveal">
+        <h2 class="section-title">Música certa para cada emoção</h2>
+        <p class="section-sub">
           Nossas playlists são organizadas por estado emocional para oferecer o
           suporte sonoro mais adequado.
         </p>
-
         <div class="therapy-grid">
-          <div
-            class="therapy-card reveal"
-            style="
-              background: linear-gradient(135deg, #1a1050, #2a1560);
-              border-color: #3a2080;
-            "
-          >
+          <div class="therapy-card">
             <span class="tc-icon">💙</span>
             <h3>Momentos de Tristeza</h3>
-            <p>Acolhimento e elevação gradual do humor com ritmos suaves</p>
+            <p>Acolhimento e elevação gradual do humor com ritmos suaves.</p>
           </div>
-          <div
-            class="therapy-card reveal"
-            style="
-              background: linear-gradient(135deg, #1a1830, #201540);
-              border-color: #352575;
-            "
-          >
+          <div class="therapy-card">
             <span class="tc-icon">🌙</span>
             <h3>Ansiedade &amp; Agitação</h3>
             <p>
-              Sons calmos que reduzem o cortisol e acalmam a mente acelerada
+              Sons calmos que reduzem o estresse e acalmam a mente acelerada.
             </p>
           </div>
-          <div
-            class="therapy-card reveal"
-            style="
-              background: linear-gradient(135deg, #201008, #301810);
-              border-color: #503020;
-            "
-          >
+          <div class="therapy-card">
             <span class="tc-icon">⚡</span>
             <h3>Hiperatividade &amp; Mania</h3>
             <p>
-              Ritmos que desaceleram gradualmente sem quebra brusca de energia
+              Ritmos que desaceleram gradualmente sem quebra brusca de energia.
             </p>
           </div>
-          <div
-            class="therapy-card reveal"
-            style="
-              background: linear-gradient(135deg, #0a2010, #102818);
-              border-color: #204030;
-            "
-          >
+          <div class="therapy-card">
             <span class="tc-icon">✨</span>
             <h3>Equilíbrio</h3>
-            <p>Mantença do bem-estar com músicas de frequências harmônicas</p>
+            <p>
+              Manutenção do bem-estar com músicas de frequências harmônicas.
+            </p>
           </div>
         </div>
       </div>
@@ -1117,44 +796,26 @@
     <section id="emergency" class="emergency-section">
       <div class="container">
         <span class="section-label">Suporte de Emergência</span>
-        <h2 class="section-title reveal">Você nunca está sozinho</h2>
-        <p class="section-sub reveal">
+        <h2 class="section-title">Você nunca está sozinho</h2>
+        <p class="section-sub">
           O Harmonia Mental integra acesso direto aos serviços de apoio à crise.
           Um toque e você já está em contato.
         </p>
-
         <div class="emergency-cards">
-          <div
-            class="emergency-card reveal"
-            style="
-              background: linear-gradient(135deg, #2a1020, #3a0a1a);
-              border-color: #6a2030;
-            "
-          >
-            <div class="e-icon" style="background: rgba(232, 64, 64, 0.18)">
-              🚑
-            </div>
+          <div class="emergency-card">
+            <div class="e-icon">🚑</div>
             <div>
               <h3>SAMU</h3>
               <p>Serviço de Atendimento Médico de Urgência</p>
-              <a href="tel:192" style="color: #e84040">192</a>
+              <a href="tel:192">192</a>
             </div>
           </div>
-
-          <div
-            class="emergency-card reveal"
-            style="
-              background: linear-gradient(135deg, #1a1808, #28200a);
-              border-color: #504010;
-            "
-          >
-            <div class="e-icon" style="background: rgba(240, 165, 0, 0.18)">
-              💛
-            </div>
+          <div class="emergency-card">
+            <div class="e-icon">💛</div>
             <div>
               <h3>CVV</h3>
               <p>Centro de Valorização da Vida — 24h, gratuito</p>
-              <a href="tel:188" style="color: var(--gold-light)">188</a>
+              <a href="tel:188">188</a>
             </div>
           </div>
         </div>
@@ -1166,57 +827,56 @@
     <!-- ── DOWNLOAD ───────────────────────────────────────────────────── -->
     <section id="download" class="download-section">
       <div class="container">
-        <div class="download-wrap reveal">
-          <h2>Baixe agora, é gratuito</h2>
-          <p>
-            Disponível para Android. A versão iOS chegará em breve. Sem
-            assinaturas, sem anúncios — foco total no seu bem-estar.
-          </p>
-
-          <div class="download-buttons">
-            <!-- APK direto — atualize o href com a URL real do seu APK -->
-            <a href="#" id="apk-download" class="btn btn-primary" download>
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-1 14.414-3.707-3.707 1.414-1.414L11 13.586V7h2v6.586l2.293-2.293 1.414 1.414L13 16.414a1 1 0 0 1-1.414 0L11 15.414Z"
-                />
-              </svg>
-              <div class="download-btn-text">
-                <span class="platform-badge">Android APK</span>
-                <span class="download-btn-main">Download Gratuito</span>
-              </div>
-            </a>
-
-            <a
-              href="#"
-              class="btn btn-outline"
-              style="cursor: not-allowed; opacity: 0.5"
-              aria-disabled="true"
+        <h2 class="section-title">Baixe agora, é gratuito</h2>
+        <p>
+          Disponível para Android. A versão iOS chegará em breve. Sem
+          assinaturas, sem anúncios — foco total no seu bem-estar.
+        </p>
+        <div class="download-buttons">
+          <a
+            href="HarmoniaMental.apk"
+            id="apk-download"
+            class="btn btn-primary"
+            download
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
             >
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"
-                />
-              </svg>
-              <div class="download-btn-text">
-                <span class="platform-badge">App Store</span>
-                <span class="download-btn-main">Em breve</span>
-              </div>
-            </a>
-          </div>
-
-          <span class="version-tag" id="version-tag">v1.0.0 · Android 8+</span>
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-1 14.414-3.707-3.707 1.414-1.414L11 13.586V7h2v6.586l2.293-2.293 1.414 1.414L13 16.414a1 1 0 0 1-1.414 0L11 15.414Z"
+              />
+            </svg>
+            <div class="download-btn-text">
+              <span class="platform-badge">Android APK</span>
+              <span class="download-btn-main">Download Gratuito</span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="btn btn-outline"
+            style="cursor: not-allowed; opacity: 0.45"
+            aria-disabled="true"
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"
+              />
+            </svg>
+            <div class="download-btn-text">
+              <span class="platform-badge">App Store</span>
+              <span class="download-btn-main">Em breve</span>
+            </div>
+          </a>
         </div>
+        <span class="version-tag" id="version-tag">v1.0.0 · Android 8+</span>
       </div>
     </section>
 
@@ -1234,7 +894,6 @@
               para apoiar o bem-estar emocional de forma acessível e gratuita.
             </p>
           </div>
-
           <div class="footer-col">
             <h4>Aplicativo</h4>
             <ul>
@@ -1244,7 +903,6 @@
               <li><a href="#download">Download</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Suporte</h4>
             <ul>
@@ -1254,11 +912,10 @@
             </ul>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>
-            © <span id="year"></span> Harmonia Mental. Feito com 💛 para a saúde
-            mental brasileira.
+            © <span id="year"></span> Harmonia Mental. Feito para a saúde mental
+            brasileira.
           </p>
           <p>
             Este app não substitui acompanhamento médico ou psicológico
@@ -1268,46 +925,8 @@
       </div>
     </footer>
 
-    <!-- ── SCRIPTS ────────────────────────────────────────────────────── -->
     <script>
-      // Year
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Scroll-reveal
-      const revealEls = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
-      revealEls.forEach((el) => observer.observe(el));
-
-      // Highlight active nav link on scroll
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
-
-      window.addEventListener(
-        "scroll",
-        () => {
-          let current = "";
-          sections.forEach((sec) => {
-            if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-          });
-          navLinks.forEach((link) => {
-            link.style.color =
-              link.getAttribute("href") === `#${current}`
-                ? "var(--gold-light)"
-                : "";
-          });
-        },
-        { passive: true },
-      );
     </script>
   </body>
 </html>
