@@ -21,7 +21,8 @@
         "backgroundColor": "#0C0C24"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.HarmoniaMental"
     },
     "web": {
       "favicon": "./assets/favicon.png"
