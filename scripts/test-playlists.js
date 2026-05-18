@@ -25,8 +25,8 @@ const REFRESH_TOKEN = envVars["EXPO_PUBLIC_SPOTIFY_REFRESH_TOKEN"];
 const PLAYLIST_IDS = {
   depressao: "4D6rArwz9g3Gyuq4ijBNBB",
   mania: "0nRBPiAlnU5bPacdmDZGNP",
-  ansiedade: "1Nqe0O8Xk5RBvWV0kPEWGb",
-  equilibrio: "3zf9l9Vejibhc4t8tTv1QP",
+  ansiedade: "3zf9l9Vejibhc4t8tTv1QP",
+  equilibrio: "1Nqe0O8Xk5RBvWV0kPEWGb",
 };
 
 async function getToken() {

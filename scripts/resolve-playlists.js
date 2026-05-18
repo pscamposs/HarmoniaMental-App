@@ -238,6 +238,11 @@ const PLAYLISTS = {
   ],
 };
 
+[PLAYLISTS.ansiedade, PLAYLISTS.equilibrio] = [
+  PLAYLISTS.equilibrio,
+  PLAYLISTS.ansiedade,
+];
+
 async function main() {
   const token = await getToken();
   console.log("✅ Token obtido\n");
