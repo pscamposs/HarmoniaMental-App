@@ -58,7 +58,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0b26efb4f60c433c7915d07",
       "durationMs": 214613,
       "spotifyUri": "spotify:track:3b8vIZo54D5aIHjukUCYuy",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/7/f/0/27f25eff0744d5b7f2ff1ba661a51353.mp3?hdnea=exp=1779064938~acl=/api/1/1/2/7/f/0/27f25eff0744d5b7f2ff1ba661a51353.mp3*~data=user_id=0,application_id=42~hmac=0e43d71669efc9cfd75d379a17ee025dbccebfc48cb245b3ce909930fc183dc4"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/0f/4b/02/0f4b0272-ac4c-7810-6591-39fb2aa5f715/mzaf_8058651407381921418.plus.aac.p.m4a"
     },
     {
       "id": "1gJJghkaqrRTk9WwmyEwyd",
@@ -78,7 +78,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4721a89ab1898dab095e26a",
       "durationMs": 206080,
       "spotifyUri": "spotify:track:20vTcYqoLZYZoUosewZ8GQ",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/0/0/0/f002e21dcc3b61b21ae58a99a2dfd355.mp3?hdnea=exp=1779064939~acl=/api/1/1/f/0/0/0/f002e21dcc3b61b21ae58a99a2dfd355.mp3*~data=user_id=0,application_id=42~hmac=6ef48b020fa8e20bc20022b598910132339e7ce9457025d44e7fbef19c5ce14e"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a1/0b/58/a10b58c8-7cc1-90bf-c7bd-c71a756e5794/mzaf_14889853388198509188.plus.aac.p.m4a"
     },
     {
       "id": "0ueSj6goFDHHKCADDz56H4",
@@ -98,7 +98,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f1ddb2cd081a6e37be2b57e",
       "durationMs": 284293,
       "spotifyUri": "spotify:track:6gBlkT2u5P7UyZUYH8WnKz",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/a/6/0/ca6827786db7158a50ead1e704892304.mp3?hdnea=exp=1779064940~acl=/api/1/1/c/a/6/0/ca6827786db7158a50ead1e704892304.mp3*~data=user_id=0,application_id=42~hmac=e5192a5b79fde245aedf4600f886e4870ed33e23c69ad465e2e56c4fb14621e2"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cc/37/bc/cc37bce9-e04b-38bc-2839-3a0757cdbfa1/mzaf_14187904242573732506.plus.aac.p.m4a"
     },
     {
       "id": "4lwUIfJPyeKqGhG9KtHtIv",
@@ -198,7 +198,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9a8ddcbc5dc940386f695df",
       "durationMs": 202287,
       "spotifyUri": "spotify:track:7Gk5OrMYaMRtT2JmgJVAfk",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/d/0/49d9768c8113e0409c0e91633ff2b284.mp3?hdnea=exp=1779064940~acl=/api/1/1/4/9/d/0/49d9768c8113e0409c0e91633ff2b284.mp3*~data=user_id=0,application_id=42~hmac=ddc7b2caac59d823b4f738fdba5253f55d28f48735972217e861134e005315db"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/63/a8/6a/63a86af0-406e-ffbd-d6bf-abaf5ee3f299/mzaf_17331163595672983128.plus.aac.p.m4a"
     },
     {
       "id": "0SfcG65T1KKCj5NQffpzQR",
@@ -418,7 +418,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27382ce362511fb3d9dda6578ee",
       "durationMs": 167303,
       "spotifyUri": "spotify:track:4Dvkj6JhhA12EX05fT7y2e",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/3/7/0/9372c78844baf74b7a06bd467151518a.mp3?hdnea=exp=1779064941~acl=/api/1/1/9/3/7/0/9372c78844baf74b7a06bd467151518a.mp3*~data=user_id=0,application_id=42~hmac=dd7031792c11523cd9e55b5471b583284102d50d41706293e81f0b5ef1cf3546"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/10/16/67101606-3869-ca44-6c03-e13d6322cb51/mzaf_1135399237022217274.plus.aac.p.m4a"
     },
     {
       "id": "3c7Ctlw9MKlIQPxRH3fOTt",
@@ -428,7 +428,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273eb2087dcd1eb61f833bdedff",
       "durationMs": 318687,
       "spotifyUri": "spotify:track:3c7Ctlw9MKlIQPxRH3fOTt",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/d/7/0/2d7fb17b138a9939d42a7bdbec8e8669.mp3?hdnea=exp=1779064941~acl=/api/1/1/2/d/7/0/2d7fb17b138a9939d42a7bdbec8e8669.mp3*~data=user_id=0,application_id=42~hmac=fc2277c629d7441a0eaddad487adb3bdb4581f848b7e44e54b166ff344e51057"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c8/6e/f4/c86ef435-d79a-095b-0cb0-49962be38e7a/mzaf_8312750545964829072.plus.aac.p.m4a"
     },
     {
       "id": "46HNZY1i7O6jwTA7Slo2PI",
@@ -438,7 +438,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273d5d34557fa33c03782d3e730",
       "durationMs": 226198,
       "spotifyUri": "spotify:track:46HNZY1i7O6jwTA7Slo2PI",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/7/e/0/67e866451fc88733ddc17e952347084b.mp3?hdnea=exp=1779064942~acl=/api/1/1/6/7/e/0/67e866451fc88733ddc17e952347084b.mp3*~data=user_id=0,application_id=42~hmac=daef53b37049e0832dfd857c4dda1a430daceb29262f2f59b8bac20a18f87dd5"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/9a/20/ac9a20f7-0065-92f0-7fbe-c136bc5ddcf4/mzaf_10985566651421931051.plus.aac.p.m4a"
     },
     {
       "id": "4llK75pXNWZz6KAho2Gp16",
@@ -458,7 +458,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c379325088c2845fe85cd70a",
       "durationMs": 248826,
       "spotifyUri": "spotify:track:1v1oIWf2Xgh54kIWuKsDf6",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/1/c/0/41c491c60964896c1996a6b62b2f34da.mp3?hdnea=exp=1779064942~acl=/api/1/1/4/1/c/0/41c491c60964896c1996a6b62b2f34da.mp3*~data=user_id=0,application_id=42~hmac=3aace58530f37d14a4ba0291b4b4824f985d879c1e2859ba9c55b19d52323402"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/d8/ee/0ed8eef4-a339-72ea-8684-b4097834f6b4/mzaf_7919531831240480096.plus.aac.p.m4a"
     },
     {
       "id": "3AJwUDP919kvQ9QcozQPxg",
@@ -488,7 +488,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1",
       "durationMs": 159245,
       "spotifyUri": "spotify:track:3qhlB30KknSejmIvZZLjOD",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/d/3/0/8d3e2d737a96e28902c7edca8b18e1f7.mp3?hdnea=exp=1779064943~acl=/api/1/1/8/d/3/0/8d3e2d737a96e28902c7edca8b18e1f7.mp3*~data=user_id=0,application_id=42~hmac=fc5870f23db237bec718c71c5646fd81d4df16b433c8eafceb3d11fdcf4579d0"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/df/af/6edfaf58-f901-e9b5-840b-9ac9e37f34b7/mzaf_8465065510938624101.plus.aac.p.m4a"
     },
     {
       "id": "6qn9YLKt13AGvpq9jfO8py",
@@ -498,7 +498,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273bef074de9ca825bddaeb9f46",
       "durationMs": 215226,
       "spotifyUri": "spotify:track:6qn9YLKt13AGvpq9jfO8py",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/5/7/0/f572de0695aa9bcbfd2f04b771cdcf9c.mp3?hdnea=exp=1779064943~acl=/api/1/1/f/5/7/0/f572de0695aa9bcbfd2f04b771cdcf9c.mp3*~data=user_id=0,application_id=42~hmac=5cd8698c7e5e8ff3b153125409ebed387d924cfaad495fcaf553d04b96da2eec"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/4e/9f/814e9f54-e7f8-3ab1-d92e-c7869efbd376/mzaf_9149255715038044431.plus.aac.p.m4a"
     },
     {
       "id": "5nujrmhLynf4yMoMtj8AQF",
@@ -518,7 +518,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a5d31644260279be8d0c46c0",
       "durationMs": 260252,
       "spotifyUri": "spotify:track:30XU4suKzCeoCK9YFzdufg",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/6/2/0/5627de841bea48ee30cd40ed971b4bbb.mp3?hdnea=exp=1779064944~acl=/api/1/1/5/6/2/0/5627de841bea48ee30cd40ed971b4bbb.mp3*~data=user_id=0,application_id=42~hmac=baf8cb7034f0be313e9cfd7039f0281af0a9082989d651985017374950ef3f63"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/d7/a2/5ed7a263-1691-2010-da59-1f4ec093b90a/mzaf_6117100412983656708.plus.aac.p.m4a"
     },
     {
       "id": "5iq4NDi4fznJJRLL1rXNE4",
@@ -548,7 +548,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273376d029f01458b3e714603b1",
       "durationMs": 263440,
       "spotifyUri": "spotify:track:0ZPquQV2aKmDfwPjvMdvRp",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/8/2/0/882d0b1de075343af3b02d638c427bab.mp3?hdnea=exp=1779064945~acl=/api/1/1/8/8/2/0/882d0b1de075343af3b02d638c427bab.mp3*~data=user_id=0,application_id=42~hmac=b8a8ddf146042de8e3893d056bdb7b4b6507d1bd2cf89a100c36aba92ec157c3"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/00/0a/71/000a71e3-5a7b-d634-2cd5-56aac590d577/mzaf_9559078460627869745.plus.aac.p.m4a"
     },
     {
       "id": "2655xYZ347fG2N6OjkoMQ8",
@@ -558,7 +558,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2737ea581f6963d14d477207234",
       "durationMs": 155720,
       "spotifyUri": "spotify:track:2655xYZ347fG2N6OjkoMQ8",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/5/2/0/952b86a45d137b491faab80e17b7d3ee.mp3?hdnea=exp=1779064945~acl=/api/1/1/9/5/2/0/952b86a45d137b491faab80e17b7d3ee.mp3*~data=user_id=0,application_id=42~hmac=194450b5d340169a8c37908b5ffcc552f5d80fd2b36c45bd0f80571d36662b1f"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8e/2f/37/8e2f3723-3a35-0ed3-aafc-94360243393b/mzaf_12862909250863695972.plus.aac.p.m4a"
     },
     {
       "id": "3RiPr603aXAoi4GHyXx0uy",
@@ -568,7 +568,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
       "durationMs": 258266,
       "spotifyUri": "spotify:track:3RiPr603aXAoi4GHyXx0uy",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/1/c/0/91c17f88f9d882d7b015595af8fce617.mp3?hdnea=exp=1779064946~acl=/api/1/1/9/1/c/0/91c17f88f9d882d7b015595af8fce617.mp3*~data=user_id=0,application_id=42~hmac=41e58a6369d945c6e6ad705059ce0d5f60385d23272ca195a7b1afe45aed51fc"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/0f/4c/17/0f4c17b5-4c32-a75b-2121-4f0585f65d8e/mzaf_16455841633683979502.plus.aac.p.m4a"
     },
     {
       "id": "6kTwzV93qpcovlRPmBOXmn",
@@ -578,7 +578,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a03a119d2adb25e05b6042c3",
       "durationMs": 178304,
       "spotifyUri": "spotify:track:6kTwzV93qpcovlRPmBOXmn",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/1/d/0/21dfe7d5a030dbf3d306dd4c02e8a369.mp3?hdnea=exp=1779064946~acl=/api/1/1/2/1/d/0/21dfe7d5a030dbf3d306dd4c02e8a369.mp3*~data=user_id=0,application_id=42~hmac=8c4708584ef351482a6a7cc2a64b3757a9fa461dd15647e66ca8d685b1033b2f"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/a8/1c/c3a81c1f-88f5-c491-e26b-a3c105d5ab30/mzaf_5227181416608291992.plus.aac.p.m4a"
     },
     {
       "id": "3xkHsmpQCBMytMJNiDf3Ii",
@@ -588,7 +588,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273831949037a1db10b87b005fa",
       "durationMs": 180304,
       "spotifyUri": "spotify:track:3xkHsmpQCBMytMJNiDf3Ii",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/7/7/0/a77683e5922a9085fa64295bc083ca42.mp3?hdnea=exp=1779064947~acl=/api/1/1/a/7/7/0/a77683e5922a9085fa64295bc083ca42.mp3*~data=user_id=0,application_id=42~hmac=1e183818a4b252ca0369f093b76efb55062b40a76053aa3b075e613eb28be9a7"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/d5/00/4dd5006f-ee02-c3f1-94db-0ed4b8dd68f1/mzaf_14250561294796027079.plus.aac.p.m4a"
     },
     {
       "id": "2V65y3PX4DkRhy1djlxd9p",
@@ -598,7 +598,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2739cfe80c0c05ce104f7bab18e",
       "durationMs": 212862,
       "spotifyUri": "spotify:track:2V65y3PX4DkRhy1djlxd9p",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/1/8/0/2184ae5bfff6b4af12135560d359abe9.mp3?hdnea=exp=1779064947~acl=/api/1/1/2/1/8/0/2184ae5bfff6b4af12135560d359abe9.mp3*~data=user_id=0,application_id=42~hmac=9a1892ed152b8b10defb85bcae385533d2f07e6320274609c331acfa9f5e5828"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/5e/5f/c1/5e5fc1e6-8905-88d3-f82b-3d4f165e624c/mzaf_10405472283065545792.plus.aac.p.m4a"
     },
     {
       "id": "46eu3SBuFCXWsPT39Yg3tJ",
@@ -608,7 +608,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732b74bf21c7e4f56758610949",
       "durationMs": 364441,
       "spotifyUri": "spotify:track:46eu3SBuFCXWsPT39Yg3tJ",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/a/0/18ab3bef521e9f4373749ef5e9881848.mp3?hdnea=exp=1779064948~acl=/api/1/1/1/8/a/0/18ab3bef521e9f4373749ef5e9881848.mp3*~data=user_id=0,application_id=42~hmac=63a288f5b873776f38ec962a6080956e321099ccbcc0aaaa1306b6a6d89d550a"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/8b/f4/028bf436-7279-0dd0-4b10-adbf2275ab80/mzaf_7743925534490811276.plus.aac.p.m4a"
     },
     {
       "id": "6B8pYtoS3XHrc821hExWf6",
@@ -630,7 +630,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b52c6b9bc4e43d873869699",
       "durationMs": 177000,
       "spotifyUri": "spotify:track:7KXjTSCq5nL1LoYtL7XAwS",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/9/c/0/59c7208affd26e5d728f03dd312dc4cd.mp3?hdnea=exp=1779064949~acl=/api/1/1/5/9/c/0/59c7208affd26e5d728f03dd312dc4cd.mp3*~data=user_id=0,application_id=42~hmac=6c58e9a997b11aed5ad9ed4d02ea963fa77439dccc81a1794361463ce3166a0d"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/30/3f/27/303f27c8-1997-8c57-66b3-b67e7c720779/mzaf_5598476068977070849.plus.aac.p.m4a"
     },
     {
       "id": "2dfAYPYnSbKsRrAnVvP9jU",
@@ -650,7 +650,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273bfcb8d00cee4f8257a6b7fe1",
       "durationMs": 205813,
       "spotifyUri": "spotify:track:7ycWLEP1GsNjVvcjawXz3z",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/c/b/0/5cb6638812fe8dd799a9678481a9a181.mp3?hdnea=exp=1779064950~acl=/api/1/1/5/c/b/0/5cb6638812fe8dd799a9678481a9a181.mp3*~data=user_id=0,application_id=42~hmac=c83837b1d19e7532b34ca05b420c07bfb97279c04f2334ba69706e60adb69d4e"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8f/7b/c9/8f7bc926-4b40-a20c-09c2-6b368d4b5d8b/mzaf_6377849716329792033.plus.aac.p.m4a"
     },
     {
       "id": "24bOiXGnWfwged0gg0LemU",
@@ -660,7 +660,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273174fde890351843eb2eb3f90",
       "durationMs": 167600,
       "spotifyUri": "spotify:track:24bOiXGnWfwged0gg0LemU",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/2/5/0/b255f46d5ab646dcb7e52f14fb18fcdc.mp3?hdnea=exp=1779064951~acl=/api/1/1/b/2/5/0/b255f46d5ab646dcb7e52f14fb18fcdc.mp3*~data=user_id=0,application_id=42~hmac=d0e511737659595fb95c6a4a6ab4224223ac635eef4b33b2b200ec676e0b564a"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7f/25/e8/7f25e8b6-706b-11a7-a5ea-881c2d8c035a/mzaf_4309798110727041181.plus.aac.p.m4a"
     },
     {
       "id": "5c12DVTlsyFbxmysLw0Vll",
@@ -670,7 +670,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c8edbab9129346ddac409b5",
       "durationMs": 244178,
       "spotifyUri": "spotify:track:5c12DVTlsyFbxmysLw0Vll",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/e/5/0/3e5c568da04ea7beba6d2261e816a92e.mp3?hdnea=exp=1779064951~acl=/api/1/1/3/e/5/0/3e5c568da04ea7beba6d2261e816a92e.mp3*~data=user_id=0,application_id=42~hmac=9760fcc66aed313eebdc07eae6752dcb58cf84a04924edf2c91df2804f3e4b05"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8d/0e/28/8d0e280e-0802-fef0-ac7d-56dd8dab3195/mzaf_17285961304882343232.plus.aac.p.m4a"
     },
     {
       "id": "1vt0n3GcAYrsSMue1C6OtC",
@@ -730,7 +730,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd",
       "durationMs": 258986,
       "spotifyUri": "spotify:track:1HNkqx9Ahdgi1Ixy2xkKkL",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/f/e/0/5fe724b9c9f40a3e8d21319a882b034b.mp3?hdnea=exp=1779064952~acl=/api/1/1/5/f/e/0/5fe724b9c9f40a3e8d21319a882b034b.mp3*~data=user_id=0,application_id=42~hmac=b3ba25c1c89bfcdd11c8b9828cc4ce51e1fd8aa2e9c05b108b5331706798e38a"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/4f/6a/114f6ad0-165c-1e3c-8fbd-df4707d7ae26/mzaf_12480083080052535279.plus.aac.p.m4a"
     },
     {
       "id": "5Xak5fmy089t0FYmh3VJiY",
@@ -740,7 +740,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d0e5ab5bd2e234fbcffa3e0",
       "durationMs": 342653,
       "spotifyUri": "spotify:track:5Xak5fmy089t0FYmh3VJiY",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/e/7/0/1e72e5ab241aa9f348bd7888b3a81e01.mp3?hdnea=exp=1779064953~acl=/api/1/1/1/e/7/0/1e72e5ab241aa9f348bd7888b3a81e01.mp3*~data=user_id=0,application_id=42~hmac=d9caa938c82dec424737416c7babbf98709a5353ad5ccc40eeb7aae1b2d406ba"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a7/98/a4/a798a4a2-dc88-1dcc-8afa-c14998734b1c/mzaf_8383293445281438560.plus.aac.p.m4a"
     },
     {
       "id": "5u5aVJKjSMJr4zesMPz7bL",
@@ -750,7 +750,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736e7bb273ff9cb1de1e1d4d0a",
       "durationMs": 268000,
       "spotifyUri": "spotify:track:5u5aVJKjSMJr4zesMPz7bL",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/c/e/0/3ce59d1530d1487c7d8c4eba045e6610.mp3?hdnea=exp=1779064953~acl=/api/1/1/3/c/e/0/3ce59d1530d1487c7d8c4eba045e6610.mp3*~data=user_id=0,application_id=42~hmac=b9365ebc0a7992d4e4b74723519e869c561cadeec3d696e24196076b8b714373"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/1c/54/fb1c540f-e079-6785-4495-49071f0d574b/mzaf_16379998122322831376.plus.aac.p.m4a"
     },
     {
       "id": "2zfitTxt9KPU0XroKQT0ND",
@@ -760,7 +760,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27369047cdfaabdf40efe7f453b",
       "durationMs": 268160,
       "spotifyUri": "spotify:track:2zfitTxt9KPU0XroKQT0ND",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/b/a/0/fbaa9c174e59bc830d95db80b9e83426.mp3?hdnea=exp=1779064954~acl=/api/1/1/f/b/a/0/fbaa9c174e59bc830d95db80b9e83426.mp3*~data=user_id=0,application_id=42~hmac=2399c9e2df8e8146976bceecab42ae4ea55983798a9395c195d6c4862dd89817"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/99/4f/47/994f47f8-4869-367a-ea8d-d451a0f2c053/mzaf_8746227744371264750.plus.aac.p.m4a"
     },
     {
       "id": "0r4GPkgHNBgqSJNLBUpQHh",
@@ -770,7 +770,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273d2e47f761c130b212bd2f3b8",
       "durationMs": 235442,
       "spotifyUri": "spotify:track:0r4GPkgHNBgqSJNLBUpQHh",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/7/3/0/173f5c5b2018bcfd14eea895fcf4350b.mp3?hdnea=exp=1779064954~acl=/api/1/1/1/7/3/0/173f5c5b2018bcfd14eea895fcf4350b.mp3*~data=user_id=0,application_id=42~hmac=91e5fb9f006503eb9ce3822c85919f725325266c749686464c7e191982748de8"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/e3/0c/e8e30c92-bf59-3730-486d-c10279605494/mzaf_8714007933203799305.plus.aac.p.m4a"
     },
     {
       "id": "3AdZFK0JBBnJdJd0rcSFUj",
@@ -810,7 +810,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273dfed999f959177dfc4f33cdc",
       "durationMs": 290146,
       "spotifyUri": "spotify:track:1oAwsWBovWRIp7qLMGPIet",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/d/7/0/bd7a8a10416dbf46796afc06fb9750e2.mp3?hdnea=exp=1779064955~acl=/api/1/1/b/d/7/0/bd7a8a10416dbf46796afc06fb9750e2.mp3*~data=user_id=0,application_id=42~hmac=afcdaf0e69b30179c11c19c3f7a1b8115d7a0b7588847c314c8b6f935b66805d"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/43/b0/b143b0ee-863a-8f7c-3c56-a67110ef1591/mzaf_10438092015459317290.plus.aac.p.m4a"
     },
     {
       "id": "7mDTvYD2ieE4Q28XFziMfJ",
@@ -840,7 +840,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
       "durationMs": 210373,
       "spotifyUri": "spotify:track:6dOtVTDdiauQNBQEDOtlAB",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/e/0/0/5e0fb99f6f1e0f18ab70a4c0d18efa5c.mp3?hdnea=exp=1779064955~acl=/api/1/1/5/e/0/0/5e0fb99f6f1e0f18ab70a4c0d18efa5c.mp3*~data=user_id=0,application_id=42~hmac=684d7e2552151efb7f648761fe954110b50d75a0efb1921622c80829269ce5a1"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/31/d3/3431d34e-847f-5d66-df83-0bce688d997e/mzaf_18106743962423782018.plus.aac.p.m4a"
     },
     {
       "id": "3QaPy1KgI7nu9FJEQUgn6h",
@@ -850,7 +850,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
       "durationMs": 261466,
       "spotifyUri": "spotify:track:3QaPy1KgI7nu9FJEQUgn6h",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/b/6/0/ab6f382533bd12e8905a8141ceaed4e8.mp3?hdnea=exp=1779064956~acl=/api/1/1/a/b/6/0/ab6f382533bd12e8905a8141ceaed4e8.mp3*~data=user_id=0,application_id=42~hmac=0d7c8ded22565c6da94b9f3bc21eb02de0b8e4f036cfcec8a8c2c5c1b9d79a5b"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/c3/e8/dec3e884-7237-9622-718a-12c5f48c5ca2/mzaf_3134455671785145822.plus.aac.p.m4a"
     },
     {
       "id": "4RVwu0g32PAqgUiJoXsdF8",
@@ -860,7 +860,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e",
       "durationMs": 298899,
       "spotifyUri": "spotify:track:4RVwu0g32PAqgUiJoXsdF8",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/c/1/0/ec17b034b8b25f5b9d51d467874316db.mp3?hdnea=exp=1779064957~acl=/api/1/1/e/c/1/0/ec17b034b8b25f5b9d51d467874316db.mp3*~data=user_id=0,application_id=42~hmac=e137ba39b077c1d52f44b12f7f6e203883f9767ccc93c0ceb44bf186f3ed71ce"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/6b/20/8c6b203a-cadc-25b3-1c91-2a8e77210e31/mzaf_9684961884676177661.plus.aac.p.m4a"
     },
     {
       "id": "6wf7Yu7cxBSPrRlWeSeK0Q",
@@ -870,7 +870,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed317ec13d3de9e01fb99c9e",
       "durationMs": 222369,
       "spotifyUri": "spotify:track:6wf7Yu7cxBSPrRlWeSeK0Q",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/0/c/0/80ce163046226da27191c2abf5f5517c.mp3?hdnea=exp=1779064957~acl=/api/1/1/8/0/c/0/80ce163046226da27191c2abf5f5517c.mp3*~data=user_id=0,application_id=42~hmac=0ce74bf33c65a98ff0adcd0ec5f9919b44060d9cc0bc810847abdc1476c4eda5"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/69/77/16697701-c8c4-6d9c-4491-7423e3fde6e8/mzaf_13139724549993369958.plus.aac.p.m4a"
     },
     {
       "id": "2uIX8YMNjGMD7441kqyyNU",
@@ -880,7 +880,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732cafcdd985630d72594ecc49",
       "durationMs": 200560,
       "spotifyUri": "spotify:track:2uIX8YMNjGMD7441kqyyNU",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/2/3/0/0237a3ef9b4e0ed854fd69716497ca54.mp3?hdnea=exp=1779064958~acl=/api/1/1/0/2/3/0/0237a3ef9b4e0ed854fd69716497ca54.mp3*~data=user_id=0,application_id=42~hmac=9bb6f7956ac3e9120be5c70d9df908316d0b160dc012c992112be4b8ff398aac"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/59/2b/d6592b0b-1e7e-4743-b2e4-f2af038fd783/mzaf_7697277787797935735.plus.aac.p.m4a"
     },
     {
       "id": "36nutPAJFggPeddyVWDFm9",
@@ -890,7 +890,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27374067f96089e82e83b3b0d28",
       "durationMs": 207335,
       "spotifyUri": "spotify:track:36nutPAJFggPeddyVWDFm9",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/e/c/0/fec2306059029dade6e16c5249dff093.mp3?hdnea=exp=1779064958~acl=/api/1/1/f/e/c/0/fec2306059029dade6e16c5249dff093.mp3*~data=user_id=0,application_id=42~hmac=23cd1bdb6f11653311da2fdd09cf45d32b62a982f34f9b09bf10be879c9a5579"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/66/4b/5b664b89-09c9-f419-5d34-5b80b2f9d226/mzaf_8655769297813913989.plus.aac.p.m4a"
     },
     {
       "id": "5dTiWDCLrInxfUwhLQZ5Em",
@@ -900,7 +900,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273922eac0b40ae0199b161ab02",
       "durationMs": 186070,
       "spotifyUri": "spotify:track:5dTiWDCLrInxfUwhLQZ5Em",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/c/1/0/ec145398f40b70f4cd58d0115628c6ee.mp3?hdnea=exp=1779064959~acl=/api/1/1/e/c/1/0/ec145398f40b70f4cd58d0115628c6ee.mp3*~data=user_id=0,application_id=42~hmac=10a49d2b6fc5b5cfb466fa825fefae0ef2851c5bc70c587dc0f24763e6148f6d"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/e3/29/55/e3295561-5f06-8559-5e03-bbbb94472d61/mzaf_15894016958462862075.plus.aac.p.m4a"
     },
     {
       "id": "4KSdMPaJC89L9NkPgybCDb",
@@ -910,7 +910,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a87cd65fb820e69697b7ab98",
       "durationMs": 185320,
       "spotifyUri": "spotify:track:4KSdMPaJC89L9NkPgybCDb",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/1/8/0/218665c3781394b95e24619a1a2904cb.mp3?hdnea=exp=1779064960~acl=/api/1/1/2/1/8/0/218665c3781394b95e24619a1a2904cb.mp3*~data=user_id=0,application_id=42~hmac=43868045b80a4166eaf73d5e2dbbf0e273b27c81b20f813fcb82e704832f77cf"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f0/c0/30/f0c030ad-a56d-8d7a-bdca-5189c34851d5/mzaf_6110755581310466190.plus.aac.p.m4a"
     },
     {
       "id": "6mTfOxORhYlpnTvm7VrL6b",
@@ -920,7 +920,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732daa87c238a78a680511da3c",
       "durationMs": 184093,
       "spotifyUri": "spotify:track:6mTfOxORhYlpnTvm7VrL6b",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/9/b/0/d9b056f068d3ba2667aa8de264795ae8.mp3?hdnea=exp=1779064960~acl=/api/1/1/d/9/b/0/d9b056f068d3ba2667aa8de264795ae8.mp3*~data=user_id=0,application_id=42~hmac=0d6fabef66542304b8b5047c9d44411eec197737cfc7c75ce5e0f64d7ea18926"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3c/29/7e/3c297ef7-bd0d-4937-9978-8ed8a7c9b089/mzaf_18172053147474418607.plus.aac.p.m4a"
     },
     {
       "id": "4ZsyrBZX0YMopDJjGpva5j",
@@ -930,7 +930,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736557b915c29554bdfe7dee6a",
       "durationMs": 181869,
       "spotifyUri": "spotify:track:4ZsyrBZX0YMopDJjGpva5j",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/a/0/49a9208e098602a895f7cdb39771c18a.mp3?hdnea=exp=1779064961~acl=/api/1/1/4/9/a/0/49a9208e098602a895f7cdb39771c18a.mp3*~data=user_id=0,application_id=42~hmac=03001805a109a6f60e22b087f386b0545d2f8b65290349e0e9d744de2b1c35a9"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/04/9c/60/049c6001-ad48-5289-83f1-da38fee21087/mzaf_13845170059190153385.plus.aac.p.m4a"
     },
     {
       "id": "5lvvqOEWpUvs2jaFkQTFWJ",
@@ -940,7 +940,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bf2c47f0b7eb441cda9a7c7",
       "durationMs": 394706,
       "spotifyUri": "spotify:track:5lvvqOEWpUvs2jaFkQTFWJ",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/1/e/0/71ecbd84d80b2cd96971a1f910e6f8e1.mp3?hdnea=exp=1779064961~acl=/api/1/1/7/1/e/0/71ecbd84d80b2cd96971a1f910e6f8e1.mp3*~data=user_id=0,application_id=42~hmac=94100ff1a72d4fba5370688dff7774b7a2efaf99705e8b2db1e7a7e24d1fc26d"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/24/c1/9d/24c19daa-cf72-0747-5ed6-bae8c2798776/mzaf_2159706272834333376.plus.aac.p.m4a"
     },
     {
       "id": "04h9o3gtRD7fvGafF7ukJj",
@@ -950,7 +950,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273052bd0ef86fa73c77263bfbe",
       "durationMs": 243183,
       "spotifyUri": "spotify:track:04h9o3gtRD7fvGafF7ukJj",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/2/9/0/92996b80ea11a5407390ee864116b91c.mp3?hdnea=exp=1779064962~acl=/api/1/1/9/2/9/0/92996b80ea11a5407390ee864116b91c.mp3*~data=user_id=0,application_id=42~hmac=2e5f96a91e0bf7239991cefdc135b7db8e1347716d40e7e8b60422513d0ccd0b"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0f/93/22/0f932222-8273-c2bb-3bf4-fb6acef7f51d/mzaf_14025769942788128527.plus.aac.p.m4a"
     },
     {
       "id": "2TI5GBkbrrFtZRM5v1heeb",
@@ -960,7 +960,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732253c41bfeac02997def39e2",
       "durationMs": 184000,
       "spotifyUri": "spotify:track:2TI5GBkbrrFtZRM5v1heeb",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/a/2/0/ca2e5eaa3ac96c7f18e6d20873c8c7cf.mp3?hdnea=exp=1779064962~acl=/api/1/1/c/a/2/0/ca2e5eaa3ac96c7f18e6d20873c8c7cf.mp3*~data=user_id=0,application_id=42~hmac=9a8f65cb817efae6c76d3f8be337acf713076675f209ff96e5e74442ad98859b"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a7/9a/f3/a79af382-402d-da63-06ba-0c1ff2d3e1ed/mzaf_17327904997651230068.plus.aac.p.m4a"
     },
     {
       "id": "52NFgCjGw7oZKIBABYKLPG",
@@ -970,7 +970,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9c68c9c90f266a0f000bca1",
       "durationMs": 292906,
       "spotifyUri": "spotify:track:52NFgCjGw7oZKIBABYKLPG",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/f/0/0/1f0c8f0eea77c9a2d8b58d408e238c2e.mp3?hdnea=exp=1779064963~acl=/api/1/1/1/f/0/0/1f0c8f0eea77c9a2d8b58d408e238c2e.mp3*~data=user_id=0,application_id=42~hmac=916f965ac37d0d7997547c45489a7ed7cec56205ff41ba626b330da0163b7f29"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/07/6c/80076ca8-3dce-8f67-db36-5eb89eab513e/mzaf_16190113110589242285.plus.aac.p.m4a"
     },
     {
       "id": "2vTDA7mOYWtuduCylWfiFd",
@@ -980,7 +980,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273dbf19f504476a6d8fcacb604",
       "durationMs": 242760,
       "spotifyUri": "spotify:track:2vTDA7mOYWtuduCylWfiFd",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/6/c/0/26c0ce1352837688a2ed971e956885a4.mp3?hdnea=exp=1779064964~acl=/api/1/1/2/6/c/0/26c0ce1352837688a2ed971e956885a4.mp3*~data=user_id=0,application_id=42~hmac=c6ad2b688510969949e67f9e31865a710298ecf17b97ea1309cca57741240f62"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/39/82/65/398265f5-4bff-2ac5-d96c-d032fb7b9680/mzaf_15865753877638350283.plus.aac.p.m4a"
     },
     {
       "id": "44A0o4jA8F2ZF03Zacwlwx",
@@ -990,7 +990,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738ea92a85c492af8a38750549",
       "durationMs": 160853,
       "spotifyUri": "spotify:track:44A0o4jA8F2ZF03Zacwlwx",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/4/8/0/94854c0675738410cfe80a187106e3ec.mp3?hdnea=exp=1779064964~acl=/api/1/1/9/4/8/0/94854c0675738410cfe80a187106e3ec.mp3*~data=user_id=0,application_id=42~hmac=799d7eb98598d8993d0f3956de4df17a30759ea2063d673cf199d370d07d5055"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f8/2d/7c/f82d7ce9-5b32-5eb0-3c7e-44cf6d5f6d39/mzaf_1802193986144247931.plus.aac.p.m4a"
     },
     {
       "id": "4IhTXiZLKATmwhMZIb1GQN",
@@ -1000,7 +1000,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273963d93a7d49b6a45facb8f78",
       "durationMs": 193749,
       "spotifyUri": "spotify:track:4IhTXiZLKATmwhMZIb1GQN",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/4/c/0/24cee18b35c79238275d7769bad2b907.mp3?hdnea=exp=1779064965~acl=/api/1/1/2/4/c/0/24cee18b35c79238275d7769bad2b907.mp3*~data=user_id=0,application_id=42~hmac=e95a1ae5364476cacac3ca6ca1d51732e63cefc00358395b6f503ba46e71ff8f"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b7/99/ee/b799ee4d-01d8-28d1-f7de-cacd02ac96d5/mzaf_12921274692097978432.plus.aac.p.m4a"
     },
     {
       "id": "1EQ8sBQ7Abv9DvNBzhXAcv",
@@ -1010,7 +1010,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273e6ce946387141316ba9aa975",
       "durationMs": 343813,
       "spotifyUri": "spotify:track:1EQ8sBQ7Abv9DvNBzhXAcv",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/8/8/0/9888bb29b84eea6c493b574821ed7d23.mp3?hdnea=exp=1779064965~acl=/api/1/1/9/8/8/0/9888bb29b84eea6c493b574821ed7d23.mp3*~data=user_id=0,application_id=42~hmac=385eb18ffa4f63da643fb8c95ea330c86a477a8853d1ddad76601f02c843b011"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/33/b0/72/33b07211-4622-1571-a4ac-6a0b518fbfdf/mzaf_6201594639962629608.plus.aac.p.m4a"
     },
     {
       "id": "5mVYvilgRiCvztnnjGW0Ef",
@@ -1020,7 +1020,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273d8194501b0d314d29d7fd53e",
       "durationMs": 196493,
       "spotifyUri": "spotify:track:5mVYvilgRiCvztnnjGW0Ef",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/a/c/0/2aced0e76ffa770f7d3cad280046b2a5.mp3?hdnea=exp=1779064966~acl=/api/1/1/2/a/c/0/2aced0e76ffa770f7d3cad280046b2a5.mp3*~data=user_id=0,application_id=42~hmac=c5830d3ab3d079ed54d45527600e8242b6445a1b0efbc9918e7cbc129b6e7e15"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/c8/fd/06c8fd88-fde3-afca-5907-20bf8e302792/mzaf_13117642468855350821.plus.aac.p.m4a"
     },
     {
       "id": "46s6p0tsgRBfzWriIg3w9o",
@@ -1030,7 +1030,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc6853bcee42e6ccbb8cc89d",
       "durationMs": 308800,
       "spotifyUri": "spotify:track:46s6p0tsgRBfzWriIg3w9o",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/a/d/0/3ad7444b38c2a48fabebe1f34f6247e4.mp3?hdnea=exp=1779064966~acl=/api/1/1/3/a/d/0/3ad7444b38c2a48fabebe1f34f6247e4.mp3*~data=user_id=0,application_id=42~hmac=03c38fa819fbc997174a41e314230204df106155ed18aafa19496aa4ea18a9bf"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e4/26/b1/e426b10c-aa95-f759-0cdc-281c8b07bed1/mzaf_7719129987788785630.plus.aac.p.m4a"
     }
   ],
   "ansiedade": [
@@ -1042,7 +1042,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732e3049fef96abebf336b7366",
       "durationMs": 202533,
       "spotifyUri": "spotify:track:7wMq5n8mYSKlQIGECKUgTX",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/5/a/0/25ac28a34347f227645db2390836ee41.mp3?hdnea=exp=1779064967~acl=/api/1/1/2/5/a/0/25ac28a34347f227645db2390836ee41.mp3*~data=user_id=0,application_id=42~hmac=3429833fdba7c621cad1e27bd7d48a11a38976359d4d439feb781a6bbc38b388"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7e/13/22/7e1322c7-980d-160f-8c68-dc9b9863a559/mzaf_1440735671923738990.plus.aac.p.m4a"
     },
     {
       "id": "7F2HkBsshPlY2jDFbHpUvQ",
@@ -1052,7 +1052,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ce11955deaf444871a90301",
       "durationMs": 223520,
       "spotifyUri": "spotify:track:7F2HkBsshPlY2jDFbHpUvQ",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/f/2/0/0f28dbb32b4a89bc038082151b651637.mp3?hdnea=exp=1779064967~acl=/api/1/1/0/f/2/0/0f28dbb32b4a89bc038082151b651637.mp3*~data=user_id=0,application_id=42~hmac=4dc8b1cb8e64cabad123e42f65b3405ec9539d57f9ce2bd58a15b5e4c532f902"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/e9/59/f3e95909-edb1-bbd9-51d8-3844a1d68c5e/mzaf_3850547796241930386.plus.aac.p.m4a"
     },
     {
       "id": "3RiPr603aXAoi4GHyXx0uy",
@@ -1062,7 +1062,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
       "durationMs": 258266,
       "spotifyUri": "spotify:track:3RiPr603aXAoi4GHyXx0uy",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/1/c/0/91c17f88f9d882d7b015595af8fce617.mp3?hdnea=exp=1779064968~acl=/api/1/1/9/1/c/0/91c17f88f9d882d7b015595af8fce617.mp3*~data=user_id=0,application_id=42~hmac=78f649c3171f431d8a0d7f943d03f287e5db6fcf58319b9fd2751a94db9b75b7"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/0f/4c/17/0f4c17b5-4c32-a75b-2121-4f0585f65d8e/mzaf_16455841633683979502.plus.aac.p.m4a"
     },
     {
       "id": "2J2Z1SkXYghSajLibnQHOa",
@@ -1072,7 +1072,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b9bea8700ca3c305eb9569a3",
       "durationMs": 217746,
       "spotifyUri": "spotify:track:2J2Z1SkXYghSajLibnQHOa",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/6/f/0/b6fd78bfc5ececa8a18b07f54cbfb6f9.mp3?hdnea=exp=1779064968~acl=/api/1/1/b/6/f/0/b6fd78bfc5ececa8a18b07f54cbfb6f9.mp3*~data=user_id=0,application_id=42~hmac=87f0f166988ab40e8db61a84eff9e957966beca7e15664d7de30afb32842a7ab"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/dd/6a/bbdd6a92-b322-1c35-8dc7-8eb7d84f72b8/mzaf_14355345747730153074.plus.aac.p.m4a"
     },
     {
       "id": "72gv4zhNvRVdQA0eOenCal",
@@ -1082,7 +1082,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c66e925d8fe4c92ebfb49ed",
       "durationMs": 212733,
       "spotifyUri": "spotify:track:72gv4zhNvRVdQA0eOenCal",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/6/6/0/6661ab10a2757feb0481adfd8091d091.mp3?hdnea=exp=1779064969~acl=/api/1/1/6/6/6/0/6661ab10a2757feb0481adfd8091d091.mp3*~data=user_id=0,application_id=42~hmac=8f1bc691ee98521fdc8ae3bc9c2e1631a054a2e4aad0854cf2118608706977ab"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/23/e9/3023e937-5b5d-b99f-30d8-bd985d8e1240/mzaf_8848386918969241098.plus.aac.p.m4a"
     },
     {
       "id": "0WtM2NBVQNNJLh6scP13H8",
@@ -1102,7 +1102,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27319a88dd5c7118e87d7b1619e",
       "durationMs": 247632,
       "spotifyUri": "spotify:track:2Foc5Q5nqNiosCNqttzHof",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/b/f/0/1bf80a82992903ff685ba1b7275223f8.mp3?hdnea=exp=1779064971~acl=/api/1/1/1/b/f/0/1bf80a82992903ff685ba1b7275223f8.mp3*~data=user_id=0,application_id=42~hmac=579c28834ff3a8de15107c09f2965bd57784b45aa02d00aeec663297c0823b0d"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/20/12/542012d2-4347-9c36-3ce3-23b0753ed231/mzaf_673767023530918741.plus.aac.p.m4a"
     },
     {
       "id": "6LUOMjoORvAkdhBYvESO46",
@@ -1112,7 +1112,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27309fc2936525fc269032451c9",
       "durationMs": 217906,
       "spotifyUri": "spotify:track:6LUOMjoORvAkdhBYvESO46",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/f/a/0/4fa53cb60887d29143d4dba6d226c07b.mp3?hdnea=exp=1779064971~acl=/api/1/1/4/f/a/0/4fa53cb60887d29143d4dba6d226c07b.mp3*~data=user_id=0,application_id=42~hmac=72c15003b6da46da625708d89f41ea6daa383d51f9cda31e377dc119acea1bc8"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/24/28/5d2428b9-3c7d-9c23-673b-e527d3038910/mzaf_9005521016866616492.plus.aac.p.m4a"
     },
     {
       "id": "2plbrEY59IikOBgBGLjaoe",
@@ -1122,7 +1122,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27382ea2e9e1858aa012c57cd45",
       "durationMs": 251667,
       "spotifyUri": "spotify:track:2plbrEY59IikOBgBGLjaoe",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/5/9/0/459c235b39ef8badd04c5ef181f58c24.mp3?hdnea=exp=1779064972~acl=/api/1/1/4/5/9/0/459c235b39ef8badd04c5ef181f58c24.mp3*~data=user_id=0,application_id=42~hmac=0b50daa6d56a20e88aa7d6089ebb97ca048a2bd334642ca617435a6bb1a22af1"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/d1/46/e9d14699-9505-493e-cd27-a501095c81ff/mzaf_7283388936457278756.plus.aac.p.m4a"
     },
     {
       "id": "2V65y3PX4DkRhy1djlxd9p",
@@ -1132,7 +1132,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2739cfe80c0c05ce104f7bab18e",
       "durationMs": 212862,
       "spotifyUri": "spotify:track:2V65y3PX4DkRhy1djlxd9p",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/1/8/0/2184ae5bfff6b4af12135560d359abe9.mp3?hdnea=exp=1779064972~acl=/api/1/1/2/1/8/0/2184ae5bfff6b4af12135560d359abe9.mp3*~data=user_id=0,application_id=42~hmac=cb23bedc1b1104b37517eb4ecfc5c59bf214ba71c986f6220d4b63c6ae4f400f"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/5e/5f/c1/5e5fc1e6-8905-88d3-f82b-3d4f165e624c/mzaf_10405472283065545792.plus.aac.p.m4a"
     },
     {
       "id": "5lF0pHbsJ0QqyIrLweHJPW",
@@ -1142,7 +1142,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a8f674745d4e6757a9b35ba0",
       "durationMs": 231213,
       "spotifyUri": "spotify:track:5lF0pHbsJ0QqyIrLweHJPW",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/4/5/0/a45eed77b2e6550800dd3c124ae9b1e2.mp3?hdnea=exp=1779064973~acl=/api/1/1/a/4/5/0/a45eed77b2e6550800dd3c124ae9b1e2.mp3*~data=user_id=0,application_id=42~hmac=5973c83a5dc332d31ed52a5b5af4a061f6dc965c5baba97b86aa14093e093d01"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cc/a0/54/cca054fd-c4d7-cbd2-353d-de6c0ace704f/mzaf_6940835074930981852.plus.aac.p.m4a"
     },
     {
       "id": "23L5CiUhw2jV1OIMwthR3S",
@@ -1152,7 +1152,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3d48927d5a423bdbdb20166",
       "durationMs": 198815,
       "spotifyUri": "spotify:track:23L5CiUhw2jV1OIMwthR3S",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/9/f/0/e9f810d14e97f241541cc7fc40cb695f.mp3?hdnea=exp=1779064973~acl=/api/1/1/e/9/f/0/e9f810d14e97f241541cc7fc40cb695f.mp3*~data=user_id=0,application_id=42~hmac=07deef26288684d79544a5cbf636079b26bbb622bdd3f3c3b17e79b8a7f6a3a5"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/04/5b/65/045b6517-c917-9f02-d559-d01aeceed6be/mzaf_8202124789937422466.plus.aac.p.m4a"
     },
     {
       "id": "0YywjDvFudcaHG74NuWISy",
@@ -1162,7 +1162,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2733661c01b54e181d01bd439a1",
       "durationMs": 256236,
       "spotifyUri": "spotify:track:0YywjDvFudcaHG74NuWISy",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/f/5/0/df5a0ede900e147290812838f45c7b87.mp3?hdnea=exp=1779064974~acl=/api/1/1/d/f/5/0/df5a0ede900e147290812838f45c7b87.mp3*~data=user_id=0,application_id=42~hmac=d88c503676568b8d7d4785d63f861997ca2d83ca06fd3250af214ed2e57ad86e"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/79/eb/8c/79eb8c32-d380-241d-0d49-5ab964420d58/mzaf_13447128584309359245.plus.aac.p.m4a"
     },
     {
       "id": "0gzqZ9d1jIKo9psEIthwXe",
@@ -1172,7 +1172,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27338fa0dfe55b1ff2e8c962bae",
       "durationMs": 248400,
       "spotifyUri": "spotify:track:0gzqZ9d1jIKo9psEIthwXe",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/2/8/0/c28e0c5b680cf4d7628bbd9ad62eb91d.mp3?hdnea=exp=1779064974~acl=/api/1/1/c/2/8/0/c28e0c5b680cf4d7628bbd9ad62eb91d.mp3*~data=user_id=0,application_id=42~hmac=8c69dcbe4856395ea95b39667bb357acf68ab6853c32de7745eca9578f87c5c7"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/ec/84/29ec846c-769f-91f2-5e28-768fa9de514b/mzaf_17613297004823866094.plus.aac.p.m4a"
     },
     {
       "id": "7xoUc6faLbCqZO6fQEYprd",
@@ -1192,7 +1192,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273e14f11f796cef9f9a82691a7",
       "durationMs": 247426,
       "spotifyUri": "spotify:track:0nrRP2bk19rLc0orkWPQk2",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/3/a/0/93a023759118ca2f5bc17c7c0c07ba1b.mp3?hdnea=exp=1779064975~acl=/api/1/1/9/3/a/0/93a023759118ca2f5bc17c7c0c07ba1b.mp3*~data=user_id=0,application_id=42~hmac=f9f5b8b5c9268aa65e648982025abb468ee0af3bffe6dca5979ee2464f5e4de1"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/1e/60/681e601f-e1f2-4ebb-37de-adf00bdf57b6/mzaf_8266263075137964740.plus.aac.p.m4a"
     },
     {
       "id": "1rqqCSm0Qe4I9rUvWncaom",
@@ -1202,7 +1202,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5148520a59be191eea16989",
       "durationMs": 190946,
       "spotifyUri": "spotify:track:1rqqCSm0Qe4I9rUvWncaom",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/2/0/cd2fa89d7f449903bbbef96796fe736f.mp3?hdnea=exp=1779064975~acl=/api/1/1/c/d/2/0/cd2fa89d7f449903bbbef96796fe736f.mp3*~data=user_id=0,application_id=42~hmac=118b171f929bfeb3ad4ae92848cf1809f034b41d5e01848f0596bf5edd3b823f"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/2/0/cd2fa89d7f449903bbbef96796fe736f.mp3?hdnea=exp=1779068546~acl=/api/1/1/c/d/2/0/cd2fa89d7f449903bbbef96796fe736f.mp3*~data=user_id=0,application_id=42~hmac=2e2fa96acea1837053c41606d0e8d19847c5d57d8285444df99d064c75e36901"
     },
     {
       "id": "73CMRj62VK8nUS4ezD2wvi",
@@ -1212,7 +1212,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2737e7e5dd9d1ab19fcded8a17f",
       "durationMs": 242973,
       "spotifyUri": "spotify:track:73CMRj62VK8nUS4ezD2wvi",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/9/d/0/89d33940ac8fd32e481a6f7ac7fa891a.mp3?hdnea=exp=1779064976~acl=/api/1/1/8/9/d/0/89d33940ac8fd32e481a6f7ac7fa891a.mp3*~data=user_id=0,application_id=42~hmac=67ce09db60d422abbd41fbe824d8b9e4cdd88d3bab20485f57b54c3ccdf1be2a"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/9/d/0/89d33940ac8fd32e481a6f7ac7fa891a.mp3?hdnea=exp=1779068547~acl=/api/1/1/8/9/d/0/89d33940ac8fd32e481a6f7ac7fa891a.mp3*~data=user_id=0,application_id=42~hmac=82f49756cd767b645ebe4b769fcbb61ffb0b0b9adcd12595ab3155d0196da622"
     },
     {
       "id": "1nInOsHbtotAmEOQhtvnzP",
@@ -1222,7 +1222,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273af384269742c6b04308c1be8",
       "durationMs": 221946,
       "spotifyUri": "spotify:track:1nInOsHbtotAmEOQhtvnzP",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/e/0/a8e3bd435b205b1424653c9ebc68b3f5.mp3?hdnea=exp=1779064976~acl=/api/1/1/a/8/e/0/a8e3bd435b205b1424653c9ebc68b3f5.mp3*~data=user_id=0,application_id=42~hmac=a3d03e26f769481141644b274057a15d6c2bf2bd8c4dabfcd21b9de34bc4a830"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/e/0/a8e3bd435b205b1424653c9ebc68b3f5.mp3?hdnea=exp=1779068548~acl=/api/1/1/a/8/e/0/a8e3bd435b205b1424653c9ebc68b3f5.mp3*~data=user_id=0,application_id=42~hmac=b638cab611b1205185035c0e46afc899ae8789e8c80fafabdf550ec81e72dc3e"
     },
     {
       "id": "55Am8neGJkdj2ADaM3aw5H",
@@ -1232,7 +1232,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738d34e1fc21441df43571faaa",
       "durationMs": 208864,
       "spotifyUri": "spotify:track:55Am8neGJkdj2ADaM3aw5H",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/d/0/e2de05a4d45041ff075278c987efdd09.mp3?hdnea=exp=1779064977~acl=/api/1/1/e/2/d/0/e2de05a4d45041ff075278c987efdd09.mp3*~data=user_id=0,application_id=42~hmac=612ae91999e953d4dd6742111f32c25caa51fed131b579356377bc620e53853a"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/d/0/e2de05a4d45041ff075278c987efdd09.mp3?hdnea=exp=1779068549~acl=/api/1/1/e/2/d/0/e2de05a4d45041ff075278c987efdd09.mp3*~data=user_id=0,application_id=42~hmac=0a9c5a08d7c988a8438955398c08b2b2eb635b15fc6dd531d643379a0a5ffba2"
     },
     {
       "id": "1jF7IL57ayN4Ity3jQqGu0",
@@ -1242,7 +1242,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27324a1ac503b55e6eef9a7bb8c",
       "durationMs": 247911,
       "spotifyUri": "spotify:track:1jF7IL57ayN4Ity3jQqGu0",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/2/7/0/c275443df7f61b02f097bd99757b4415.mp3?hdnea=exp=1779064978~acl=/api/1/1/c/2/7/0/c275443df7f61b02f097bd99757b4415.mp3*~data=user_id=0,application_id=42~hmac=c90784bcf126b089d30e6edfbe4a055053cb8228fd58accd9abe7d5613a5f7a3"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/2/7/0/c275443df7f61b02f097bd99757b4415.mp3?hdnea=exp=1779068550~acl=/api/1/1/c/2/7/0/c275443df7f61b02f097bd99757b4415.mp3*~data=user_id=0,application_id=42~hmac=0da04cb67c2325a1710f273c13bd62ac142638003b816f7fa2e15a7f5b0dc42c"
     },
     {
       "id": "44p0C72gL2FbjWbzkUFfTf",
@@ -1252,7 +1252,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b9bea8700ca3c305eb9569a3",
       "durationMs": 252440,
       "spotifyUri": "spotify:track:44p0C72gL2FbjWbzkUFfTf",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/6/0/e26c75f5383fea6a9324f602ba5930a1.mp3?hdnea=exp=1779064978~acl=/api/1/1/e/2/6/0/e26c75f5383fea6a9324f602ba5930a1.mp3*~data=user_id=0,application_id=42~hmac=c1f3eafd24cf696a4e5fc5d27a219ab3b75c2950bee1b390d7d6908368d9aced"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/6/0/e26c75f5383fea6a9324f602ba5930a1.mp3?hdnea=exp=1779068551~acl=/api/1/1/e/2/6/0/e26c75f5383fea6a9324f602ba5930a1.mp3*~data=user_id=0,application_id=42~hmac=c0bcc0a1f95640556d195446061924ae0c628812ae9d8bb903cf31d1ad998b4d"
     },
     {
       "id": "27tNWlhdAryQY04Gb2ZhUI",
@@ -1272,7 +1272,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27359d2079e141301ab89b6cbc5",
       "durationMs": 245466,
       "spotifyUri": "spotify:track:37sINbJZcFdHFAsVNsPq1i",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/8/d/0/28dd48d49ffb859d7d0505450247556d.mp3?hdnea=exp=1779064979~acl=/api/1/1/2/8/d/0/28dd48d49ffb859d7d0505450247556d.mp3*~data=user_id=0,application_id=42~hmac=da696370a2dd0fcfdbba09a72cb82097520f096d7f31466108e7390ff0024b7c"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/8/d/0/28dd48d49ffb859d7d0505450247556d.mp3?hdnea=exp=1779068552~acl=/api/1/1/2/8/d/0/28dd48d49ffb859d7d0505450247556d.mp3*~data=user_id=0,application_id=42~hmac=189299843393e2d53e5d027620f4db0c7d191dd8093bc475ebd4a4ff744e8804"
     },
     {
       "id": "2Kz5qeXifBxE0zmuoVchlM",
@@ -1282,7 +1282,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cf816391f4d0c49d481ee1b",
       "durationMs": 252106,
       "spotifyUri": "spotify:track:2Kz5qeXifBxE0zmuoVchlM",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/b/1/0/6b1e9a7d236f3c79e250b4fe5f19fc1f.mp3?hdnea=exp=1779064979~acl=/api/1/1/6/b/1/0/6b1e9a7d236f3c79e250b4fe5f19fc1f.mp3*~data=user_id=0,application_id=42~hmac=f0e5ac2f93692d359b7c781393c8c934eaa0bfceefbf6cad99ceefae92c9e08d"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/b/1/0/6b1e9a7d236f3c79e250b4fe5f19fc1f.mp3?hdnea=exp=1779068553~acl=/api/1/1/6/b/1/0/6b1e9a7d236f3c79e250b4fe5f19fc1f.mp3*~data=user_id=0,application_id=42~hmac=17e66ac1892b08ef0e82779b4cdf095ab0f8fa5faa926378bdbf1f0bf4c2bc7b"
     },
     {
       "id": "7ewI4ZKxRXrkESHB8eGBnO",
@@ -1292,7 +1292,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27305d081cbdc2f67d37a364d63",
       "durationMs": 249382,
       "spotifyUri": "spotify:track:7ewI4ZKxRXrkESHB8eGBnO",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/8/1/0/c81bb3933413758f95aa4008a1e9e0b9.mp3?hdnea=exp=1779064980~acl=/api/1/1/c/8/1/0/c81bb3933413758f95aa4008a1e9e0b9.mp3*~data=user_id=0,application_id=42~hmac=1e87daee1d6f9e144907ab28c2afe19f8d883667433d7d9e5de3dc540a7c4c4f"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/8/1/0/c81bb3933413758f95aa4008a1e9e0b9.mp3?hdnea=exp=1779068554~acl=/api/1/1/c/8/1/0/c81bb3933413758f95aa4008a1e9e0b9.mp3*~data=user_id=0,application_id=42~hmac=fa282008e8d8a3cd478a19d0899347f0adf918c89fbb6e0092b9bda869fdbbcb"
     },
     {
       "id": "5yDL13y5giogKs2fSNf7sj",
@@ -1302,7 +1302,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27317a142a78128fb7c54ab9aa4",
       "durationMs": 197935,
       "spotifyUri": "spotify:track:5yDL13y5giogKs2fSNf7sj",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/a/1/0/1a1c066b74fa44ee3eb4aacbd30f7305.mp3?hdnea=exp=1779064980~acl=/api/1/1/1/a/1/0/1a1c066b74fa44ee3eb4aacbd30f7305.mp3*~data=user_id=0,application_id=42~hmac=39409c76e9e0aeb70b33445aa16dfba1178547c117ebd332d57a8ea3139d7cd2"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/a/1/0/1a1c066b74fa44ee3eb4aacbd30f7305.mp3?hdnea=exp=1779068555~acl=/api/1/1/1/a/1/0/1a1c066b74fa44ee3eb4aacbd30f7305.mp3*~data=user_id=0,application_id=42~hmac=d057d760561d1166dc46bf70af44c192ba941329ff8f36fd70a1aa1a5e7cbd32"
     },
     {
       "id": "244AvzGQ4Ksa5637JQu5Gy",
@@ -1312,7 +1312,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273003f81b1f4246362638e682d",
       "durationMs": 168666,
       "spotifyUri": "spotify:track:244AvzGQ4Ksa5637JQu5Gy",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/1/4/0/4148a224cf4e31aa852de395e485d734.mp3?hdnea=exp=1779064981~acl=/api/1/1/4/1/4/0/4148a224cf4e31aa852de395e485d734.mp3*~data=user_id=0,application_id=42~hmac=9049b3aba5217396f221b9d5799277920a916c72c0448f3a30e48386486ba628"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/1/4/0/4148a224cf4e31aa852de395e485d734.mp3?hdnea=exp=1779068556~acl=/api/1/1/4/1/4/0/4148a224cf4e31aa852de395e485d734.mp3*~data=user_id=0,application_id=42~hmac=5eb5e22b6ed88b4c87486202bdf86aac179c95d6abb9b17f9e89a3e6f1ea8e14"
     },
     {
       "id": "57F80059mWaWFvWG3tBTbO",
@@ -1322,7 +1322,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a5d31644260279be8d0c46c0",
       "durationMs": 320546,
       "spotifyUri": "spotify:track:57F80059mWaWFvWG3tBTbO",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/6/0/0/a60acc9cfcf619e9f8a64faa6a284821.mp3?hdnea=exp=1779064982~acl=/api/1/1/a/6/0/0/a60acc9cfcf619e9f8a64faa6a284821.mp3*~data=user_id=0,application_id=42~hmac=0e4db9df80a6c5d5550031b67bb421b3ae3c38c8d89ee0291d6f1461982b436b"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/6/0/0/a60acc9cfcf619e9f8a64faa6a284821.mp3?hdnea=exp=1779068557~acl=/api/1/1/a/6/0/0/a60acc9cfcf619e9f8a64faa6a284821.mp3*~data=user_id=0,application_id=42~hmac=2389a3c3233055d87d72718d693a8d820fd2497c3d1dabee205a9456d63b66e1"
     },
     {
       "id": "1CwNogTShsnsn1C8UhRmYX",
@@ -1332,7 +1332,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27356df425432bdb3251281affd",
       "durationMs": 203474,
       "spotifyUri": "spotify:track:1CwNogTShsnsn1C8UhRmYX",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/8/0/a88e4ac2ef19f18787eaf038415fb7b7.mp3?hdnea=exp=1779064982~acl=/api/1/1/a/8/8/0/a88e4ac2ef19f18787eaf038415fb7b7.mp3*~data=user_id=0,application_id=42~hmac=ceb434e07d94e8288999bd1617227b3c5fe3b6780d916bc4138ef67c91ba8e2f"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/8/0/a88e4ac2ef19f18787eaf038415fb7b7.mp3?hdnea=exp=1779068557~acl=/api/1/1/a/8/8/0/a88e4ac2ef19f18787eaf038415fb7b7.mp3*~data=user_id=0,application_id=42~hmac=bf25a35c86938794b912af2be05655a7204900d87371be79f19737ae48cfbdf4"
     },
     {
       "id": "6nek1Nin9q48AVZcWs9e9D",
@@ -1342,7 +1342,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273de0cd11d7b31c3bd1fd5983d",
       "durationMs": 278719,
       "spotifyUri": "spotify:track:6nek1Nin9q48AVZcWs9e9D",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/1/6/0/3168a7df5abaacb366e2f88935fdbd99.mp3?hdnea=exp=1779064983~acl=/api/1/1/3/1/6/0/3168a7df5abaacb366e2f88935fdbd99.mp3*~data=user_id=0,application_id=42~hmac=31824e877969f3277f49a8fe06265f685c89bd73bdea845163fe3ad33154bd35"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/1/6/0/3168a7df5abaacb366e2f88935fdbd99.mp3?hdnea=exp=1779068559~acl=/api/1/1/3/1/6/0/3168a7df5abaacb366e2f88935fdbd99.mp3*~data=user_id=0,application_id=42~hmac=ac1c2cf17bf48e49a96438519e0cb68555590e048392536bae2e75afc10156db"
     },
     {
       "id": "2goLsvvODILDzeeiT4dAoR",
@@ -1352,7 +1352,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27306ce0d1f846c525e847d60e7",
       "durationMs": 239026,
       "spotifyUri": "spotify:track:2goLsvvODILDzeeiT4dAoR",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/f/e/0/cfe5600eb3b0f8b50ff351ae46129e07.mp3?hdnea=exp=1779064983~acl=/api/1/1/c/f/e/0/cfe5600eb3b0f8b50ff351ae46129e07.mp3*~data=user_id=0,application_id=42~hmac=82c52b5f4e510020190566eeba910ea4c4f73baad6e49d006ee1277eb47bcc96"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/f/e/0/cfe5600eb3b0f8b50ff351ae46129e07.mp3?hdnea=exp=1779068560~acl=/api/1/1/c/f/e/0/cfe5600eb3b0f8b50ff351ae46129e07.mp3*~data=user_id=0,application_id=42~hmac=73ddbee450c92aec2953e7228ca416310fe9e363d259d16892d7bfb09cfbf1dd"
     },
     {
       "id": "5p9XWUdvbUzmPCukOmwoU3",
@@ -1362,7 +1362,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273183730e8038fa632b2c227da",
       "durationMs": 201706,
       "spotifyUri": "spotify:track:5p9XWUdvbUzmPCukOmwoU3",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/8/0/0/d80f3db2915d786e8ea6fa4046125c44.mp3?hdnea=exp=1779064984~acl=/api/1/1/d/8/0/0/d80f3db2915d786e8ea6fa4046125c44.mp3*~data=user_id=0,application_id=42~hmac=587b5b708a44ea93fec18deb3383a95cc563b842a169d4b6d298adcd81b75a73"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/8/0/0/d80f3db2915d786e8ea6fa4046125c44.mp3?hdnea=exp=1779068560~acl=/api/1/1/d/8/0/0/d80f3db2915d786e8ea6fa4046125c44.mp3*~data=user_id=0,application_id=42~hmac=3f8f0961d5a9ecbe98e2a8dd5542bdc7f35b1b7688b100b26e13bc9b4598c5aa"
     },
     {
       "id": "4E3afPSY5fUEelQS9ppL0e",
@@ -1372,7 +1372,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b9bea8700ca3c305eb9569a3",
       "durationMs": 263520,
       "spotifyUri": "spotify:track:4E3afPSY5fUEelQS9ppL0e",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/1/6/0/516e39f154551e002deb4a5c796bfc50.mp3?hdnea=exp=1779064984~acl=/api/1/1/5/1/6/0/516e39f154551e002deb4a5c796bfc50.mp3*~data=user_id=0,application_id=42~hmac=3e90677336a664a0293a78005ff231370a9847ed7f7a25d8972b723a017a7056"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/1/6/0/516e39f154551e002deb4a5c796bfc50.mp3?hdnea=exp=1779068562~acl=/api/1/1/5/1/6/0/516e39f154551e002deb4a5c796bfc50.mp3*~data=user_id=0,application_id=42~hmac=f477a7a441114b7209fbae66d1509ec3acb38c82e8f6468b3389ad3de7497484"
     },
     {
       "id": "6Qn5zhYkTa37e91HC1D7lb",
@@ -1382,7 +1382,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a",
       "durationMs": 201240,
       "spotifyUri": "spotify:track:6Qn5zhYkTa37e91HC1D7lb",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/1/0/291040c955219d31b5ce2cd9da19e9c6.mp3?hdnea=exp=1779064985~acl=/api/1/1/2/9/1/0/291040c955219d31b5ce2cd9da19e9c6.mp3*~data=user_id=0,application_id=42~hmac=f19c8be31626558c9b748bf82d906f9b0d1c6ff0fef7e0292ab95990ac9744e6"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/1/0/291040c955219d31b5ce2cd9da19e9c6.mp3?hdnea=exp=1779068562~acl=/api/1/1/2/9/1/0/291040c955219d31b5ce2cd9da19e9c6.mp3*~data=user_id=0,application_id=42~hmac=91c20dc0ddaf06548cf8a096641eb21716d3cbb6dd81982e12a0957d79b17054"
     },
     {
       "id": "3zU9rdflI65tK4dkkNSp77",
@@ -1392,7 +1392,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b804bbd11f864902d452b3a7",
       "durationMs": 210013,
       "spotifyUri": "spotify:track:3zU9rdflI65tK4dkkNSp77",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/3/f/0/43ff34ceb8755a59ef3a045e4b191213.mp3?hdnea=exp=1779064985~acl=/api/1/1/4/3/f/0/43ff34ceb8755a59ef3a045e4b191213.mp3*~data=user_id=0,application_id=42~hmac=911c6681a0d9d65fbe2debdd2b69c8a8355ae0966450c46c3b1f11c5c12faf78"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/3/f/0/43ff34ceb8755a59ef3a045e4b191213.mp3?hdnea=exp=1779068563~acl=/api/1/1/4/3/f/0/43ff34ceb8755a59ef3a045e4b191213.mp3*~data=user_id=0,application_id=42~hmac=3c46c23353babba19c1aae74fe9de732ed62e35152d80bcd0a4647c67f57e94c"
     },
     {
       "id": "2vlDrKpOC0eSTqTDRcbYyw",
@@ -1402,7 +1402,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738daa8ac6367fc997c1873b9b",
       "durationMs": 221900,
       "spotifyUri": "spotify:track:2vlDrKpOC0eSTqTDRcbYyw",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/e/9/0/ee9343b8c6302f49270fd6e96321276c.mp3?hdnea=exp=1779064986~acl=/api/1/1/e/e/9/0/ee9343b8c6302f49270fd6e96321276c.mp3*~data=user_id=0,application_id=42~hmac=5c49eb7ddbdfb373b52203b9ad6c9a70a44e342499e15862104af7f6594778fe"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/e/9/0/ee9343b8c6302f49270fd6e96321276c.mp3?hdnea=exp=1779068564~acl=/api/1/1/e/e/9/0/ee9343b8c6302f49270fd6e96321276c.mp3*~data=user_id=0,application_id=42~hmac=818de61fdbdbb9b2cc8d94bffad5a84f4edb06d7b8daccb5d60c527d3b553d33"
     },
     {
       "id": "1uigwk5hNV84zRd5YQQRTk",
@@ -1412,7 +1412,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273861f87fea3ad0f7b23453780",
       "durationMs": 202906,
       "spotifyUri": "spotify:track:1uigwk5hNV84zRd5YQQRTk",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/4/0/d248d2a164654d17d2282ab1221274c7.mp3?hdnea=exp=1779064986~acl=/api/1/1/d/2/4/0/d248d2a164654d17d2282ab1221274c7.mp3*~data=user_id=0,application_id=42~hmac=fca78f35b54fea34da16d84c0f2f165bd48643c387ef5cf589512f6363580cfd"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/4/0/d248d2a164654d17d2282ab1221274c7.mp3?hdnea=exp=1779068565~acl=/api/1/1/d/2/4/0/d248d2a164654d17d2282ab1221274c7.mp3*~data=user_id=0,application_id=42~hmac=e37af50c8504f37e50027f268e216d75f38c176f28f2eaa3e651294357497313"
     },
     {
       "id": "4Dvkj6JhhA12EX05fT7y2e",
@@ -1422,7 +1422,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27382ce362511fb3d9dda6578ee",
       "durationMs": 167303,
       "spotifyUri": "spotify:track:4Dvkj6JhhA12EX05fT7y2e",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/3/7/0/9372c78844baf74b7a06bd467151518a.mp3?hdnea=exp=1779064987~acl=/api/1/1/9/3/7/0/9372c78844baf74b7a06bd467151518a.mp3*~data=user_id=0,application_id=42~hmac=46ce7c24d7eb768bc58652625558dfd37d64f07df1ab86a8b09a744b1deb2ab7"
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/10/16/67101606-3869-ca44-6c03-e13d6322cb51/mzaf_1135399237022217274.plus.aac.p.m4a"
     },
     {
       "id": "6KgBpzTuTRPebChN0VTyzV",
@@ -1432,7 +1432,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c73afc08102af649ce32d6b4",
       "durationMs": 159735,
       "spotifyUri": "spotify:track:6KgBpzTuTRPebChN0VTyzV",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/9/e/0/f9e3c4f5360187e40efb78fc8b2487cc.mp3?hdnea=exp=1779064988~acl=/api/1/1/f/9/e/0/f9e3c4f5360187e40efb78fc8b2487cc.mp3*~data=user_id=0,application_id=42~hmac=b0df79009844610b329e410ac444f4f9e6382030fbe5161335d672d0be97705b"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/9/e/0/f9e3c4f5360187e40efb78fc8b2487cc.mp3?hdnea=exp=1779068567~acl=/api/1/1/f/9/e/0/f9e3c4f5360187e40efb78fc8b2487cc.mp3*~data=user_id=0,application_id=42~hmac=36c479b56e14a28162977238611ca4c3bbeca7787e56142859f05f0a5fdeacc8"
     },
     {
       "id": "2iXdwVdzA0KrI2Q0iZNJbX",
@@ -1442,7 +1442,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273628dba01c669d89586967dc5",
       "durationMs": 207680,
       "spotifyUri": "spotify:track:2iXdwVdzA0KrI2Q0iZNJbX",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/c/5/0/2c5d2ca4d1a3341a589d0b95f0e329a2.mp3?hdnea=exp=1779064988~acl=/api/1/1/2/c/5/0/2c5d2ca4d1a3341a589d0b95f0e329a2.mp3*~data=user_id=0,application_id=42~hmac=f115f48151ae25ad71f132626f8e2477d28d973cca23363e0c5713fc49b7769e"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/c/5/0/2c5d2ca4d1a3341a589d0b95f0e329a2.mp3?hdnea=exp=1779068568~acl=/api/1/1/2/c/5/0/2c5d2ca4d1a3341a589d0b95f0e329a2.mp3*~data=user_id=0,application_id=42~hmac=cdde2e2db881e00f2dc6123e4fa670b0c13f46280e8425740ebeb3e30ab9969a"
     },
     {
       "id": "3U5JVgI2x4rDyHGObzJfNf",
@@ -1452,7 +1452,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b337e1ca6629a53c66a3b0d4",
       "durationMs": 259333,
       "spotifyUri": "spotify:track:3U5JVgI2x4rDyHGObzJfNf",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/1/0/f710465507aafdd54efa395ae33eddb2.mp3?hdnea=exp=1779064989~acl=/api/1/1/f/7/1/0/f710465507aafdd54efa395ae33eddb2.mp3*~data=user_id=0,application_id=42~hmac=1f0f40aa007f46d4e5b762646c63c4ebea559736c90f5c65b340c0ca375f3363"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/1/0/f710465507aafdd54efa395ae33eddb2.mp3?hdnea=exp=1779068568~acl=/api/1/1/f/7/1/0/f710465507aafdd54efa395ae33eddb2.mp3*~data=user_id=0,application_id=42~hmac=2b979748e90501446e71ecfc7555a80a355ee776fa6fe224f9bdb10f165ea483"
     },
     {
       "id": "5Hroj5K7vLpIG4FNCRIjbP",
@@ -1462,7 +1462,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273cc761ba55b0e7abad4539abe",
       "durationMs": 194240,
       "spotifyUri": "spotify:track:5Hroj5K7vLpIG4FNCRIjbP",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3?hdnea=exp=1779064989~acl=/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3*~data=user_id=0,application_id=42~hmac=cde9e35bb7a2461dc5124b20ff175ab8acb78d3630c533f2628d150ca0e04914"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3?hdnea=exp=1779068569~acl=/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3*~data=user_id=0,application_id=42~hmac=38b87c4b2e83b52879c870653dbd202244b9682cd3c535f83610c1a643b28528"
     }
   ],
   "equilibrio": [
@@ -1474,7 +1474,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27369c62d5cc3d960a4f8f76f51",
       "durationMs": 144000,
       "spotifyUri": "spotify:track:6VGQSxcUXNeH03eS1Fzygz",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/e/b/0/eeb65206f53dd7eac21ea396e47683aa.mp3?hdnea=exp=1779064990~acl=/api/1/1/e/e/b/0/eeb65206f53dd7eac21ea396e47683aa.mp3*~data=user_id=0,application_id=42~hmac=bd07623c0c019b8a1a1f18a7be2fccf01ee63587123ae631486004dd9aa1811c"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/e/b/0/eeb65206f53dd7eac21ea396e47683aa.mp3?hdnea=exp=1779068570~acl=/api/1/1/e/e/b/0/eeb65206f53dd7eac21ea396e47683aa.mp3*~data=user_id=0,application_id=42~hmac=fd1226f895bc5a0531635c801d730f3dd04b00225fdd1c0b0846252da7450d9d"
     },
     {
       "id": "4p1KJUbH3EFHQMUI5Jwq0x",
@@ -1484,7 +1484,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bb1ce12d952947814b9b8b0",
       "durationMs": 151000,
       "spotifyUri": "spotify:track:4p1KJUbH3EFHQMUI5Jwq0x",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/a/d/0/0ad542eed9a10c1f2931826dec69b3b5.mp3?hdnea=exp=1779064990~acl=/api/1/1/0/a/d/0/0ad542eed9a10c1f2931826dec69b3b5.mp3*~data=user_id=0,application_id=42~hmac=d49af055fb1a6970b86590d521f59ff175f6d81a2553b7301a1df77b21ba925d"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/a/d/0/0ad542eed9a10c1f2931826dec69b3b5.mp3?hdnea=exp=1779068571~acl=/api/1/1/0/a/d/0/0ad542eed9a10c1f2931826dec69b3b5.mp3*~data=user_id=0,application_id=42~hmac=6bfa7680d0b859ea07568ee53ba85e1e60071f572cfdc9906d85ac9e786ba037"
     },
     {
       "id": "1HhvQyDKZb4QtZek1d9KzW",
@@ -1494,7 +1494,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c372511b1b121730c8bcf640",
       "durationMs": 163090,
       "spotifyUri": "spotify:track:1HhvQyDKZb4QtZek1d9KzW",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/f/0/acf594a4311d21cde38d2681dc4392a7.mp3?hdnea=exp=1779064991~acl=/api/1/1/a/c/f/0/acf594a4311d21cde38d2681dc4392a7.mp3*~data=user_id=0,application_id=42~hmac=5810dc5ae8e5158b02af01b3bb3ea750676c51d79dc64449be31ddab2b8e8a68"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/f/0/acf594a4311d21cde38d2681dc4392a7.mp3?hdnea=exp=1779068572~acl=/api/1/1/a/c/f/0/acf594a4311d21cde38d2681dc4392a7.mp3*~data=user_id=0,application_id=42~hmac=07f653b6ebb832d23db4e4c5749aed8215702a95c8bd13abde5b12528ffbfa09"
     },
     {
       "id": "0vFOH96oqw1YZUs7ev5PW4",
@@ -1504,7 +1504,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27352f94290e8851f8e0f43586f",
       "durationMs": 122874,
       "spotifyUri": "spotify:track:0vFOH96oqw1YZUs7ev5PW4",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/1/a/0/b1a41f95dccb917c131d7b36b2e58d09.mp3?hdnea=exp=1779064992~acl=/api/1/1/b/1/a/0/b1a41f95dccb917c131d7b36b2e58d09.mp3*~data=user_id=0,application_id=42~hmac=c09008c7fd6e2a6fad63353df00b2e756d4a10a2c75b31938eb67fca8e7e1dfa"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/1/a/0/b1a41f95dccb917c131d7b36b2e58d09.mp3?hdnea=exp=1779068573~acl=/api/1/1/b/1/a/0/b1a41f95dccb917c131d7b36b2e58d09.mp3*~data=user_id=0,application_id=42~hmac=fcdaf19c5799963653812c7c32d9670605ce4cbda24bec46405ed24384533e9f"
     },
     {
       "id": "4ovQlgSLQsDpmE4SplH10J",
@@ -1514,7 +1514,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27352f94290e8851f8e0f43586f",
       "durationMs": 156750,
       "spotifyUri": "spotify:track:4ovQlgSLQsDpmE4SplH10J",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/6/b/0/56b2b866c6af4cf480a66576e4c609a4.mp3?hdnea=exp=1779064992~acl=/api/1/1/5/6/b/0/56b2b866c6af4cf480a66576e4c609a4.mp3*~data=user_id=0,application_id=42~hmac=13a10634b44290cd4557d994b431412deb165052e97c9e95796514324de58383"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/6/b/0/56b2b866c6af4cf480a66576e4c609a4.mp3?hdnea=exp=1779068574~acl=/api/1/1/5/6/b/0/56b2b866c6af4cf480a66576e4c609a4.mp3*~data=user_id=0,application_id=42~hmac=6369142dc590c84d9b45f8e762df87accf2215f4a36d97911c9cac1c52a259a2"
     },
     {
       "id": "1Gu1IIX892vNZtsrUc8zw4",
@@ -1524,7 +1524,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2737e58d555ba2bc88452f544af",
       "durationMs": 145750,
       "spotifyUri": "spotify:track:1Gu1IIX892vNZtsrUc8zw4",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/7/0/29755c5c2c911cdd4477a1be44de8f09.mp3?hdnea=exp=1779064993~acl=/api/1/1/2/9/7/0/29755c5c2c911cdd4477a1be44de8f09.mp3*~data=user_id=0,application_id=42~hmac=e701ada314f1edfa0e860a890f1bc0a5893ef75bba880c72eeb1067df6080c3b"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/7/0/29755c5c2c911cdd4477a1be44de8f09.mp3?hdnea=exp=1779068575~acl=/api/1/1/2/9/7/0/29755c5c2c911cdd4477a1be44de8f09.mp3*~data=user_id=0,application_id=42~hmac=07685cf3cfd65da85595cbf2b288a3e2c35bffae635746d12c9c95e67c2361cf"
     },
     {
       "id": "4ga2tUghWJYFNVYjo9NhBH",
@@ -1534,7 +1534,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732174e583350e5eba59be81b4",
       "durationMs": 179375,
       "spotifyUri": "spotify:track:4ga2tUghWJYFNVYjo9NhBH",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/f/a/0/7faaf4abbadbee5fd94ed262e39dae4d.mp3?hdnea=exp=1779064993~acl=/api/1/1/7/f/a/0/7faaf4abbadbee5fd94ed262e39dae4d.mp3*~data=user_id=0,application_id=42~hmac=c950f3477a46e7040e0165ec4d0c5f7cd38ab78d5037241b2ef48b2087ddb76f"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/f/a/0/7faaf4abbadbee5fd94ed262e39dae4d.mp3?hdnea=exp=1779068576~acl=/api/1/1/7/f/a/0/7faaf4abbadbee5fd94ed262e39dae4d.mp3*~data=user_id=0,application_id=42~hmac=41f8ab4a0bc7b6686a30909b08557ae6ef56f0afbbc08e126c5dc216d5240fc2"
     },
     {
       "id": "1q3xwIfq35vhqid8rDCTci",
@@ -1544,7 +1544,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27308dd2d9bee0d47716c2bf35c",
       "durationMs": 343861,
       "spotifyUri": "spotify:track:1q3xwIfq35vhqid8rDCTci",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/d/0/29d48ca3c65e50201ba251c3b176ff6e.mp3?hdnea=exp=1779064994~acl=/api/1/1/2/9/d/0/29d48ca3c65e50201ba251c3b176ff6e.mp3*~data=user_id=0,application_id=42~hmac=05ae50ce4831ad3be45c3834c9c187a6306b0ec8e8d5c8b905dc3dd48cd7547e"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/9/d/0/29d48ca3c65e50201ba251c3b176ff6e.mp3?hdnea=exp=1779068576~acl=/api/1/1/2/9/d/0/29d48ca3c65e50201ba251c3b176ff6e.mp3*~data=user_id=0,application_id=42~hmac=7d824ef90b10a559dab87ef53ab83d88f9daf4461a2f5e71eff4dffe7f032a01"
     },
     {
       "id": "4GsXjb5Ev0NXiSjpcVVJHI",
@@ -1554,7 +1554,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27308dd2d9bee0d47716c2bf35c",
       "durationMs": 284928,
       "spotifyUri": "spotify:track:4GsXjb5Ev0NXiSjpcVVJHI",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/0/0/f401a5a51d7d4f192e07e6953b1abf79.mp3?hdnea=exp=1779064994~acl=/api/1/1/f/4/0/0/f401a5a51d7d4f192e07e6953b1abf79.mp3*~data=user_id=0,application_id=42~hmac=bfc5f5554aaa313641f9cb5fcb0386bf13baa3a56ba490539e0e6090f0352d66"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/0/0/f401a5a51d7d4f192e07e6953b1abf79.mp3?hdnea=exp=1779068578~acl=/api/1/1/f/4/0/0/f401a5a51d7d4f192e07e6953b1abf79.mp3*~data=user_id=0,application_id=42~hmac=4d95fc4361508e8a3254fe4237c11db594eee4e050e1617219bdfb2f28533deb"
     },
     {
       "id": "3rhIhxtjV4UXeJtCcjGVb2",
@@ -1573,7 +1573,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27308dd2d9bee0d47716c2bf35c",
       "durationMs": 363323,
       "spotifyUri": "spotify:track:3oOdwRYDoQrv7tcl5C57BF",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/9/8/0/0980ad1b9147e709ef2d54bb71f65f24.mp3?hdnea=exp=1779064996~acl=/api/1/1/0/9/8/0/0980ad1b9147e709ef2d54bb71f65f24.mp3*~data=user_id=0,application_id=42~hmac=9d1d87b886f486565de1c64d61ab4ca151e0d63a41a8256e5ec2799ab0ebb914"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/9/8/0/0980ad1b9147e709ef2d54bb71f65f24.mp3?hdnea=exp=1779068580~acl=/api/1/1/0/9/8/0/0980ad1b9147e709ef2d54bb71f65f24.mp3*~data=user_id=0,application_id=42~hmac=0d3c452be66d8615360ef6fd31d3503a41b98b7adece54537058747d86570705"
     },
     {
       "id": "43NBwF8ro4mOFbASzTNRb1",
@@ -1583,7 +1583,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27379bc00b042eb41e9b2ca9cb8",
       "durationMs": 440000,
       "spotifyUri": "spotify:track:43NBwF8ro4mOFbASzTNRb1",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/2/0/842178d21815c9e48b974baddf715225.mp3?hdnea=exp=1779064996~acl=/api/1/1/8/4/2/0/842178d21815c9e48b974baddf715225.mp3*~data=user_id=0,application_id=42~hmac=19b04cbc137d73f44cd0692a3e3f669e111031b697f19bfa41ba354220a9a9fb"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/2/0/842178d21815c9e48b974baddf715225.mp3?hdnea=exp=1779068581~acl=/api/1/1/8/4/2/0/842178d21815c9e48b974baddf715225.mp3*~data=user_id=0,application_id=42~hmac=73ca02f328111dfe6f795b1dcf794b2e4fec5c0becd018c4228ca07936e02e83"
     },
     {
       "id": "0BHFGnZ2IpJQtGsGJaCQSc",
@@ -1593,7 +1593,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27379bc00b042eb41e9b2ca9cb8",
       "durationMs": 420000,
       "spotifyUri": "spotify:track:0BHFGnZ2IpJQtGsGJaCQSc",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/c/d/0/5cd8dafc6cc80a1d49d465dc995989a5.mp3?hdnea=exp=1779064997~acl=/api/1/1/5/c/d/0/5cd8dafc6cc80a1d49d465dc995989a5.mp3*~data=user_id=0,application_id=42~hmac=302ecf7870ad49e805a39c847639003872a89d4c10b494ac615645aada4fcc68"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/c/d/0/5cd8dafc6cc80a1d49d465dc995989a5.mp3?hdnea=exp=1779068582~acl=/api/1/1/5/c/d/0/5cd8dafc6cc80a1d49d465dc995989a5.mp3*~data=user_id=0,application_id=42~hmac=c4d38bc8bb74bc7802c7cfcd9efeee7c3a56b711582df14f1f26b732a7a237cf"
     },
     {
       "id": "7KXPx2m3bRGVBtzdMUMwvk",
@@ -1603,7 +1603,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27379bc00b042eb41e9b2ca9cb8",
       "durationMs": 584000,
       "spotifyUri": "spotify:track:7KXPx2m3bRGVBtzdMUMwvk",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/a/0/84a66898d531472863039e49c874dd5c.mp3?hdnea=exp=1779064998~acl=/api/1/1/8/4/a/0/84a66898d531472863039e49c874dd5c.mp3*~data=user_id=0,application_id=42~hmac=0ad52533e8dbaef1dda24b32122a1aeddf2f8a096bf8f76661e7716e58a5cc5d"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/a/0/84a66898d531472863039e49c874dd5c.mp3?hdnea=exp=1779068583~acl=/api/1/1/8/4/a/0/84a66898d531472863039e49c874dd5c.mp3*~data=user_id=0,application_id=42~hmac=9c87c20c644dd45159253566009f9c965e5ead6fb764cfada51dfcba5bd1a059"
     },
     {
       "id": "1WNDLp2sPUHITy1wntNEx5",
@@ -1613,7 +1613,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27379bc00b042eb41e9b2ca9cb8",
       "durationMs": 575500,
       "spotifyUri": "spotify:track:1WNDLp2sPUHITy1wntNEx5",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/b/c/0/6bc89a00abbff92841bd1ee1fe60bde2.mp3?hdnea=exp=1779064998~acl=/api/1/1/6/b/c/0/6bc89a00abbff92841bd1ee1fe60bde2.mp3*~data=user_id=0,application_id=42~hmac=d8a8715ca8ebaa1c639b72a6d995613e91fafd580079fc5d92e83f34ae038650"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/b/c/0/6bc89a00abbff92841bd1ee1fe60bde2.mp3?hdnea=exp=1779068584~acl=/api/1/1/6/b/c/0/6bc89a00abbff92841bd1ee1fe60bde2.mp3*~data=user_id=0,application_id=42~hmac=2200d56346339e107dd08dff58f053f958d4225342f85094e6406f0a3f169c1a"
     },
     {
       "id": "4XGtiG5IEiFyBJ108fQbXI",
@@ -1623,7 +1623,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27379bc00b042eb41e9b2ca9cb8",
       "durationMs": 368000,
       "spotifyUri": "spotify:track:4XGtiG5IEiFyBJ108fQbXI",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/3/9/0/13934ffb523c8c7adf85993f65afe061.mp3?hdnea=exp=1779064999~acl=/api/1/1/1/3/9/0/13934ffb523c8c7adf85993f65afe061.mp3*~data=user_id=0,application_id=42~hmac=18441e007700af53941f628aae6ea94e50f28237ff92ba21a9fc6106793fa731"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/3/9/0/13934ffb523c8c7adf85993f65afe061.mp3?hdnea=exp=1779068585~acl=/api/1/1/1/3/9/0/13934ffb523c8c7adf85993f65afe061.mp3*~data=user_id=0,application_id=42~hmac=0a81ce5af976c857706acdda4a03a1de4ab5bcf7fe065266638f97235770d29a"
     },
     {
       "id": "3rw3uYUoKicjBxUW7EigtS",
@@ -1643,7 +1643,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27329c37b769185bed0c14cd703",
       "durationMs": 600000,
       "spotifyUri": "spotify:track:5oBUfp8dBTxYxofSpuuCPY",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/d/0/acd59713aeb0b9eadbe4a73a32fa8a72.mp3?hdnea=exp=1779065000~acl=/api/1/1/a/c/d/0/acd59713aeb0b9eadbe4a73a32fa8a72.mp3*~data=user_id=0,application_id=42~hmac=343e2f3530b3c9542c1455d69a4993cf2639b87e4412c8871f90ecdf31ac4c8f"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/d/0/acd59713aeb0b9eadbe4a73a32fa8a72.mp3?hdnea=exp=1779068586~acl=/api/1/1/a/c/d/0/acd59713aeb0b9eadbe4a73a32fa8a72.mp3*~data=user_id=0,application_id=42~hmac=33bef5a7d018e9c73e4cacbbc41abc966ca9ba0f31d0380da66f10f13776f72f"
     },
     {
       "id": "18UipGZxskN17xuXwZ8QiH",
@@ -1653,7 +1653,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273bf54eaf61cbd0d4df87d8e38",
       "durationMs": 386312,
       "spotifyUri": "spotify:track:18UipGZxskN17xuXwZ8QiH",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/8/0/0/280997c945b13bffb86ffccc8e43fc55.mp3?hdnea=exp=1779065001~acl=/api/1/1/2/8/0/0/280997c945b13bffb86ffccc8e43fc55.mp3*~data=user_id=0,application_id=42~hmac=83ef7ea612dd562f1b8abb6d8cbf257ee5566cd2490dbf79a1ade1e4cdeb2844"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/8/0/0/280997c945b13bffb86ffccc8e43fc55.mp3?hdnea=exp=1779068586~acl=/api/1/1/2/8/0/0/280997c945b13bffb86ffccc8e43fc55.mp3*~data=user_id=0,application_id=42~hmac=8d672623316b155b0263b73dd397eb069a3dcce14b346f03f6bc6412772bcc6a"
     },
     {
       "id": "3z43m8OPpS3BGPoOrePsbV",
@@ -1663,7 +1663,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273bf54eaf61cbd0d4df87d8e38",
       "durationMs": 403407,
       "spotifyUri": "spotify:track:3z43m8OPpS3BGPoOrePsbV",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/f/0/d2f8de5a4d043666570cc9c872e245a9.mp3?hdnea=exp=1779065002~acl=/api/1/1/d/2/f/0/d2f8de5a4d043666570cc9c872e245a9.mp3*~data=user_id=0,application_id=42~hmac=bf3dff455f5b1a0eeed033c4472c3c7e1067fd6d161d50c9cdf66188286260fc"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/f/0/d2f8de5a4d043666570cc9c872e245a9.mp3?hdnea=exp=1779068587~acl=/api/1/1/d/2/f/0/d2f8de5a4d043666570cc9c872e245a9.mp3*~data=user_id=0,application_id=42~hmac=97b5622a4ce795f839d886eac076aa11a145811353dfbafc058a6d62a6d92cec"
     },
     {
       "id": "6pWgRkpqVfxnj3WuIcJ7WP",
@@ -1673,7 +1673,7 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2730310d2e254062d98b2a92b2d",
       "durationMs": 126959,
       "spotifyUri": "spotify:track:6pWgRkpqVfxnj3WuIcJ7WP",
-      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/e/4/0/9e4e3f7f152deaec518e502b9e5cb023.mp3?hdnea=exp=1779065002~acl=/api/1/1/9/e/4/0/9e4e3f7f152deaec518e502b9e5cb023.mp3*~data=user_id=0,application_id=42~hmac=d8cbfc5c75a200bbb2591d74ed4c02dae4e4ced99d247a41d10a89d5ffc3e43c"
+      "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/e/4/0/9e4e3f7f152deaec518e502b9e5cb023.mp3?hdnea=exp=1779068588~acl=/api/1/1/9/e/4/0/9e4e3f7f152deaec518e502b9e5cb023.mp3*~data=user_id=0,application_id=42~hmac=15ebe650cb49f4faced6f45dee4c4b0f0215b8ed79419bab0929e6d026378330"
     }
   ]
 }

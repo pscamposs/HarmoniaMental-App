@@ -42,7 +42,7 @@ type SectionDetailProps = {
 function SectionDetail({ section, visible, onClose }: SectionDetailProps) {
   const { colors: Colors, styles: detailStyles } =
     useThemeStyles(createDetailStyles);
-  const { currentTrack, isPlaying, playSong } = usePlayback();
+  const { currentTrack, isPlaying, isLoadingTrack, playSong } = usePlayback();
 
   return (
     <Modal
@@ -148,7 +148,12 @@ function SectionDetail({ section, visible, onClose }: SectionDetailProps) {
                     currentTrack?.artist === song.artist &&
                     currentTrack?.title === song.title
                   }
-                  onPress={() => playSong(song, section.songs)}
+                  isLoading={isLoadingTrack(song)}
+                  onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                    onClose();
+                    playSong(song, section.songs);
+                  }}
                 />
               ))}
             </View>

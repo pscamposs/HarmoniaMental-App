@@ -12,10 +12,13 @@ type MusicNotificationModule = {
     title: string,
     artist: string,
     isPlaying: boolean,
+    durationSeconds: number,
+    elapsedSeconds: number,
     canPrevious: boolean,
     canNext: boolean,
   ) => Promise<boolean>;
   hide: () => void;
+  consumePendingActions: () => Promise<MusicNotificationAction[]>;
 };
 
 const nativeModule = NativeModules.MusicNotification as
@@ -53,6 +56,8 @@ export async function showMusicNotification(params: {
   title: string;
   artist: string;
   isPlaying: boolean;
+  durationSeconds: number;
+  elapsedSeconds: number;
   canPrevious: boolean;
   canNext: boolean;
 }) {
@@ -69,6 +74,8 @@ export async function showMusicNotification(params: {
     params.title,
     params.artist,
     params.isPlaying,
+    params.durationSeconds,
+    params.elapsedSeconds,
     params.canPrevious,
     params.canNext,
   );
@@ -83,5 +90,48 @@ export function hideMusicNotification() {
 export function addMusicNotificationActionListener(
   listener: (action: MusicNotificationAction) => void,
 ) {
-  return emitter?.addListener("MusicNotificationAction", listener) ?? null;
+  if (!emitter || !nativeModule) {
+    return null;
+  }
+
+  let isDraining = false;
+  let shouldDrainAgain = false;
+
+  const drain = async () => {
+    if (isDraining) {
+      shouldDrainAgain = true;
+      return;
+    }
+
+    isDraining = true;
+    try {
+      do {
+        shouldDrainAgain = false;
+        const actions = await nativeModule.consumePendingActions();
+        actions.forEach(listener);
+      } while (shouldDrainAgain);
+    } catch {
+      // Notification actions are best-effort; playback state will stay in sync on the next event.
+    } finally {
+      isDraining = false;
+    }
+  };
+
+  const subscription = emitter.addListener("MusicNotificationAction", drain);
+  drain();
+
+  return {
+    remove: () => subscription.remove(),
+  };
+}
+
+export async function consumePendingMusicNotificationActions(
+  listener: (action: MusicNotificationAction) => void,
+) {
+  if (Platform.OS !== "android" || !nativeModule) {
+    return;
+  }
+
+  const actions = await nativeModule.consumePendingActions();
+  actions.forEach(listener);
 }

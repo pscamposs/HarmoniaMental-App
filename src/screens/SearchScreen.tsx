@@ -24,7 +24,7 @@ function normalizeSearchTerm(value: string) {
 export function SearchScreen() {
   const { colors: Colors, styles } = useThemeStyles(createStyles);
   const [query, setQuery] = useState("");
-  const { currentTrack, isPlaying, playSong } = usePlayback();
+  const { currentTrack, isPlaying, isLoadingTrack, playSong } = usePlayback();
   const { songs, isLoading, error, refresh } = usePlaylistCatalog();
 
   const filteredSongs = useMemo(() => {
@@ -109,6 +109,7 @@ export function SearchScreen() {
                     currentTrack?.artist === song.artist &&
                     currentTrack?.title === song.title
                   }
+                  isLoading={isLoadingTrack(song)}
                   onPress={() => {
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                     playSong(song, filteredSongs);

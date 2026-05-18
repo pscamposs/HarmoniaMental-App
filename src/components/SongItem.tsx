@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { ActivityIndicator, View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { AppColors } from "../constants/colors";
 import { Song } from "../constants/data";
@@ -9,20 +9,24 @@ type SongItemProps = {
   song: Song;
   index: number;
   isPlaying?: boolean;
+  isLoading?: boolean;
   onPress?: () => void;
 };
 
-export function SongItem({ song, index, isPlaying, onPress }: SongItemProps) {
+export function SongItem({ song, index, isPlaying, isLoading, onPress }: SongItemProps) {
   const { colors: Colors, styles } = useThemeStyles(createStyles);
 
   return (
     <TouchableOpacity
       style={[styles.container, isPlaying && styles.containerActive]}
       onPress={onPress}
+      disabled={isLoading}
       activeOpacity={0.7}
     >
       <View style={[styles.indexBox, isPlaying && styles.indexBoxActive]}>
-        {isPlaying ? (
+        {isLoading ? (
+          <ActivityIndicator size="small" color={Colors.gold} />
+        ) : isPlaying ? (
           <View style={styles.playingDots}>
             <View style={[styles.dot, styles.dot1]} />
             <View style={[styles.dot, styles.dot2]} />
@@ -46,11 +50,15 @@ export function SongItem({ song, index, isPlaying, onPress }: SongItemProps) {
       </View>
 
       <View style={styles.playBtn}>
-        <Ionicons
-          name={isPlaying ? "pause" : "play"}
-          size={16}
-          color={isPlaying ? Colors.gold : Colors.textMuted}
-        />
+        {isLoading ? (
+          <ActivityIndicator size="small" color={Colors.gold} />
+        ) : (
+          <Ionicons
+            name={isPlaying ? "pause" : "play"}
+            size={16}
+            color={isPlaying ? Colors.gold : Colors.textMuted}
+          />
+        )}
       </View>
     </TouchableOpacity>
   );
@@ -112,5 +120,7 @@ const createStyles = (Colors: AppColors) =>
   },
   playBtn: {
     paddingLeft: 12,
+    width: 28,
+    alignItems: "flex-end",
   },
 });

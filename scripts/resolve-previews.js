@@ -1,6 +1,6 @@
 /**
- * Resolve preview URLs usando múltiplas fontes: Deezer + iTunes.
- * Deezer tem melhor cobertura para músicas brasileiras/nicho.
+ * Resolve preview URLs usando múltiplas fontes: iTunes + Deezer.
+ * iTunes e preferido porque os previews do Deezer podem vir com assinatura temporaria.
  *
  * Uso: node scripts/resolve-previews.js
  */
@@ -67,16 +67,19 @@ async function getItunesPreview(artist, title) {
 }
 
 async function resolvePreview(artist, title) {
-  // Try Deezer first (better for BR music), then iTunes
-  let preview = await getDeezerPreview(artist, title);
-  if (preview) return { url: preview, source: "deezer" };
+  let preview = await getItunesPreview(artist, title);
+  if (preview) return { url: preview, source: "itunes" };
 
   await new Promise((r) => setTimeout(r, 100));
 
-  preview = await getItunesPreview(artist, title);
-  if (preview) return { url: preview, source: "itunes" };
+  preview = await getDeezerPreview(artist, title);
+  if (preview) return { url: preview, source: "deezer" };
 
   return null;
+}
+
+function isExpiringPreviewUrl(url) {
+  return Boolean(url?.includes("cdnt-preview.dzcdn.net") || url?.includes("hdnea="));
 }
 
 async function main() {
@@ -91,8 +94,8 @@ async function main() {
     for (const track of tracks) {
       total++;
 
-      // Skip if already has a preview
-      if (track.previewUrl) {
+      // Keep stable previews, but refresh expiring signed URLs.
+      if (track.previewUrl && !isExpiringPreviewUrl(track.previewUrl)) {
         resolved++;
         process.stdout.write("•");
         continue;

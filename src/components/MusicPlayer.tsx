@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Linking, Image } from "react-native";
+import { ActivityIndicator, View, Text, TouchableOpacity, StyleSheet, Linking, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { AppColors } from "../constants/colors";
 import { usePlayback } from "../context/PlaybackContext";
@@ -10,6 +10,7 @@ export function MusicPlayer() {
   const {
     currentTrack,
     isPlaying,
+    isLoading,
     progress,
     elapsedSeconds,
     togglePlayPause,
@@ -97,13 +98,18 @@ export function MusicPlayer() {
           <TouchableOpacity
             style={styles.playPauseBtn}
             onPress={togglePlayPause}
+            disabled={isLoading}
             activeOpacity={0.8}
           >
-            <Ionicons
-              name={isPlaying ? "pause" : "play"}
-              size={16}
-              color={Colors.background}
-            />
+            {isLoading ? (
+              <ActivityIndicator size="small" color={Colors.background} />
+            ) : (
+              <Ionicons
+                name={isPlaying ? "pause" : "play"}
+                size={16}
+                color={Colors.background}
+              />
+            )}
           </TouchableOpacity>
 
           <TouchableOpacity
