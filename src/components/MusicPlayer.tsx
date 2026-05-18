@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Linking, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
 import { usePlayback } from "../context/PlaybackContext";
+import { useThemeStyles } from "../context/ThemeContext";
 
 export function MusicPlayer() {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
   const {
     currentTrack,
     isPlaying,
@@ -15,18 +17,31 @@ export function MusicPlayer() {
     playPrevious,
   } = usePlayback();
 
-  if (!currentTrack || !isPlaying) {
+  if (!currentTrack) {
     return null;
   }
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
+    const s = Math.floor(seconds % 60);
     return `${m}:${String(s).padStart(2, "0")}`;
   };
 
   const totalSeconds = currentTrack.duration;
   const currentSeconds = elapsedSeconds;
+
+  const openSpotify = () => {
+    if (currentTrack.spotifyUri) {
+      Linking.openURL(currentTrack.spotifyUri).catch(() => {
+        Linking.openURL(`https://open.spotify.com/track/${currentTrack.id}`);
+      });
+    }
+  };
+
+  const openYouTubeMusic = () => {
+    const query = encodeURIComponent(`${currentTrack.title} ${currentTrack.artist}`);
+    Linking.openURL(`https://music.youtube.com/search?q=${query}`);
+  };
 
   return (
     <View style={styles.container}>
@@ -41,7 +56,15 @@ export function MusicPlayer() {
       <View style={styles.body}>
         {/* Album art */}
         <View style={styles.albumArt}>
-          <Ionicons name="musical-note" size={20} color={Colors.gold} />
+          {currentTrack.artworkUrl ? (
+            <Image
+              source={{ uri: currentTrack.artworkUrl }}
+              style={styles.albumArtImage}
+              resizeMode="cover"
+            />
+          ) : (
+            <Ionicons name="musical-note" size={20} color={Colors.gold} />
+          )}
         </View>
 
         {/* Track info */}
@@ -99,16 +122,31 @@ export function MusicPlayer() {
         {/* Total time */}
         <Text style={styles.timeLabel}>{formatTime(totalSeconds)}</Text>
       </View>
+
+      <View style={styles.externalLinks}>
+        <TouchableOpacity style={styles.linkBtn} onPress={openSpotify} activeOpacity={0.7}>
+          <Ionicons name="musical-notes" size={12} color={Colors.textSecondary} />
+          <Text style={styles.linkText}>Ouvir inteira no Spotify</Text>
+        </TouchableOpacity>
+
+        <View style={styles.linkDivider} />
+
+        <TouchableOpacity style={styles.linkBtn} onPress={openYouTubeMusic} activeOpacity={0.7}>
+          <Ionicons name="logo-youtube" size={12} color={Colors.textSecondary} />
+          <Text style={styles.linkText}>YouTube Music</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   container: {
     backgroundColor: Colors.playerBg,
     borderTopWidth: 1,
     borderTopColor: Colors.tabBarBorder,
-    paddingBottom: 4,
+    paddingBottom: 8,
   },
   progressTrack: {
     height: 3,
@@ -144,8 +182,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderWidth: 1,
     borderColor: Colors.border,
+    overflow: 'hidden'
   },
-
+  albumArtImage: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: Colors.surface
+  },
   trackInfo: {
     flex: 1,
   },
@@ -182,4 +225,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginHorizontal: 4,
   },
+  externalLinks: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+    marginTop: -2,
+    gap: 12
+  },
+  linkBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    paddingVertical: 4
+  },
+  linkText: {
+    fontSize: 11,
+    color: Colors.textSecondary,
+    fontWeight: "600"
+  },
+  linkDivider: {
+    width: 1,
+    height: 10,
+    backgroundColor: Colors.border
+  }
 });

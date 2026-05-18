@@ -2,9 +2,10 @@ import React, { useRef, useState } from "react";
 import { View, Text, StyleSheet, Dimensions, Animated } from "react-native";
 import PagerView from "react-native-pager-view";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
+import { useThemeStyles } from "../context/ThemeContext";
 import { TherapyScreen } from "../screens/TherapyScreen";
-import { GenresScreen } from "../screens/GenresScreen";
+import { SearchScreen } from "../screens/SearchScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
 import { MusicPlayer } from "./MusicPlayer";
 
@@ -12,13 +13,14 @@ const { width } = Dimensions.get("window");
 
 const PAGES = [
   { key: "therapy", label: "Musicoterapia" },
-  { key: "genres", label: "Gêneros" },
+  { key: "search", label: "Pesquisa" },
   { key: "settings", label: "Configurações" },
 ];
 
 export function PagerLayout() {
   const [activePage, setActivePage] = useState(0);
   const pagerRef = useRef<PagerView>(null);
+  const { styles } = useThemeStyles(createStyles);
 
   return (
     <View style={styles.root}>
@@ -63,8 +65,8 @@ export function PagerLayout() {
         <View key="therapy" style={styles.page}>
           <TherapyScreen />
         </View>
-        <View key="genres" style={styles.page}>
-          <GenresScreen />
+        <View key="search" style={styles.page}>
+          <SearchScreen />
         </View>
         <View key="settings" style={styles.page}>
           <SettingsScreen />
@@ -77,7 +79,8 @@ export function PagerLayout() {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   root: { flex: 1, backgroundColor: Colors.background },
   topSafeArea: { backgroundColor: Colors.background },
 
@@ -103,7 +106,7 @@ const styles = StyleSheet.create({
     color: Colors.textMuted,
   },
   tabLabelActive: {
-    color: Colors.gold,
+    color: Colors.secondary,
   },
   tabUnderline: {
     position: "absolute",
@@ -112,7 +115,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 2,
     borderRadius: 1,
-    backgroundColor: Colors.gold,
+    backgroundColor: Colors.secondary,
   },
   dotRow: {
     flex: 1,
@@ -128,7 +131,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.border,
   },
   dotActive: {
-    backgroundColor: Colors.gold,
+    backgroundColor: Colors.secondary,
     width: 18,
   },
 

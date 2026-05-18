@@ -1,11 +1,5 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from "expo-av";
 import { Song } from "../constants/data";
 
 type PlaybackTrack = Song & {
@@ -17,10 +11,10 @@ type PlaybackContextType = {
   isPlaying: boolean;
   progress: number;
   elapsedSeconds: number;
-  playSong: (song: Song, queue?: Song[]) => void;
-  togglePlayPause: () => void;
-  playNext: () => void;
-  playPrevious: () => void;
+  playSong: (song: Song, queue?: Song[]) => Promise<void>;
+  togglePlayPause: () => Promise<void>;
+  playNext: () => Promise<void>;
+  playPrevious: () => Promise<void>;
 };
 
 const PlaybackContext = createContext<PlaybackContextType>({
@@ -28,14 +22,14 @@ const PlaybackContext = createContext<PlaybackContextType>({
   isPlaying: false,
   progress: 0,
   elapsedSeconds: 0,
-  playSong: () => {},
-  togglePlayPause: () => {},
-  playNext: () => {},
-  playPrevious: () => {},
+  playSong: async () => {},
+  togglePlayPause: async () => {},
+  playNext: async () => {},
+  playPrevious: async () => {},
 });
 
 function toTrack(song: Song): PlaybackTrack {
-  return { ...song, duration: 210 };
+  return { ...song, duration: song.durationSeconds ?? 30 };
 }
 
 function songKey(song: Song) {
@@ -48,37 +42,107 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
   const [currentTrack, setCurrentTrack] = useState<PlaybackTrack | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [sound, setSound] = useState<Audio.Sound | null>(null);
 
   useEffect(() => {
-    if (!isPlaying || !currentTrack) return;
+    Audio.setAudioModeAsync({
+      allowsRecordingIOS: false,
+      staysActiveInBackground: true,
+      interruptionModeIOS: InterruptionModeIOS.DoNotMix,
+      playsInSilentModeIOS: true,
+      shouldDuckAndroid: false,
+      interruptionModeAndroid: InterruptionModeAndroid.DoNotMix,
+      playThroughEarpieceAndroid: false
+    });
+  }, []);
 
-    const timer = setInterval(() => {
-      setElapsedSeconds((prev) => {
-        const next = prev + 1;
-        if (next >= currentTrack.duration) {
-          if (currentIndex >= 0 && currentIndex < queue.length - 1) {
-            const nextIndex = currentIndex + 1;
-            const nextSong = queue[nextIndex];
-            setCurrentIndex(nextIndex);
-            setCurrentTrack(toTrack(nextSong));
-            return 0;
+  useEffect(() => {
+    return () => {
+      if (sound) {
+        sound.unloadAsync();
+      }
+    };
+  }, [sound]);
+
+  // Using a stable ref for handleNext to avoid stale closures in the onPlaybackStatusUpdate callback,
+  // or better, handle it carefully. Actually, since state is updated via callback, `queue` and `currentIndex`
+  // might be stale. Let's use functional state updates or refs if we hit bugs, but for now we'll stick to a simple approach.
+  // Actually, handleNext needs current queue and index. Since Audio callbacks have stale closures, 
+  // it's safer to store queue and currentIndex in refs, or simply emit an event.
+  // Let's use refs for queue and currentIndex to avoid stale closure in status update callback.
+  const queueRef = React.useRef(queue);
+  const currentIndexRef = React.useRef(currentIndex);
+
+  useEffect(() => {
+    queueRef.current = queue;
+    currentIndexRef.current = currentIndex;
+  }, [queue, currentIndex]);
+
+  const loadSound = async (song: Song, playOnLoad: boolean = true) => {
+    if (sound) {
+      await sound.unloadAsync();
+      setSound(null);
+    }
+    
+    const track = toTrack(song);
+    setCurrentTrack(track);
+    setElapsedSeconds(0);
+    setProgress(0);
+    setIsPlaying(false);
+
+    if (!track.audioUrl) {
+      console.warn("No audio URL (preview) for track:", track.title);
+      return;
+    }
+
+    try {
+      const { sound: newSound } = await Audio.Sound.createAsync(
+        { uri: track.audioUrl },
+        { shouldPlay: playOnLoad },
+        (status) => {
+          if (status.isLoaded) {
+            setIsPlaying(status.isPlaying);
+            setElapsedSeconds(status.positionMillis / 1000);
+            if (status.durationMillis) {
+              setProgress(status.positionMillis / status.durationMillis);
+            }
+            if (status.didJustFinish) {
+              const nextIdx = currentIndexRef.current + 1;
+              if (nextIdx < queueRef.current.length) {
+                // To avoid calling setState/loading inside the status callback synchronously,
+                // we defer it.
+                setTimeout(() => {
+                  setCurrentIndex(nextIdx);
+                  loadSound(queueRef.current[nextIdx], true);
+                }, 0);
+              }
+            }
           }
-          setIsPlaying(false);
-          return currentTrack.duration;
         }
-        return next;
-      });
-    }, 1000);
+      );
+      setSound(newSound);
+      if (playOnLoad) setIsPlaying(true);
+    } catch (err) {
+      console.error("Failed to load sound", err);
+    }
+  };
 
-    return () => clearInterval(timer);
-  }, [isPlaying, currentTrack, currentIndex, queue]);
+  const handleNext = async () => {
+    if (currentIndex < 0 || currentIndex >= queue.length - 1) return;
+    const nextIndex = currentIndex + 1;
+    setCurrentIndex(nextIndex);
+    await loadSound(queue[nextIndex], true);
+  };
 
-  const progress = useMemo(() => {
-    if (!currentTrack?.duration) return 0;
-    return Math.min(1, elapsedSeconds / currentTrack.duration);
-  }, [currentTrack, elapsedSeconds]);
+  const handlePrevious = async () => {
+    if (currentIndex <= 0 || queue.length === 0) return;
+    const prevIndex = currentIndex - 1;
+    setCurrentIndex(prevIndex);
+    await loadSound(queue[prevIndex], true);
+  };
 
-  const playSong = (song: Song, nextQueue?: Song[]) => {
+  const playSong = async (song: Song, nextQueue?: Song[]) => {
     const targetQueue = nextQueue && nextQueue.length > 0 ? nextQueue : [song];
     const targetIndex = targetQueue.findIndex(
       (s) => songKey(s) === songKey(song),
@@ -86,32 +150,18 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
 
     setQueue(targetQueue);
     setCurrentIndex(targetIndex >= 0 ? targetIndex : 0);
-    setCurrentTrack(toTrack(song));
-    setElapsedSeconds(0);
-    setIsPlaying(true);
+    await loadSound(song, true);
   };
 
-  const togglePlayPause = () => {
-    if (!currentTrack) return;
-    setIsPlaying((prev) => !prev);
-  };
-
-  const playNext = () => {
-    if (currentIndex < 0 || currentIndex >= queue.length - 1) return;
-    const nextIndex = currentIndex + 1;
-    setCurrentIndex(nextIndex);
-    setCurrentTrack(toTrack(queue[nextIndex]));
-    setElapsedSeconds(0);
-    setIsPlaying(true);
-  };
-
-  const playPrevious = () => {
-    if (currentIndex <= 0 || queue.length === 0) return;
-    const prevIndex = currentIndex - 1;
-    setCurrentIndex(prevIndex);
-    setCurrentTrack(toTrack(queue[prevIndex]));
-    setElapsedSeconds(0);
-    setIsPlaying(true);
+  const togglePlayPause = async () => {
+    if (!sound) {
+      return;
+    }
+    if (isPlaying) {
+      await sound.pauseAsync();
+    } else {
+      await sound.playAsync();
+    }
   };
 
   return (
@@ -123,8 +173,8 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
         elapsedSeconds,
         playSong,
         togglePlayPause,
-        playNext,
-        playPrevious,
+        playNext: handleNext,
+        playPrevious: handlePrevious,
       }}
     >
       {children}

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
+import { useThemeStyles } from "../context/ThemeContext";
 
 type Props = {
   avatarUrl: string;
@@ -8,6 +9,8 @@ type Props = {
 };
 
 export function AvatarImage({ avatarUrl, size = 100 }: Props) {
+  const { styles } = useThemeStyles(createStyles);
+
   return (
     <View
       style={[
@@ -28,7 +31,8 @@ export function AvatarImage({ avatarUrl, size = 100 }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   container: {
     overflow: "hidden",
     borderWidth: 2,

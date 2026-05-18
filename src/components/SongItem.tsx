@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
 import { Song } from "../constants/data";
+import { useThemeStyles } from "../context/ThemeContext";
 
 type SongItemProps = {
   song: Song;
@@ -12,6 +13,8 @@ type SongItemProps = {
 };
 
 export function SongItem({ song, index, isPlaying, onPress }: SongItemProps) {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
+
   return (
     <TouchableOpacity
       style={[styles.container, isPlaying && styles.containerActive]}
@@ -53,7 +56,8 @@ export function SongItem({ song, index, isPlaying, onPress }: SongItemProps) {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.border,
   },
   containerActive: {
-    backgroundColor: "rgba(240,165,0,0.06)",
+    backgroundColor: "rgba(2,195,202,0.08)",
   },
   indexBox: {
     width: 36,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -12,13 +12,16 @@ import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import { Colors } from "../constants/colors";
-import { THERAPY_SECTIONS, TherapySection, Song } from "../constants/data";
+import { AppColors } from "../constants/colors";
+import { TherapySection } from "../constants/data";
 import { SongItem } from "../components/SongItem";
 import { HelpModal } from "../components/HelpModal";
 import { useUser } from "../context/UserContext";
 import { AvatarImage } from "../components/AvatarImage";
 import { usePlayback } from "../context/PlaybackContext";
+import { usePlaylistCatalog } from "../context/PlaylistCatalogContext";
+import { useThemeStyles } from "../context/ThemeContext";
+
 
 type IoniconName = React.ComponentProps<typeof Ionicons>["name"];
 
@@ -37,6 +40,8 @@ type SectionDetailProps = {
 };
 
 function SectionDetail({ section, visible, onClose }: SectionDetailProps) {
+  const { colors: Colors, styles: detailStyles } =
+    useThemeStyles(createDetailStyles);
   const { currentTrack, isPlaying, playSong } = usePlayback();
 
   return (
@@ -161,86 +166,89 @@ function SectionDetail({ section, visible, onClose }: SectionDetailProps) {
   );
 }
 
-const detailStyles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    justifyContent: "flex-end",
-    backgroundColor: "rgba(0,0,0,0.7)",
-  },
-  sheet: {
-    height: "88%",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    overflow: "hidden",
-    paddingHorizontal: 20,
-    paddingTop: 12,
-  },
-  handle: {
-    width: 40,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: Colors.border,
-    alignSelf: "center",
-    marginBottom: 16,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    marginBottom: 16,
-    gap: 12,
-  },
-  iconBg: {
-    width: 50,
-    height: 50,
-    borderRadius: 14,
-    borderWidth: 1.5,
-    backgroundColor: "rgba(255,255,255,0.04)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  headerText: { flex: 1 },
-  title: { fontSize: 17, fontWeight: "700", marginBottom: 4 },
-  subtitle: { fontSize: 13, color: Colors.textSecondary },
-  closeBtn: { padding: 4 },
-  description: {
-    fontSize: 14,
-    color: Colors.textSecondary,
-    lineHeight: 22,
-    marginBottom: 16,
-  },
-  pills: { flexDirection: "row", gap: 10, marginBottom: 20 },
-  pill: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-    borderWidth: 1,
-    backgroundColor: "rgba(255,255,255,0.03)",
-  },
-  pillText: { fontSize: 12, fontWeight: "600" },
-  songList: {
-    backgroundColor: Colors.card,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: Colors.border,
-    overflow: "hidden",
-    marginBottom: 20,
-  },
-  disclaimer: {
-    fontSize: 12,
-    color: Colors.textMuted,
-    textAlign: "center",
-    lineHeight: 18,
-    paddingHorizontal: 16,
-  },
-});
+const createDetailStyles = (Colors: AppColors) =>
+  StyleSheet.create({
+    overlay: {
+      flex: 1,
+      justifyContent: "flex-end",
+      backgroundColor: "rgba(0,0,0,0.7)",
+    },
+    sheet: {
+      height: "88%",
+      borderTopLeftRadius: 24,
+      borderTopRightRadius: 24,
+      overflow: "hidden",
+      paddingHorizontal: 20,
+      paddingTop: 12,
+    },
+    handle: {
+      width: 40,
+      height: 4,
+      borderRadius: 2,
+      backgroundColor: Colors.border,
+      alignSelf: "center",
+      marginBottom: 16,
+    },
+    header: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      marginBottom: 16,
+      gap: 12,
+    },
+    iconBg: {
+      width: 50,
+      height: 50,
+      borderRadius: 14,
+      borderWidth: 1.5,
+      backgroundColor: "rgba(255,255,255,0.04)",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    headerText: { flex: 1 },
+    title: { fontSize: 17, fontWeight: "700", marginBottom: 4 },
+    subtitle: { fontSize: 13, color: Colors.textSecondary },
+    closeBtn: { padding: 4 },
+    description: {
+      fontSize: 14,
+      color: Colors.textSecondary,
+      lineHeight: 22,
+      marginBottom: 16,
+    },
+    pills: { flexDirection: "row", gap: 10, marginBottom: 20 },
+    pill: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      borderRadius: 20,
+      borderWidth: 1,
+      backgroundColor: "rgba(255,255,255,0.03)",
+    },
+    pillText: { fontSize: 12, fontWeight: "600" },
+    songList: {
+      backgroundColor: Colors.card,
+      borderRadius: 16,
+      borderWidth: 1,
+      borderColor: Colors.border,
+      overflow: "hidden",
+      marginBottom: 20,
+    },
+    disclaimer: {
+      fontSize: 12,
+      color: Colors.textMuted,
+      textAlign: "center",
+      lineHeight: 18,
+      paddingHorizontal: 16,
+    },
+  });
 
 // ── Main Screen ───────────────────────────────────────────────────────────────
 
 export function TherapyScreen() {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
   const { profile } = useUser();
+  const { therapySections, isLoading } = usePlaylistCatalog();
   const [helpVisible, setHelpVisible] = useState(false);
   const [selectedSection, setSelectedSection] = useState<TherapySection | null>(
     null,
@@ -248,8 +256,18 @@ export function TherapyScreen() {
   const [activeMood, setActiveMood] = useState<string | null>(null);
 
   const visibleSections = activeMood
-    ? THERAPY_SECTIONS.filter((s) => s.id === activeMood)
-    : THERAPY_SECTIONS;
+    ? therapySections.filter((s) => s.id === activeMood)
+    : therapySections;
+
+  // Sync selectedSection if therapySections gets updated
+  useEffect(() => {
+    if (selectedSection) {
+      const updated = therapySections.find((s) => s.id === selectedSection.id);
+      if (updated && updated !== selectedSection) {
+        setSelectedSection(updated);
+      }
+    }
+  }, [therapySections, selectedSection]);
 
   const greeting = () => {
     const h = new Date().getHours();
@@ -484,155 +502,160 @@ export function TherapyScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: Colors.background },
-  safe: { flex: 1 },
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
+    root: { flex: 1, backgroundColor: Colors.background },
+    safe: { flex: 1 },
 
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-  },
-  headerLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
-  greetWrap: {},
-  greetDay: { fontSize: 11, color: Colors.textMuted },
-  greetName: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: Colors.textPrimary,
-    maxWidth: 160,
-  },
-  helpBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    borderWidth: 1.5,
-    borderColor: Colors.gold,
-    borderRadius: 20,
-    paddingHorizontal: 14,
-    paddingVertical: 6,
-  },
-  helpBtnText: { fontSize: 13, fontWeight: "600", color: Colors.gold },
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: 20,
+      paddingVertical: 12,
+    },
+    headerLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
+    greetWrap: {},
+    greetDay: { fontSize: 11, color: Colors.textMuted },
+    greetName: {
+      fontSize: 16,
+      fontWeight: "700",
+      color: Colors.textPrimary,
+      maxWidth: 160,
+    },
+    helpBtn: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      borderWidth: 1.5,
+      borderColor: Colors.gold,
+      borderRadius: 20,
+      paddingHorizontal: 14,
+      paddingVertical: 6,
+    },
+    helpBtnText: { fontSize: 13, fontWeight: "600", color: Colors.gold },
 
-  scroll: { paddingHorizontal: 20 },
+    scroll: { paddingHorizontal: 20 },
 
-  hero: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: 20,
-    gap: 12,
-  },
-  heroTextWrap: { flex: 1 },
-  heroTitle: {
-    fontSize: 26,
-    fontWeight: "800",
-    color: Colors.textPrimary,
-    marginBottom: 8,
-  },
-  heroSubtitle: { fontSize: 13, color: Colors.textSecondary, lineHeight: 20 },
-  heroIconWrap: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    backgroundColor: Colors.card,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: Colors.border,
-  },
+    hero: {
+      flexDirection: "row",
+      alignItems: "center",
+      paddingVertical: 20,
+      gap: 12,
+    },
+    heroTextWrap: { flex: 1 },
+    heroTitle: {
+      fontSize: 26,
+      fontWeight: "800",
+      color: Colors.textPrimary,
+      marginBottom: 8,
+    },
+    heroSubtitle: { fontSize: 13, color: Colors.textSecondary, lineHeight: 20 },
+    heroIconWrap: {
+      width: 70,
+      height: 70,
+      borderRadius: 35,
+      backgroundColor: Colors.card,
+      alignItems: "center",
+      justifyContent: "center",
+      borderWidth: 1,
+      borderColor: Colors.border,
+    },
 
-  sectionLabel: {
-    fontSize: 13,
-    fontWeight: "700",
-    color: Colors.textMuted,
-    textTransform: "uppercase",
-    letterSpacing: 1,
-    marginBottom: 12,
-    marginTop: 8,
-  },
+    sectionLabel: {
+      fontSize: 13,
+      fontWeight: "700",
+      color: Colors.textMuted,
+      textTransform: "uppercase",
+      letterSpacing: 1,
+      marginBottom: 12,
+      marginTop: 8,
+    },
 
-  moodRow: { marginBottom: 20 },
-  moodChip: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    paddingHorizontal: 14,
-    paddingVertical: 9,
-    borderRadius: 24,
-    backgroundColor: Colors.card,
-    borderWidth: 1,
-    borderColor: Colors.border,
-    marginRight: 8,
-  },
-  moodChipActive: { backgroundColor: Colors.gold, borderColor: Colors.gold },
-  moodChipText: {
-    fontSize: 13,
-    fontWeight: "600",
-    color: Colors.textSecondary,
-  },
-  moodChipActiveText: { color: Colors.background },
+    moodRow: { marginBottom: 20 },
+    moodChip: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      paddingHorizontal: 14,
+      paddingVertical: 9,
+      borderRadius: 24,
+      backgroundColor: Colors.card,
+      borderWidth: 1,
+      borderColor: Colors.border,
+      marginRight: 8,
+    },
+    moodChipActive: { backgroundColor: Colors.gold, borderColor: Colors.gold },
+    moodChipText: {
+      fontSize: 13,
+      fontWeight: "600",
+      color: Colors.textSecondary,
+    },
+    moodChipActiveText: { color: Colors.background },
 
-  sectionCard: {
-    borderRadius: 18,
-    marginBottom: 14,
-    borderWidth: 1,
-    borderColor: Colors.border,
-    overflow: "hidden",
-  },
-  cardAccentBar: { height: 3, width: "100%" },
-  cardBody: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 16,
-    gap: 12,
-  },
-  cardIconBg: {
-    width: 48,
-    height: 48,
-    borderRadius: 14,
-    borderWidth: 1.5,
-    backgroundColor: "rgba(255,255,255,0.04)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  cardTextWrap: { flex: 1 },
-  cardTitle: { fontSize: 15, fontWeight: "700", marginBottom: 3 },
-  cardSubtitle: { fontSize: 12, color: Colors.textSecondary, marginBottom: 6 },
-  cardMeta: { flexDirection: "row", alignItems: "center", gap: 6 },
-  cardMetaText: { fontSize: 11, color: Colors.textMuted },
-  metaDot: {
-    width: 3,
-    height: 3,
-    borderRadius: 2,
-    backgroundColor: Colors.textMuted,
-  },
+    sectionCard: {
+      borderRadius: 18,
+      marginBottom: 14,
+      borderWidth: 1,
+      borderColor: Colors.border,
+      overflow: "hidden",
+    },
+    cardAccentBar: { height: 3, width: "100%" },
+    cardBody: {
+      flexDirection: "row",
+      alignItems: "center",
+      padding: 16,
+      gap: 12,
+    },
+    cardIconBg: {
+      width: 48,
+      height: 48,
+      borderRadius: 14,
+      borderWidth: 1.5,
+      backgroundColor: "rgba(255,255,255,0.04)",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    cardTextWrap: { flex: 1 },
+    cardTitle: { fontSize: 15, fontWeight: "700", marginBottom: 3 },
+    cardSubtitle: {
+      fontSize: 12,
+      color: Colors.textSecondary,
+      marginBottom: 6,
+    },
+    cardMeta: { flexDirection: "row", alignItems: "center", gap: 6 },
+    cardMetaText: { fontSize: 11, color: Colors.textMuted },
+    metaDot: {
+      width: 3,
+      height: 3,
+      borderRadius: 2,
+      backgroundColor: Colors.textMuted,
+    },
 
-  previewSongs: {
-    borderTopWidth: 1,
-    borderTopColor: Colors.border,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 6,
-  },
-  previewSong: { fontSize: 12, color: Colors.textPrimary },
+    previewSongs: {
+      borderTopWidth: 1,
+      borderTopColor: Colors.border,
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+      gap: 6,
+    },
+    previewSong: { fontSize: 12, color: Colors.textPrimary },
 
-  disclaimer: {
-    flexDirection: "row",
-    gap: 8,
-    backgroundColor: Colors.card,
-    borderRadius: 12,
-    padding: 14,
-    marginTop: 4,
-    borderWidth: 1,
-    borderColor: Colors.border,
-    alignItems: "flex-start",
-  },
-  disclaimerText: {
-    flex: 1,
-    fontSize: 12,
-    color: Colors.textMuted,
-    lineHeight: 18,
-  },
-});
+    disclaimer: {
+      flexDirection: "row",
+      gap: 8,
+      backgroundColor: Colors.card,
+      borderRadius: 12,
+      padding: 14,
+      marginTop: 4,
+      borderWidth: 1,
+      borderColor: Colors.border,
+      alignItems: "flex-start",
+    },
+    disclaimerText: {
+      flex: 1,
+      fontSize: 12,
+      color: Colors.textMuted,
+      lineHeight: 18,
+    },
+  });

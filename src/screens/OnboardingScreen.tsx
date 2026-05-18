@@ -13,15 +13,17 @@ import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
 import { useUser } from "../context/UserContext";
 import { AvatarImage } from "../components/AvatarImage";
 import { BrandLogo } from "../components/BrandLogo";
 import { AvatarConfig, createAvatarOptions } from "../services/avatarApi";
+import { useThemeStyles } from "../context/ThemeContext";
 
 type Step = "welcome" | "name" | "avatar";
 
 export function OnboardingScreen() {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
   const { saveProfile } = useUser();
   const [step, setStep] = useState<Step>("welcome");
   const [name, setName] = useState("");
@@ -83,12 +85,12 @@ export function OnboardingScreen() {
         />
         <SafeAreaView style={styles.centerSafe}>
           <View style={styles.welcomeWrap}>
-            <BrandLogo width={118} height={118} />
-            <Text style={styles.brandTitle}>HARMONIA MENTAL</Text>
-            <Text style={styles.brandTagline}>A Musica que Equilibra a Mente</Text>
+            <BrandLogo width={176} height={136} />
+            <Text style={styles.brandTitle}>PSYMPHONY</Text>
+            <Text style={styles.brandTagline}>Quando a música encontra o cuidado</Text>
             <Text style={styles.welcomeTitle}>Seja bem-vindo(a)</Text>
             <Text style={styles.welcomeSubtitle}>
-              Harmonia Mental é o seu espaço para usar a música como ferramenta
+              Psymphony é o seu espaço para usar a música como ferramenta
               de equilíbrio emocional. Vamos criar seu perfil?
             </Text>
             <TouchableOpacity
@@ -270,7 +272,8 @@ export function OnboardingScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   root: { flex: 1, backgroundColor: Colors.background },
   safe: { flex: 1 },
   centerSafe: { flex: 1, justifyContent: "center" },
@@ -281,7 +284,7 @@ const styles = StyleSheet.create({
     fontSize: 21,
     fontWeight: "900",
     letterSpacing: 1.1,
-    color: "#79D2D3",
+    color: Colors.cyan,
   },
   brandTagline: {
     marginTop: 2,
@@ -380,7 +383,7 @@ const styles = StyleSheet.create({
   },
   avatarCardActive: {
     borderColor: Colors.gold,
-    backgroundColor: "rgba(240,165,0,0.08)",
+    backgroundColor: "rgba(2,195,202,0.1)",
   },
 
   secondaryBtn: {

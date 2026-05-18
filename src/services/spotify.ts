@@ -1,15 +1,6 @@
-/**
- * Spotify API Service — PLACEHOLDER
- * ───────────────────────────────────
- * Integrar com Spotify Web API usando fluxo Client Credentials para busca
- * pública de faixas e OAuth PKCE para playlists do usuário.
- *
- * Docs: https://developer.spotify.com/documentation/web-api
- *
- * Variáveis de ambiente necessárias (app.config.js / .env):
- *   EXPO_PUBLIC_SPOTIFY_CLIENT_ID
- *   EXPO_PUBLIC_SPOTIFY_CLIENT_SECRET
- */
+// src/services/spotify.ts
+
+import { getStoredSpotifyToken } from "./spotifyAuth";
 
 export type SpotifyTrack = {
   id: string;
@@ -22,57 +13,83 @@ export type SpotifyTrack = {
   spotifyUri: string;
 };
 
-export type SpotifyPlaylist = {
-  id: string;
-  name: string;
-  description: string;
-  imageUrl: string;
-  trackCount: number;
-};
-
-// ── Mock data ────────────────────────────────
-
-export async function searchTracks(query: string): Promise<SpotifyTrack[]> {
-  // TODO: GET https://api.spotify.com/v1/search?q={query}&type=track
-  console.log("[Spotify] searchTracks:", query);
-  return MOCK_TRACKS;
-}
-
-export async function getPlaylistTracks(
-  playlistId: string,
+/**
+ * Busca tracks no Spotify via Search API.
+ * Funciona em Development Mode sem Extended Quota.
+ */
+export async function searchSpotifyTracks(
+  query: string,
+  limit: number = 10,
 ): Promise<SpotifyTrack[]> {
-  // TODO: GET https://api.spotify.com/v1/playlists/{playlistId}/tracks
-  console.log("[Spotify] getPlaylistTracks:", playlistId);
-  return MOCK_TRACKS;
+  const token = await getStoredSpotifyToken();
+  if (!token) {
+    console.warn("[Spotify] Sem token para busca.");
+    return [];
+  }
+
+  try {
+    const response = await fetch(
+      `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=${limit}`,
+      { headers: { Authorization: `Bearer ${token}` } },
+    );
+
+    if (!response.ok) {
+      const body = await response.text().catch(() => "<no-body>");
+      console.error(`[Spotify] Search failed: ${response.status} - ${body}`);
+      return [];
+    }
+
+    const data = await response.json();
+    return (data.tracks?.items || []).map((track: any) => ({
+      id: track.id,
+      name: track.name,
+      artist: track.artists?.map((a: any) => a.name).join(", ") || "Unknown",
+      album: track.album?.name || "",
+      albumArt: track.album?.images?.[0]?.url || "",
+      previewUrl: track.preview_url ?? null,
+      durationMs: track.duration_ms || 0,
+      spotifyUri: track.uri || "",
+    }));
+  } catch (error) {
+    console.error("[Spotify] Search error:", error);
+    return [];
+  }
 }
 
-export async function getRecommendations(
-  seedTrackIds: string[],
+/**
+ * Busca terapêutica: executa múltiplas queries e combina resultados
+ * removendo duplicatas. Ideal para montar seções temáticas.
+ */
+export async function searchTherapyTracks(
+  queries: string[],
+  tracksPerQuery: number = 5,
 ): Promise<SpotifyTrack[]> {
-  // TODO: GET https://api.spotify.com/v1/recommendations?seed_tracks={ids}
-  console.log("[Spotify] getRecommendations:", seedTrackIds);
-  return MOCK_TRACKS;
+  const seenIds = new Set<string>();
+  const results: SpotifyTrack[] = [];
+
+  for (const query of queries) {
+    const tracks = await searchSpotifyTracks(query, tracksPerQuery);
+    for (const track of tracks) {
+      if (!seenIds.has(track.id)) {
+        seenIds.add(track.id);
+        results.push(track);
+      }
+    }
+  }
+
+  return results;
 }
 
-const MOCK_TRACKS: SpotifyTrack[] = [
-  {
-    id: "mock_1",
-    name: "River Flows in You",
-    artist: "Yiruma",
-    album: "First Love",
-    albumArt: "",
-    previewUrl: null,
-    durationMs: 210000,
-    spotifyUri: "spotify:track:mock_1",
-  },
-  {
-    id: "mock_2",
-    name: "Weightless",
-    artist: "Marconi Union",
-    album: "Weightless",
-    albumArt: "",
-    previewUrl: null,
-    durationMs: 498000,
-    spotifyUri: "spotify:track:mock_2",
-  },
-];
+/**
+ * Busca uma track específica por artist + title no Spotify.
+ */
+export async function searchExactTrack(
+  artist: string,
+  title: string,
+): Promise<SpotifyTrack | null> {
+  const results = await searchSpotifyTracks(
+    `track:${title} artist:${artist}`,
+    1,
+  );
+  return results[0] ?? null;
+}

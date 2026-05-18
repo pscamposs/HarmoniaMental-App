@@ -12,11 +12,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
 import { useUser } from "../context/UserContext";
 import { BrandLogo } from "../components/BrandLogo";
+import { useThemeStyles } from "../context/ThemeContext";
 
 export function SettingsScreen() {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
   const { profile, logout } = useUser();
   const [logoutModalVisible, setLogoutModalVisible] = useState(false);
 
@@ -38,8 +40,8 @@ export function SettingsScreen() {
       <SafeAreaView style={styles.safe} edges={["top"]}>
         <ScrollView contentContainerStyle={styles.scroll}>
           <View style={styles.logoWrap}>
-            <BrandLogo width={94} height={94} />
-            <Text style={styles.brandTitle}>HARMONIA MENTAL</Text>
+            <BrandLogo width={136} height={106} />
+            <Text style={styles.brandTitle}>PSYMPHONY</Text>
           </View>
 
           <View style={styles.header}>
@@ -131,7 +133,8 @@ export function SettingsScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   root: { flex: 1, backgroundColor: Colors.background },
   safe: { flex: 1 },
   scroll: { paddingHorizontal: 20, paddingBottom: 24 },
@@ -146,7 +149,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "800",
     letterSpacing: 0.9,
-    color: "#79D2D3",
+    color: Colors.cyan,
   },
 
   header: { paddingTop: 10, paddingBottom: 14 },
@@ -172,7 +175,7 @@ const styles = StyleSheet.create({
   rowValue: { fontSize: 15, fontWeight: "700", color: Colors.textPrimary },
 
   logoutBtn: {
-    backgroundColor: "#C0392B",
+    backgroundColor: Colors.danger,
     borderRadius: 14,
     flexDirection: "row",
     alignItems: "center",
@@ -216,7 +219,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: "rgba(240,165,0,0.14)",
+    backgroundColor: "rgba(2,195,202,0.12)",
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
@@ -254,7 +257,7 @@ const styles = StyleSheet.create({
   cancelText: { color: Colors.textPrimary, fontSize: 14, fontWeight: "700" },
   confirmBtn: {
     flex: 1,
-    backgroundColor: "#C0392B",
+    backgroundColor: Colors.danger,
     borderRadius: 12,
     paddingVertical: 12,
     alignItems: "center",

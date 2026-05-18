@@ -11,7 +11,8 @@ import {
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors } from "../constants/colors";
+import { AppColors } from "../constants/colors";
+import { useThemeStyles } from "../context/ThemeContext";
 
 type HelpModalProps = {
   visible: boolean;
@@ -19,6 +20,8 @@ type HelpModalProps = {
 };
 
 export function HelpModal({ visible, onClose }: HelpModalProps) {
+  const { colors: Colors, styles } = useThemeStyles(createStyles);
+
   const callNumber = async (phone: string) => {
     const url = `tel:${phone}`;
     const canOpen = await Linking.canOpenURL(url);
@@ -146,7 +149,8 @@ export function HelpModal({ visible, onClose }: HelpModalProps) {
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (Colors: AppColors) =>
+  StyleSheet.create({
   overlay: {
     flex: 1,
     backgroundColor: Colors.overlay,
@@ -186,7 +190,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: "rgba(240,165,0,0.14)",
+    backgroundColor: "rgba(2,195,202,0.12)",
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
@@ -260,11 +264,11 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   callNumberMuted: {
-    backgroundColor: "rgba(240,165,0,0.2)",
+    backgroundColor: Colors.accentSoft,
     borderRadius: 6,
     paddingHorizontal: 8,
     paddingVertical: 3,
-    color: Colors.gold,
+    color: Colors.accent,
     fontSize: 13,
     minWidth: 40,
     textAlign: "center",
