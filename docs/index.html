@@ -5,37 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Harmonia Mental — App de musicoterapia para equilíbrio emocional. Playlists terapêuticas, suporte à crise e acesso gratuito."
+      content="Psymphony e um app de musicoterapia para apoio emocional, com onboarding personalizado, playlists terapeuticas, busca musical, player persistente e ajuda em crise."
     />
-    <meta property="og:title" content="Harmonia Mental" />
-    <meta property="og:description" content="A Música que Equilibra a Mente" />
-    <meta property="og:image" content="assets/brand-symbol.png" />
-    <meta name="theme-color" content="#0C0C24" />
-    <title>Harmonia Mental — A Música que Equilibra a Mente</title>
+    <meta property="og:title" content="Psymphony" />
+    <meta
+      property="og:description"
+      content="Quando a musica encontra o cuidado. Baixe o APK Android da versao atual."
+    />
+    <meta property="og:image" content="assets/app-icon-safe.png" />
+    <meta
+      name="theme-color"
+      content="#FAFAF7"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#12101E"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="icon" href="assets/app-icon-safe.png" />
+    <title>Psymphony - Download Android</title>
 
     <style>
-      /* ── Reset & Base ─────────────────────────────────────────────── */
       *,
       *::before,
       *::after {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
       }
 
       :root {
-        --bg: #0c0c24;
-        --surface: #13132e;
-        --surface-alt: #1a1a42;
-        --border: #2a2a5a;
-        --primary: #0c0c24;
-        --accent: #f0a500;
-        --accent-dark: #b87d00;
-        --text: #ffffff;
-        --text-sec: #8884a8;
-        --text-muted: #5a587a;
-        --radius: 12px;
-        --radius-sm: 8px;
+        color-scheme: light dark;
+        --bg: #fafaf7;
+        --bg-soft: #f1f7f7;
+        --surface: #ffffff;
+        --surface-2: #f7f4fb;
+        --border: #e5e0ef;
+        --text: #241f33;
+        --text-2: #7f5e9d;
+        --text-3: #9a84b6;
+        --cyan: #02c3ca;
+        --cyan-2: #00aeb5;
+        --purple: #5635aa;
+        --lavender: #a58cd7;
+        --mint: #6ace9a;
+        --gold: #e3a216;
+        --orange: #e97c39;
+        --danger: #e65349;
+        --radius: 8px;
+        --shadow: 0 22px 70px rgba(36, 31, 51, 0.12);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #12101e;
+          --bg-soft: #171426;
+          --surface: #1d1930;
+          --surface-2: #28213f;
+          --border: #342a4f;
+          --text: #f8f5ff;
+          --text-2: #b9a9d8;
+          --text-3: #8f7cb0;
+          --cyan: #02c3ca;
+          --cyan-2: #35dde2;
+          --purple: #7b55d9;
+          --lavender: #a58cd7;
+          --mint: #6ace9a;
+          --gold: #e3a216;
+          --orange: #e97c39;
+          --danger: #ff7068;
+          --shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
+        }
       }
 
       html {
@@ -43,890 +82,1118 @@
       }
 
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        background-color: var(--bg);
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(2, 195, 202, 0.16),
+            transparent 34rem
+          ),
+          radial-gradient(
+            circle at 82% 12%,
+            rgba(86, 53, 170, 0.16),
+            transparent 28rem
+          ),
+          var(--bg);
         color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.5;
       }
 
       a {
         color: inherit;
         text-decoration: none;
       }
+
       img {
         display: block;
         max-width: 100%;
       }
 
       .container {
-        max-width: 1100px;
+        width: min(1120px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 0 24px;
       }
 
-      /* ── NAV ──────────────────────────────────────────────────────── */
-      nav {
-        position: fixed;
+      .topbar {
+        position: sticky;
         top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background: var(--surface);
+        z-index: 20;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
         border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(16px);
       }
 
-      .nav-inner {
+      .topbar__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 24px;
-        max-width: 1100px;
-        margin: 0 auto;
+        min-height: 72px;
+        gap: 20px;
       }
 
-      .nav-brand {
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        font-weight: 850;
+        letter-spacing: 0;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+      }
+
+      .brand span {
+        white-space: nowrap;
+      }
+
+      .nav {
         display: flex;
         align-items: center;
+        gap: 22px;
+        color: var(--text-2);
+        font-size: 0.92rem;
+        font-weight: 650;
+      }
+
+      .nav a:hover {
+        color: var(--cyan);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         gap: 10px;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: var(--radius);
+        border: 1px solid transparent;
+        background: var(--cyan);
+        color: #12101e;
+        font-weight: 800;
+        line-height: 1;
+        transition:
+          transform 0.16s ease,
+          border-color 0.16s ease,
+          background 0.16s ease;
       }
 
-      .nav-brand img {
-        width: 34px;
-        height: 34px;
-        object-fit: contain;
+      .button:hover {
+        background: var(--cyan-2);
+        transform: translateY(-1px);
       }
 
-      .nav-brand span {
-        font-size: 0.95rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
+      .button--secondary {
+        background: var(--surface);
         color: var(--text);
+        border-color: var(--border);
       }
 
-      .nav-links {
-        display: flex;
+      .button--secondary:hover {
+        background: var(--surface-2);
+      }
+
+      .release {
+        position: relative;
+        min-height: calc(100svh - 72px);
+        overflow: hidden;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .release::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background-image: url("assets/brand-symbol.png");
+        background-position: center 42%;
+        background-repeat: no-repeat;
+        background-size: min(760px, 118vw);
+        opacity: 0.065;
+      }
+
+      .release::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        z-index: -1;
+        height: 46%;
+        background: linear-gradient(180deg, transparent, var(--bg-soft));
+      }
+
+      .release__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
         align-items: center;
-        gap: 28px;
-        list-style: none;
+        gap: 48px;
+        min-height: calc(100svh - 72px);
+        padding: 56px 0 84px;
       }
 
-      .nav-links a {
-        font-size: 0.875rem;
-        color: var(--text-sec);
-        transition: color 0.15s;
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        margin-bottom: 18px;
+        padding: 7px 10px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: color-mix(in srgb, var(--surface) 86%, transparent);
+        color: var(--purple);
+        font-size: 0.78rem;
+        font-weight: 850;
+        text-transform: uppercase;
       }
 
-      .nav-links a:hover {
-        color: var(--accent);
+      .wordmark {
+        width: min(360px, 78vw);
+        height: auto;
+        margin-bottom: 18px;
+        mix-blend-mode: multiply;
       }
 
-      .nav-cta {
-        background: var(--accent);
-        color: #fff !important;
-        font-weight: 600;
-        padding: 8px 20px;
-        border-radius: var(--radius-sm);
-        font-size: 0.875rem;
-        transition: background 0.15s;
-      }
-
-      .nav-cta:hover {
-        background: var(--accent-dark) !important;
-      }
-
-      @media (max-width: 640px) {
-        .nav-links li:not(:last-child) {
-          display: none;
+      @media (prefers-color-scheme: dark) {
+        .wordmark {
+          mix-blend-mode: screen;
         }
       }
 
-      /* ── HERO ─────────────────────────────────────────────────────── */
-      .hero {
-        background: var(--surface-alt);
-        min-height: 100dvh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 120px 24px 80px;
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
       }
 
-      .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        max-width: 560px;
-        margin: 0 auto;
+      h1 {
+        max-width: 760px;
+        color: var(--text);
+        font-size: clamp(3rem, 8vw, 6.2rem);
+        font-weight: 900;
+        line-height: 0.96;
       }
 
-      .hero-logo {
-        width: 110px;
-        height: 110px;
-        object-fit: contain;
+      .subtitle {
+        max-width: 660px;
+        margin-top: 22px;
+        color: var(--text-2);
+        font-size: clamp(1.05rem, 2.1vw, 1.32rem);
       }
 
-      .hero-eyebrow {
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      .hero h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 800;
-        letter-spacing: 0.04em;
-        line-height: 1.1;
-        color: #ffffff;
-      }
-
-      .hero-tagline {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.68);
-        max-width: 440px;
-      }
-
-      .hero-actions {
+      .release__actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        justify-content: center;
-        margin-top: 8px;
+        margin-top: 30px;
       }
 
-      /* ── Buttons ──────────────────────────────────────────────────── */
-      .btn {
+      .release__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+        color: var(--text-3);
+        font-size: 0.9rem;
+      }
+
+      .pill {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        padding: 13px 26px;
-        border-radius: var(--radius-sm);
-        font-size: 0.95rem;
-        font-weight: 600;
-        cursor: pointer;
-        border: none;
-        text-decoration: none;
-        transition:
-          background 0.15s,
-          opacity 0.15s;
-      }
-
-      .btn .icon {
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: #ffffff;
-      }
-      .btn-primary:hover {
-        background: var(--accent-dark);
-      }
-
-      .btn-outline {
-        background: transparent;
-        color: rgba(255, 255, 255, 0.65);
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-      }
-
-      .btn-outline:hover {
-        border-color: rgba(255, 255, 255, 0.5);
-        color: rgba(255, 255, 255, 0.85);
-      }
-
-      /* ── Divider ─────────────────────────────────────────────────── */
-      .section-divider {
-        width: 100%;
-        height: 1px;
-        background: var(--border);
-      }
-
-      /* ── Section commons ─────────────────────────────────────────── */
-      section {
-        padding: 88px 0;
-      }
-
-      .section-label {
-        display: block;
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--accent);
-        margin-bottom: 10px;
-        text-align: center;
-      }
-
-      .section-title {
-        font-size: clamp(1.5rem, 3.5vw, 2.1rem);
-        font-weight: 800;
-        text-align: center;
-        line-height: 1.25;
-        margin-bottom: 14px;
-        color: var(--text);
-      }
-
-      .section-sub {
-        font-size: 1rem;
-        color: var(--text-sec);
-        text-align: center;
-        max-width: 520px;
-        margin: 0 auto 52px;
-      }
-
-      /* ── FEATURES ────────────────────────────────────────────────── */
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 18px;
-      }
-
-      .feature-card {
-        background: var(--surface);
+        min-height: 32px;
+        padding: 0 10px;
         border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 26px 22px;
+        background: color-mix(in srgb, var(--surface) 74%, transparent);
+        font-weight: 700;
       }
 
-      .feature-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: var(--radius-sm);
+      .phone {
+        width: min(360px, 100%);
+        margin-left: auto;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        box-shadow: var(--shadow);
+      }
+
+      .phone__screen {
+        overflow: hidden;
+        min-height: 650px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background:
+          linear-gradient(150deg, rgba(2, 195, 202, 0.12), transparent 36%),
+          linear-gradient(220deg, rgba(86, 53, 170, 0.2), transparent 44%),
+          var(--surface);
+      }
+
+      .app-head {
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-        margin-bottom: 16px;
-        background: var(--surface-alt);
-      }
-
-      .feature-card h3 {
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: var(--text);
-      }
-
-      .feature-card p {
-        font-size: 0.875rem;
-        color: var(--text-sec);
-        line-height: 1.65;
-      }
-
-      /* ── HOW IT WORKS ────────────────────────────────────────────── */
-      .steps-section {
-        background: var(--surface);
-      }
-      .steps-section .section-label {
-        color: rgba(255, 255, 255, 0.45);
-      }
-      .steps-section .section-title {
-        color: #ffffff;
-      }
-      .steps-section .section-sub {
-        color: rgba(255, 255, 255, 0.58);
-      }
-
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 32px;
-      }
-
-      .step {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
         gap: 12px;
+        padding: 18px 18px 12px;
       }
 
-      .step-num {
-        width: 44px;
-        height: 44px;
+      .avatar {
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background: var(--accent);
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 800;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
+        background:
+          linear-gradient(145deg, var(--mint), var(--cyan)), var(--surface-2);
+        border: 2px solid var(--surface);
       }
 
-      .step h3 {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #ffffff;
-      }
-      .step p {
-        font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.58);
+      .app-title {
+        flex: 1;
+        min-width: 0;
       }
 
-      /* ── THERAPY CATEGORIES ──────────────────────────────────────── */
-      .therapy-grid {
+      .app-title strong,
+      .app-title span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .app-title strong {
+        font-size: 0.95rem;
+      }
+
+      .app-title span {
+        color: var(--text-3);
+        font-size: 0.78rem;
+      }
+
+      .help-dot {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--cyan);
+        border-radius: 50%;
+        color: var(--cyan);
+        font-weight: 900;
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+        padding: 0 12px 14px;
+        color: var(--text-3);
+        font-size: 0.68rem;
+        font-weight: 800;
+      }
+
+      .tabs span {
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .tabs span:first-child {
+        color: var(--purple);
+      }
+
+      .screen-body {
+        padding: 0 18px 18px;
+      }
+
+      .screen-hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 0;
+      }
+
+      .screen-hero h2 {
+        font-size: 1.7rem;
+        line-height: 1.08;
+      }
+
+      .screen-hero p {
+        margin-top: 8px;
+        color: var(--text-2);
+        font-size: 0.82rem;
+      }
+
+      .heart {
+        display: grid;
+        place-items: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: var(--surface-2);
+        color: var(--cyan);
+        font-size: 1.9rem;
+        font-weight: 900;
+      }
+
+      .moods {
+        display: flex;
+        gap: 8px;
+        overflow: hidden;
+        margin: 4px -18px 14px;
+        padding: 0 18px;
+      }
+
+      .moods span {
+        flex: 0 0 auto;
+        padding: 8px 11px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface);
+        color: var(--text-2);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .moods span:first-child {
+        background: var(--cyan);
+        color: #12101e;
+        border-color: var(--cyan);
       }
 
       .therapy-card {
-        background: var(--surface);
+        position: relative;
+        overflow: hidden;
+        margin-top: 10px;
         border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 22px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        background: var(--surface);
       }
 
-      .tc-icon {
-        font-size: 1.6rem;
-        margin-bottom: 4px;
+      .therapy-card::before {
+        content: "";
+        display: block;
+        height: 4px;
+        background: var(--accent, var(--cyan));
       }
+
+      .therapy-card__body {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .therapy-icon {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--accent, var(--cyan));
+        border-radius: var(--radius);
+        color: var(--accent, var(--cyan));
+        font-weight: 900;
+      }
+
       .therapy-card h3 {
         font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--text);
       }
+
       .therapy-card p {
-        font-size: 0.82rem;
-        color: var(--text-sec);
-        line-height: 1.6;
+        color: var(--text-3);
+        font-size: 0.74rem;
       }
 
-      /* ── EMERGENCY ───────────────────────────────────────────────── */
-      .emergency-section {
-        background: var(--surface-alt);
-      }
-
-      .emergency-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        justify-content: center;
-      }
-
-      .emergency-card {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        padding: 22px 26px;
-        border-radius: var(--radius);
-        flex: 1 1 280px;
-        max-width: 380px;
-        background: var(--surface);
-        border: 1px solid var(--border);
-      }
-
-      .e-icon {
-        font-size: 1.75rem;
-        width: 52px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: var(--radius-sm);
-        background: var(--surface-alt);
-        flex-shrink: 0;
-      }
-
-      .emergency-card h3 {
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 2px;
-        color: var(--text);
-      }
-      .emergency-card p {
-        font-size: 0.82rem;
-        color: var(--text-sec);
-        margin-bottom: 6px;
-      }
-      .emergency-card a {
-        font-size: 1.4rem;
-        font-weight: 800;
-        color: var(--accent);
-        font-variant-numeric: tabular-nums;
-      }
-
-      /* ── DOWNLOAD ────────────────────────────────────────────────── */
-      .download-section {
-        text-align: center;
-        background: var(--surface);
-      }
-      .download-section .section-title {
-        color: #ffffff;
-      }
-      .download-section > .container > p {
-        color: rgba(255, 255, 255, 0.62);
-        font-size: 1rem;
-        max-width: 480px;
-        margin: 0 auto 36px;
-      }
-
-      .download-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-      }
-
-      .platform-badge {
-        font-size: 0.68rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        opacity: 0.7;
-        display: block;
-        margin-bottom: 1px;
-      }
-
-      .download-btn-text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        line-height: 1.15;
-      }
-
-      .download-btn-main {
-        font-size: 0.95rem;
-        font-weight: 700;
-      }
-
-      .version-tag {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.1);
-        font-size: 0.72rem;
-        font-weight: 500;
-        padding: 4px 12px;
-        border-radius: 50px;
+      .player {
         margin-top: 20px;
-        color: rgba(255, 255, 255, 0.45);
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid var(--border);
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
       }
 
-      /* ── FOOTER ──────────────────────────────────────────────────── */
-      footer {
+      .player__bar {
+        height: 3px;
+        background: linear-gradient(90deg, var(--cyan) 52%, var(--border) 52%);
+      }
+
+      .player__body {
+        display: grid;
+        grid-template-columns: 42px 1fr auto;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+      }
+
+      .album {
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius);
+        background: linear-gradient(145deg, var(--purple), var(--cyan));
+      }
+
+      .track strong,
+      .track span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .track strong {
+        font-size: 0.82rem;
+      }
+
+      .track span {
+        color: var(--text-2);
+        font-size: 0.72rem;
+      }
+
+      .play {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--cyan);
+        color: #12101e;
+        font-weight: 900;
+      }
+
+      section {
+        padding: 82px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-head {
+        max-width: 760px;
+        margin-bottom: 32px;
+      }
+
+      .section-kicker {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--cyan);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 1.04;
+      }
+
+      .section-head p {
+        margin-top: 14px;
+        color: var(--text-2);
+        font-size: 1.04rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 100%;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
         background: var(--surface);
-        border-top: 1px solid var(--border);
-        padding: 48px 0 32px;
+      }
+
+      .card__icon {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 16px;
+        border: 1px solid currentColor;
+        border-radius: var(--radius);
+        color: var(--card-color, var(--cyan));
+        font-weight: 900;
+      }
+
+      .card h3 {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+
+      .card p {
+        color: var(--text-2);
+        font-size: 0.95rem;
+      }
+
+      .plan {
+        display: grid;
+        grid-template-columns: 0.78fr 1fr;
+        gap: 16px;
+      }
+
+      .plan__aside {
+        padding: 24px;
+        border-radius: var(--radius);
+        background: var(--text);
+        color: var(--bg);
+      }
+
+      .plan__aside h2 {
+        font-size: clamp(1.9rem, 3.8vw, 3rem);
+        line-height: 1;
+      }
+
+      .plan__aside p {
+        margin-top: 14px;
+        opacity: 0.76;
+      }
+
+      .checks {
+        display: grid;
+        gap: 10px;
+      }
+
+      .check {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .check strong {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .check p {
+        color: var(--text-2);
+      }
+
+      .check__mark {
+        display: grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--cyan) 16%, transparent);
+        color: var(--cyan);
+        font-weight: 900;
+      }
+
+      .download {
+        background: var(--bg-soft);
+      }
+
+      .download-panel {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 28px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .download-panel h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.05;
+      }
+
+      .download-panel p {
+        margin-top: 12px;
+        color: var(--text-2);
+      }
+
+      .download-actions {
+        display: grid;
+        gap: 10px;
+        justify-items: stretch;
+        min-width: min(300px, 100%);
+      }
+
+      .small {
+        color: var(--text-3);
+        font-size: 0.86rem;
+        text-align: center;
+      }
+
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .support-card {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .support-card strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+      }
+
+      .support-card p {
+        margin-bottom: 16px;
+        color: var(--text-2);
+      }
+
+      .support-card a {
+        color: var(--cyan);
+        font-weight: 900;
+      }
+
+      footer {
+        padding: 32px 0;
+        color: var(--text-3);
       }
 
       .footer-inner {
         display: flex;
-        flex-wrap: wrap;
-        gap: 32px;
+        align-items: center;
         justify-content: space-between;
-        margin-bottom: 36px;
+        gap: 20px;
+        font-size: 0.9rem;
       }
 
-      .footer-brand {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        max-width: 280px;
-      }
-
-      .footer-brand-row {
+      .footer-logo {
         display: flex;
         align-items: center;
         gap: 10px;
-      }
-      .footer-brand-row img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-      }
-      .footer-brand-row span {
-        font-size: 0.875rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
         color: var(--text);
-      }
-      .footer-brand p {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        line-height: 1.65;
+        font-weight: 850;
       }
 
-      .footer-col h4 {
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--text-sec);
-        margin-bottom: 14px;
+      .footer-logo img {
+        width: 34px;
+        height: 34px;
+        border-radius: var(--radius);
       }
 
-      .footer-col ul {
-        list-style: none;
+      .footer-social {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 10px;
       }
-      .footer-col ul a {
-        font-size: 0.875rem;
-        color: var(--text-muted);
-        transition: color 0.15s;
-      }
-      .footer-col ul a:hover {
-        color: var(--accent);
+
+      .social-link {
+        display: inline-grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--text-2);
+        transition:
+          border-color 0.16s ease,
+          color 0.16s ease,
+          transform 0.16s ease;
       }
 
-      .footer-bottom {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding-top: 24px;
-        border-top: 1px solid var(--border);
+      .social-link:hover {
+        border-color: var(--cyan);
+        color: var(--cyan);
+        transform: translateY(-1px);
       }
 
-      .footer-bottom p {
-        font-size: 0.78rem;
-        color: var(--text-muted);
+      .social-link svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
       }
 
-      /* ── Responsive ──────────────────────────────────────────────── */
-      @media (max-width: 640px) {
-        section {
-          padding: 60px 0;
+      @media (max-width: 900px) {
+        .nav a:not(.button) {
+          display: none;
         }
-        .step {
-          align-items: center;
-          text-align: center;
+
+        .release__inner,
+        .plan,
+        .download-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .phone {
+          margin: 10px auto 0;
+        }
+
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .download-actions {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .container {
+          width: min(100% - 28px, 1120px);
+        }
+
+        .topbar__inner {
+          min-height: 64px;
+        }
+
+        .brand span {
+          display: none;
+        }
+
+        .nav {
+          gap: 10px;
+        }
+
+        .release__inner {
+          min-height: auto;
+          padding: 42px 0 58px;
+        }
+
+        .release__meta,
+        .release__actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .button,
+        .pill {
+          width: 100%;
+        }
+
+        .phone {
+          width: 100%;
+          padding: 10px;
+          border-radius: 22px;
+        }
+
+        .phone__screen {
+          min-height: 560px;
+        }
+
+        .tabs {
+          font-size: 0.62rem;
+        }
+
+        section {
+          padding: 58px 0;
+        }
+
+        .grid,
+        .support-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
         }
       }
     </style>
   </head>
   <body>
-    <!-- ── NAV ───────────────────────────────────────────────────────── -->
-    <nav aria-label="Navegação principal">
-      <div class="nav-inner">
-        <a href="#hero" class="nav-brand">
-          <img src="assets/brand-symbol.png" alt="Logo Harmonia Mental" />
-          <span>HARMONIA MENTAL</span>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#release" aria-label="Psymphony">
+          <img src="assets/app-icon-safe.png" alt="" />
+          <span>Psymphony</span>
         </a>
-        <ul class="nav-links">
-          <li><a href="#features">Funcionalidades</a></li>
-          <li><a href="#how-it-works">Como funciona</a></li>
-          <li><a href="#emergency">Ajuda</a></li>
-          <li><a href="#download" class="nav-cta">Baixar grátis</a></li>
-        </ul>
+        <nav class="nav" aria-label="Navegacao principal">
+          <a href="#recursos">Recursos</a>
+          <a href="#apoio">Apoio</a>
+          <a class="button" href="#download">Baixar APK</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <!-- ── HERO ──────────────────────────────────────────────────────── -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <img
-          class="hero-logo"
-          src="assets/brand-symbol.png"
-          alt="Símbolo Harmonia Mental"
-        />
-        <p class="hero-eyebrow">Musicoterapia no seu bolso</p>
-        <h1>HARMONIA MENTAL</h1>
-        <p class="hero-tagline">
-          A música que equilibra a mente. Playlists terapêuticas criadas para
-          cada estado emocional, com acesso gratuito e sem anúncios.
-        </p>
-        <div class="hero-actions">
-          <a href="#download" class="btn btn-primary">
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-1 14.414-3.707-3.707 1.414-1.414L11 13.586V7h2v6.586l2.293-2.293 1.414 1.414L13 16.414a1 1 0 0 1-1.414 0L11 15.414Z"
+    <main>
+      <div id="release" class="release">
+        <div class="container release__inner">
+          <div>
+            <picture>
+              <source
+                srcset="assets/logo-full-darkmode.png"
+                media="(prefers-color-scheme: dark)"
               />
-            </svg>
-            Baixar para Android
-          </a>
-          <a href="#features" class="btn btn-outline">Saiba mais</a>
+              <img
+                class="wordmark"
+                src="assets/logo-full-whitemode.png"
+                alt="Psymphony"
+              />
+            </picture>
+            <h1>Psymphony</h1>
+            <p class="subtitle">
+              Quando a musica encontra o cuidado. Playlists terapeuticas, busca
+              por musicas e um player simples para apoiar seu bem-estar
+              emocional no dia a dia.
+            </p>
+
+            <div class="release__actions">
+              <a class="button" href="Psymphony.apk" download id="apk-download">
+                Baixar APK Android
+              </a>
+            </div>
+
+            <div class="release__meta">
+              <span class="pill">v1.0.0</span>
+              <span class="pill">Android 8+</span>
+              <span class="pill" id="apk-size">Download direto</span>
+              <span class="pill">Tema automatico</span>
+            </div>
+          </div>
+
+          <aside class="phone" aria-label="Previa do aplicativo Psymphony">
+            <div class="phone__screen">
+              <div class="app-head">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="app-title">
+                  <span>Boa noite,</span>
+                  <strong>Usuario</strong>
+                </div>
+                <div class="help-dot" aria-hidden="true">?</div>
+              </div>
+
+              <div class="tabs" aria-hidden="true">
+                <span>Musicoterapia</span>
+                <span>Pesquisa</span>
+                <span>Configuracoes</span>
+              </div>
+
+              <div class="screen-body">
+                <div class="screen-hero">
+                  <div>
+                    <h2>Musicoterapia</h2>
+                    <p>
+                      Musicas selecionadas para depressao, mania, ansiedade e
+                      equilibrio.
+                    </p>
+                  </div>
+                  <div class="heart" aria-hidden="true">+</div>
+                </div>
+
+                <div class="moods">
+                  <span>Todos</span>
+                  <span>Triste</span>
+                  <span>Agitado</span>
+                  <span>Ansioso</span>
+                </div>
+
+                <article class="therapy-card" style="--accent: var(--lavender)">
+                  <div class="therapy-card__body">
+                    <div class="therapy-icon">01</div>
+                    <div>
+                      <h3>Para Momentos de Tristeza</h3>
+                      <p>Sedativa para estimulante · 50-80 BPM</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="therapy-card" style="--accent: var(--purple)">
+                  <div class="therapy-card__body">
+                    <div class="therapy-icon">02</div>
+                    <div>
+                      <h3>Acalmando a Agitacao</h3>
+                      <p>Sedativa · 50-65 BPM</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="therapy-card" style="--accent: var(--mint)">
+                  <div class="therapy-card__body">
+                    <div class="therapy-icon">03</div>
+                    <div>
+                      <h3>Controle da Ansiedade</h3>
+                      <p>Meditativa · 60-70 BPM</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="player" aria-hidden="true">
+                <div class="player__bar"></div>
+                <div class="player__body">
+                  <div class="album"></div>
+                  <div class="track">
+                    <strong>Faixa terapeutica</strong>
+                    <span>Spotify e YouTube Music</span>
+                  </div>
+                  <div class="play">II</div>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </section>
 
-    <div class="section-divider"></div>
+      <section id="recursos">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-kicker">Recursos</span>
+            <h2>Uma experiencia simples para ouvir e se cuidar</h2>
+            <p>
+              Escolha como voce esta se sentindo, encontre faixas adequadas ao
+              momento e acompanhe a reproducao sem sair do app.
+            </p>
+          </div>
 
-    <!-- ── FEATURES ──────────────────────────────────────────────────── -->
-    <section id="features">
-      <div class="container">
-        <span class="section-label">Funcionalidades</span>
-        <h2 class="section-title">
-          Tudo que você precisa para cuidar da sua mente
-        </h2>
-        <p class="section-sub">
-          Um app completo que combina ciência da musicoterapia com uma
-          experiência de uso simples e acolhedora.
-        </p>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🧠</div>
-            <h3>Musicoterapia Clínica</h3>
-            <p>
-              Playlists especializadas para Tristeza, Ansiedade, Euforia e
-              Equilíbrio — baseadas nos princípios da musicoterapia.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎵</div>
-            <h3>Gêneros Variados</h3>
-            <p>
-              De Clássico a Lo-fi, de Jazz a Sertanejo — encontre o som certo
-              para cada momento do seu dia.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎭</div>
-            <h3>Avatar Personalizado</h3>
-            <p>
-              Escolha um avatar único gerado por inteligência artificial que
-              representa você no app.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🆘</div>
-            <h3>Ajuda de Emergência</h3>
-            <p>
-              Acesso rápido ao SAMU (192) e CVV (188) diretamente no app —
-              porque sua segurança é prioridade.
-            </p>
+          <div class="grid">
+            <article class="card" style="--card-color: var(--cyan)">
+              <div class="card__icon">01</div>
+              <h3>Perfil personalizado</h3>
+              <p>
+                Configure seu nome e escolha um avatar para deixar o aplicativo
+                com a sua cara.
+              </p>
+            </article>
+            <article class="card" style="--card-color: var(--purple)">
+              <div class="card__icon">02</div>
+              <h3>Playlists terapeuticas</h3>
+              <p>
+                Faixas organizadas para tristeza, agitacao, ansiedade e
+                equilibrio emocional.
+              </p>
+            </article>
+            <article class="card" style="--card-color: var(--mint)">
+              <div class="card__icon">03</div>
+              <h3>Pesquisa no catalogo</h3>
+              <p>
+                Encontre rapidamente uma faixa ou artista dentro do catalogo do
+                aplicativo.
+              </p>
+            </article>
+            <article class="card" style="--card-color: var(--gold)">
+              <div class="card__icon">04</div>
+              <h3>Player persistente</h3>
+              <p>
+                Controle a reproducao, veja o progresso e abra a faixa completa
+                em servicos externos.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ── HOW IT WORKS ───────────────────────────────────────────────── -->
-    <section id="how-it-works" class="steps-section">
-      <div class="container">
-        <span class="section-label">Como funciona</span>
-        <h2 class="section-title">
-          Em 3 passos você já está cuidando da sua saúde mental
-        </h2>
-        <p class="section-sub">
-          Sem complexidade. Sem cadastros demorados. Direto ao que importa.
-        </p>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Crie seu perfil</h3>
+      <section id="apoio">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-kicker">Apoio</span>
+            <h2>Precisa de ajuda agora?</h2>
             <p>
-              Insira seu nome e escolha um avatar personalizado em segundos.
+              Se houver risco imediato, confusao intensa ou sofrimento emocional
+              severo, procure atendimento profissional.
             </p>
           </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Escolha como você está</h3>
-            <p>
-              Selecione a playlist terapêutica que corresponde ao seu estado
-              emocional atual.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <h3>Ouça e se equilibre</h3>
-            <p>
-              Deixe a música guiar sua mente para um estado de maior harmonia e
-              bem-estar.
-            </p>
+
+          <div class="support-grid">
+            <article class="support-card">
+              <strong>SAMU&nbsp;192</strong>
+              <p>Emergencia medica imediata no Brasil.</p>
+              <a href="tel:192">Ligar&nbsp;para&nbsp;192</a>
+            </article>
+            <article class="support-card">
+              <strong>CVV&nbsp;188</strong>
+              <p>Apoio emocional 24 horas, gratuito e sigiloso.</p>
+              <a href="tel:188">Ligar&nbsp;para&nbsp;188</a>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ── THERAPY CATEGORIES ─────────────────────────────────────────── -->
-    <section id="therapy">
-      <div class="container">
-        <span class="section-label">Categorias Terapêuticas</span>
-        <h2 class="section-title">Música certa para cada emoção</h2>
-        <p class="section-sub">
-          Nossas playlists são organizadas por estado emocional para oferecer o
-          suporte sonoro mais adequado.
-        </p>
-        <div class="therapy-grid">
-          <div class="therapy-card">
-            <span class="tc-icon">💙</span>
-            <h3>Momentos de Tristeza</h3>
-            <p>Acolhimento e elevação gradual do humor com ritmos suaves.</p>
-          </div>
-          <div class="therapy-card">
-            <span class="tc-icon">🌙</span>
-            <h3>Ansiedade &amp; Agitação</h3>
-            <p>
-              Sons calmos que reduzem o estresse e acalmam a mente acelerada.
-            </p>
-          </div>
-          <div class="therapy-card">
-            <span class="tc-icon">⚡</span>
-            <h3>Hiperatividade &amp; Mania</h3>
-            <p>
-              Ritmos que desaceleram gradualmente sem quebra brusca de energia.
-            </p>
-          </div>
-          <div class="therapy-card">
-            <span class="tc-icon">✨</span>
-            <h3>Equilíbrio</h3>
-            <p>
-              Manutenção do bem-estar com músicas de frequências harmônicas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ── EMERGENCY ──────────────────────────────────────────────────── -->
-    <section id="emergency" class="emergency-section">
-      <div class="container">
-        <span class="section-label">Suporte de Emergência</span>
-        <h2 class="section-title">Você nunca está sozinho</h2>
-        <p class="section-sub">
-          O Harmonia Mental integra acesso direto aos serviços de apoio à crise.
-          Um toque e você já está em contato.
-        </p>
-        <div class="emergency-cards">
-          <div class="emergency-card">
-            <div class="e-icon">🚑</div>
+      <section id="download" class="download">
+        <div class="container">
+          <div class="download-panel">
             <div>
-              <h3>SAMU</h3>
-              <p>Serviço de Atendimento Médico de Urgência</p>
-              <a href="tel:192">192</a>
+              <span class="section-kicker">Download</span>
+              <h2>Instale a versão Android atual</h2>
+              <p>
+                Baixe o Psymphony para Android e comece a usar gratuitamente.
+              </p>
             </div>
-          </div>
-          <div class="emergency-card">
-            <div class="e-icon">💛</div>
-            <div>
-              <h3>CVV</h3>
-              <p>Centro de Valorização da Vida — 24h, gratuito</p>
-              <a href="tel:188">188</a>
+            <div class="download-actions">
+              <a class="button" href="Psymphony.apk" download>
+                Baixar Psymphony APK
+              </a>
+              <span class="small">v1.0.0 · Android 8+ · APK direto</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <div class="section-divider"></div>
-
-    <!-- ── DOWNLOAD ───────────────────────────────────────────────────── -->
-    <section id="download" class="download-section">
-      <div class="container">
-        <h2 class="section-title">Baixe agora, é gratuito</h2>
-        <p>
-          Disponível para Android. A versão iOS chegará em breve. Sem
-          assinaturas, sem anúncios — foco total no seu bem-estar.
-        </p>
-        <div class="download-buttons">
-          <a
-            href="HarmoniaMental.apk"
-            id="apk-download"
-            class="btn btn-primary"
-            download
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-1 14.414-3.707-3.707 1.414-1.414L11 13.586V7h2v6.586l2.293-2.293 1.414 1.414L13 16.414a1 1 0 0 1-1.414 0L11 15.414Z"
-              />
-            </svg>
-            <div class="download-btn-text">
-              <span class="platform-badge">Android APK</span>
-              <span class="download-btn-main">Download Gratuito</span>
-            </div>
-          </a>
-          <a
-            href="#"
-            class="btn btn-outline"
-            style="cursor: not-allowed; opacity: 0.45"
-            aria-disabled="true"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"
-              />
-            </svg>
-            <div class="download-btn-text">
-              <span class="platform-badge">App Store</span>
-              <span class="download-btn-main">Em breve</span>
-            </div>
-          </a>
-        </div>
-        <span class="version-tag" id="version-tag">v1.0.0 · Android 8+</span>
-      </div>
-    </section>
-
-    <!-- ── FOOTER ─────────────────────────────────────────────────────── -->
     <footer>
-      <div class="container">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            <div class="footer-brand-row">
-              <img src="assets/brand-symbol.png" alt="Logo Harmonia Mental" />
-              <span>HARMONIA MENTAL</span>
-            </div>
-            <p>
-              A música que equilibra a mente. Um app de musicoterapia criado
-              para apoiar o bem-estar emocional de forma acessível e gratuita.
-            </p>
-          </div>
-          <div class="footer-col">
-            <h4>Aplicativo</h4>
-            <ul>
-              <li><a href="#features">Funcionalidades</a></li>
-              <li><a href="#therapy">Categorias</a></li>
-              <li><a href="#how-it-works">Como funciona</a></li>
-              <li><a href="#download">Download</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Suporte</h4>
-            <ul>
-              <li><a href="#emergency">Emergências</a></li>
-              <li><a href="tel:192">SAMU — 192</a></li>
-              <li><a href="tel:188">CVV — 188</a></li>
-            </ul>
-          </div>
+      <div class="container footer-inner">
+        <div class="footer-logo">
+          <img src="assets/app-icon-safe.png" alt="" />
+          <span>Psymphony</span>
         </div>
-        <div class="footer-bottom">
-          <p>
-            © <span id="year"></span> Harmonia Mental. Feito para a saúde mental
-            brasileira.
-          </p>
-          <p>
-            Este app não substitui acompanhamento médico ou psicológico
-            profissional.
-          </p>
-        </div>
+        <nav class="footer-social" aria-label="Perfis sociais">
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/patrick-soares-492948243/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Patrick Soares"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.7 20.5H3.1V8.9h3.6v11.6ZM4.9 7.3a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2Zm16 13.2h-3.6v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8H9.6V8.9H13v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.4Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="social-link"
+            href="https://github.com/pscamposs"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de pscamposs"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.4a9.7 9.7 0 0 0-3.1 18.9c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-4.8 0-1.1.4-1.9 1-2.6-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.6 0 3.7-2.3 4.5-4.6 4.8.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A9.7 9.7 0 0 0 12 2.4Z"
+              ></path>
+            </svg>
+          </a>
+        </nav>
+        <span
+          >&copy; <span id="year"></span> Psymphony. Musicoterapia como apoio ao
+          cuidado.</span
+        >
       </div>
     </footer>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const apkSize = document.getElementById("apk-size");
+      fetch("Psymphony.apk", { method: "HEAD" })
+        .then((response) => {
+          const length = response.headers.get("content-length");
+          if (!length) return;
+          const mb = Number(length) / 1024 / 1024;
+          apkSize.textContent = `${mb.toFixed(1)} MB`;
+        })
+        .catch(() => {
+          apkSize.textContent = "Download direto";
+        });
     </script>
   </body>
 </html>

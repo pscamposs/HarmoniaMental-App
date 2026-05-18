@@ -1,6 +1,13 @@
 import React, { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { AppState } from "react-native";
 import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from "expo-av";
 import { Song } from "../constants/data";
+import {
+  addMusicNotificationActionListener,
+  ensureMusicNotificationPermission,
+  hideMusicNotification,
+  showMusicNotification,
+} from "../services/musicNotification";
 
 type PlaybackTrack = Song & {
   duration: number;
@@ -44,6 +51,12 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [progress, setProgress] = useState(0);
   const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const appStateRef = React.useRef(AppState.currentState);
+  const currentTrackRef = React.useRef<PlaybackTrack | null>(null);
+  const isPlayingRef = React.useRef(false);
+  const togglePlayPauseRef = React.useRef<() => Promise<void>>(async () => {});
+  const playNextRef = React.useRef<() => Promise<void>>(async () => {});
+  const playPreviousRef = React.useRef<() => Promise<void>>(async () => {});
 
   useEffect(() => {
     Audio.setAudioModeAsync({
@@ -78,6 +91,11 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
     queueRef.current = queue;
     currentIndexRef.current = currentIndex;
   }, [queue, currentIndex]);
+
+  useEffect(() => {
+    currentTrackRef.current = currentTrack;
+    isPlayingRef.current = isPlaying;
+  }, [currentTrack, isPlaying]);
 
   const loadSound = async (song: Song, playOnLoad: boolean = true) => {
     if (sound) {
@@ -150,6 +168,7 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
 
     setQueue(targetQueue);
     setCurrentIndex(targetIndex >= 0 ? targetIndex : 0);
+    ensureMusicNotificationPermission().catch(() => {});
     await loadSound(song, true);
   };
 
@@ -163,6 +182,62 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
       await sound.playAsync();
     }
   };
+
+  const syncMusicNotification = React.useCallback(async () => {
+    const track = currentTrackRef.current;
+    if (appStateRef.current === "active" || !track) {
+      hideMusicNotification();
+      return;
+    }
+
+    await showMusicNotification({
+      title: track.title,
+      artist: track.artist,
+      isPlaying: isPlayingRef.current,
+      canPrevious: currentIndexRef.current > 0,
+      canNext:
+        currentIndexRef.current >= 0 &&
+        currentIndexRef.current < queueRef.current.length - 1,
+    });
+  }, []);
+
+  useEffect(() => {
+    togglePlayPauseRef.current = togglePlayPause;
+    playNextRef.current = handleNext;
+    playPreviousRef.current = handlePrevious;
+  });
+
+  useEffect(() => {
+    const subscription = addMusicNotificationActionListener((action) => {
+      if (action === "playPause") {
+        togglePlayPauseRef.current();
+      } else if (action === "next") {
+        playNextRef.current();
+      } else if (action === "previous") {
+        playPreviousRef.current();
+      }
+    });
+
+    return () => {
+      subscription?.remove();
+    };
+  }, []);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", (nextState) => {
+      appStateRef.current = nextState;
+      syncMusicNotification();
+    });
+
+    return () => {
+      subscription.remove();
+      hideMusicNotification();
+    };
+  }, [syncMusicNotification]);
+
+  useEffect(() => {
+    syncMusicNotification();
+  }, [currentTrack, currentIndex, isPlaying, queue.length, syncMusicNotification]);
 
   return (
     <PlaybackContext.Provider
